@@ -11,6 +11,12 @@
       "username": "mario64",
       "password": "12345",
       "id": 2
+    },
+    {
+      "name": "Shrek",
+      "username": "shrek_rules",
+      "password": "shrek",
+      "id": 3
     }
   ]
 }

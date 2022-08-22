@@ -19,7 +19,7 @@ function Home({ setActiveUser }) {
   			<div className="column">
     			<div className="columns is-mobile">
       			<div className="column is-half">
-						{hasAccount ? <Login setActiveUser={setActiveUser} setHasAccount={() => setHasAccount(false)}/> : <Signup setHasAccount={() => setHasAccount(true)} />}
+						{hasAccount ? <Login setActiveUser={setActiveUser} setHasAccount={() => setHasAccount(false)}/> : <Signup setHasAccount={() => setHasAccount(true)} setActiveUser={setActiveUser} />}
       			</div>
     			</div>
   			</div>

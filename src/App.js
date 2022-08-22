@@ -20,7 +20,7 @@ function App() {
           <About />
         </Route>
         <Route path="/user/:username">
-          <UserPage />
+          <UserPage user={activeUser} />
         </Route>
         <Route path="/">
           <Home setActiveUser={setActiveUser} />

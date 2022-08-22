@@ -30,7 +30,7 @@ function Login({ setHasAccount, setActiveUser }) {
 			setFormData(initializedForm);
 		} else {
 			setActiveUser(user);
-			history.push(`/user/${user.username}`)
+			history.push(`/user/${user.username}`);
 		}
 	}
 
