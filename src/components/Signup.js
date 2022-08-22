@@ -6,7 +6,9 @@ const initializedForm = {
 	name: "",
 	username: "",
 	password: "",
-	cardImage: "https://www.linkpicture.com/q/defaultuser.png"
+	cardImage: "https://www.linkpicture.com/q/defaultuser.png",
+	songs: [],
+	status: "new to friend hop",
 }
 
 function Signup({ setHasAccount, setActiveUser }) {

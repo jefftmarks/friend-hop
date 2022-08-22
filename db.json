@@ -5,35 +5,57 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "status": "new to friend hop",
+      "songs": [
+        {"artist": "100 gecs", "title": "Doritos & Fritos"},
+        {"artist": "My Chemical Romance", "title": "Helena"}
+      ]
     },
     {
       "name": "Mario",
       "username": "mario64",
       "password": "12345",
       "id": 2,
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "status": "new to friend hop",
+      "songs": [
+        {"artist": "100 Gecs", "title": "mememe"}
+      ]
     },
     {
       "name": "Shrek",
       "username": "shrek_rules",
       "password": "shrek",
       "id": 3,
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "status": "new to friend hop",
+      "songs": [
+        {"artist": "Stevie Wonder", "title": "Isn't She Lovely"},
+        {"artist": "Smash Mouth", "title": "All Star"}
+      ]
     },
     {
       "name": "Shrek's Mom",
       "username": "momma_shrek",
       "password": "shrek",
       "id": 4,
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "status": "new to friend hop",
+      "songs": [
+        {"artist": "Smash Mouth", "title": "I'm a Believer"}
+      ]
     },
     {
       "name": "Shrek's Dad",
       "username": "dad_shrek",
       "password": "shrek",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "id": 5
+      "status": "new to friend hop",
+      "id": 5,
+      "songs": [
+        {"artist": "Darkthrone", "title": "Transilvanian Hunger"}
+      ]
     }
   ]
 }

@@ -22,7 +22,7 @@ function NavBar({ activeUser, setActiveUser }) {
 			<div id="navbarBasicExample" className="navbar-menu">
 				<div className="navbar-start">
 					<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"}>
-						home
+						{activeUser ? "profile" : "home"}
 					</Link>
 
 					<Link className="navbar-item" to="/about">
