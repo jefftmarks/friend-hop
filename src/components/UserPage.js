@@ -20,21 +20,21 @@ function UserPage() {
 		<>
 			
 
-			<div class="columns">
-  			<div class="column is-one-fifth">
+			<div className="columns">
+  			<div className="column is-one-fifth">
 					avatar image and 
-					<div class="box">
+					<div className="box">
   				I'm feeling...
 					
 					</div>
 					<StatusDropdown />
 					</div>
-  				<div class="column is-one-fifth">
+  				<div className="column is-one-fifth">
 					darkmode/lightmode
 					 toggles go here
 					</div>
- 				<div class="column"> 
-				<div class="box"><h1>{name}'s Page</h1>
+ 				<div className="column"> 
+				<div className="box"><h1>{name}'s Page</h1>
 				</div> and add song form go here</div>
 			</div>
 
