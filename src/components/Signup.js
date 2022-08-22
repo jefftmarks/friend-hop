@@ -6,6 +6,7 @@ const initializedForm = {
 	name: "",
 	username: "",
 	password: "",
+	cardImage: "https://www.linkpicture.com/q/defaultuser.png"
 }
 
 function Signup({ setHasAccount, setActiveUser }) {

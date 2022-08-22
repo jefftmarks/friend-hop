@@ -4,19 +4,36 @@
       "id": 1,
       "name": "Jeff",
       "username": "jeffsworld",
-      "password": "11111"
+      "password": "11111",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
     },
     {
       "name": "Mario",
       "username": "mario64",
       "password": "12345",
-      "id": 2
+      "id": 2,
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
     },
     {
       "name": "Shrek",
       "username": "shrek_rules",
       "password": "shrek",
-      "id": 3
+      "id": 3,
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
+    },
+    {
+      "name": "Shrek's Mom",
+      "username": "momma_shrek",
+      "password": "shrek",
+      "id": 4,
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
+    },
+    {
+      "name": "Shrek's Dad",
+      "username": "dad_shrek",
+      "password": "shrek",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "id": 5
     }
   ]
 }

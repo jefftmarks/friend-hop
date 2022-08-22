@@ -20,7 +20,7 @@ function App() {
           <UserPage user={activeUser} />
         </Route>
         <Route path="/search/:query">
-          <SearchResults />
+          <SearchResults setActiveUser={setActiveUser} />
         </Route>
         <Route path="/">
           <Home setActiveUser={setActiveUser} />
