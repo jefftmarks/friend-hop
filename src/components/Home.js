@@ -8,7 +8,7 @@ function Home({ setActiveUser }) {
 
 	return (
 		<div style={{ 
-      backgroundImage: 'url("https://www.linkpicture.com/q/home_4.jpg")',
+      backgroundImage: 'url("https://www.linkpicture.com/q/home1.jpg")',
 			backgroundRepeat: "no-repeat",
 			backgroundSize: "cover",
 			backgroundPosition: "center",

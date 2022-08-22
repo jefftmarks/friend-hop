@@ -7,12 +7,12 @@ function NavBar({ activeUser, setActiveUser }) {
 
 	return (
 		<nav className="navbar" role="navigation" aria-label="main navigation">
-			<div className="navbar-brand">
+			<div className="navbar-brand" height="100px">
 				<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"} >
-					<img src="https://www.linkpicture.com/q/Screen-Shot-2022-08-22-at-10.58.54-AM_1.png" alt="logo" width="112" height="28" />
+					<img src="https://www.linkpicture.com/q/logo1_7.png" alt="logo" width="112" height="28" />
 				</Link>
 
-				<a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<a role="button" className="navbar-burger is-active" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>

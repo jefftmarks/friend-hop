@@ -38,7 +38,7 @@ function Login({ setHasAccount, setActiveUser }) {
 		<Box style={{ width: 400, margin: "20px" }}>
 			<form onSubmit={handleSubmit}>
 				<Form.Field>
-					<Form.Label htmlFor="username">Username</Form.Label>
+					<Form.Label htmlFor="username">username</Form.Label>
 					<Form.Control>
 						<Form.Input
 							type="text"
@@ -52,7 +52,7 @@ function Login({ setHasAccount, setActiveUser }) {
 					</Form.Control>
 				</Form.Field>
 				<Form.Field>
-					<Form.Label htmlFor="password">Password</Form.Label>
+					<Form.Label htmlFor="password">password</Form.Label>
 					<Form.Control>
 						<Form.Input
 							type="password"
@@ -65,8 +65,8 @@ function Login({ setHasAccount, setActiveUser }) {
 					</Form.Control>
 				</Form.Field>
 				<Button.Group align="right">
-					<Button color="primary">Login</Button>
-					<Button color="primary" onClick={setHasAccount}>Create Account</Button>
+					<Button color="primary">login</Button>
+					<Button color="primary" onClick={setHasAccount}>create account</Button>
 				</Button.Group>
 			</form>
 		</Box>
