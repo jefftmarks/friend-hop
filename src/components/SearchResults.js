@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import UserCard from "./UserCard";
 import { useParams } from "react-router-dom";
 
-function SearchResults({ setActiveUser}) {
+function SearchResults({  }) {
 	const [searchResults, setSearchResults] = useState([]);
 
 	const query = useParams().query;
@@ -17,7 +17,7 @@ function SearchResults({ setActiveUser}) {
 	<>
 		<div className="columns">
   		<div className="column is-three-quarters">{searchResults.map(result => (
-			<UserCard key={result.username} user={result} setActiveUser={setActiveUser} />
+			<UserCard key={result.username} user={result} />
 		))}</div>
 		</div>
 	</>

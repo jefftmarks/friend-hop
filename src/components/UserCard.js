@@ -1,13 +1,12 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-function UserCard({ user, setActiveUser }) {
+function UserCard({ user }) {
 	const { name, username, cardImage } = user;
 
 	const history = useHistory();
 
 	function onCardClick() {
-		setActiveUser(user);
 		history.push(`/user/${username}`)
 	}
 
