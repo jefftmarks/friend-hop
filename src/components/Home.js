@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Login from "./Login";
 import Signup from "./Signup";
 
-function Home() {
+function Home({ setActiveUser }) {
 	const [hasAccount, setHasAccount] = useState(true);
 
 
@@ -19,7 +19,7 @@ function Home() {
   			<div className="column">
     			<div className="columns is-mobile">
       			<div className="column is-half">
-						{hasAccount ? <Login setHasAccount={() => setHasAccount(false)}/> : <Signup setHasAccount={() => setHasAccount(true)} />}
+						{hasAccount ? <Login setActiveUser={setActiveUser} setHasAccount={() => setHasAccount(false)}/> : <Signup setHasAccount={() => setHasAccount(true)} />}
       			</div>
     			</div>
   			</div>
