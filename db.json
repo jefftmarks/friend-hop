@@ -6,7 +6,7 @@
       "username": "jeffsworld",
       "password": "11111",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "in the zone",
+      "status": "blissed out",
       "songs": [
         {
           "title": "Running Away",
@@ -17,6 +17,11 @@
           "title": "test",
           "artist": "test",
           "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Blah blah",
+          "artist": "Karl",
+          "url": "https://soundcloud.com/user-81871523/network-spring-mixtape-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ]
     },
