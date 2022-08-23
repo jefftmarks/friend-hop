@@ -12,7 +12,32 @@ function SearchResults({ handleOnCardClick }) {
 	useEffect(() => {
 		fetch(`http://localhost:4000/users?q=${encodeURI(query)}`)
 			.then(res => res.json())
-			.then(results => setSearchResults(results))
+			.then(results => setSearchResults(results.filter(result => {
+
+				let titles = "";
+				result.songs.forEach(song => {
+					titles = titles + " " + song.title.toLowerCase();
+				})
+
+				let artists = "";
+				result.songs.forEach(song => {
+					artists = artists + " " + song.artist.toLowerCase();
+				})
+
+				if (result.name.toLowerCase().includes(query.toLowerCase())) {
+					return true;
+				} else if (result.username.toLowerCase().includes(query.toLowerCase())) {
+					return true;
+				} else if (result.status.toLowerCase().includes(query.toLowerCase())) {
+					return true;
+				} else if (titles.includes(query.toLowerCase())) {
+					return true;
+				} else if (artists.includes(query.toLowerCase())) {
+					return true;
+				} else {
+					return false;
+				}
+			})))
 	}, [query]);
 
  return (

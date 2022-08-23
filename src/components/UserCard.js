@@ -26,7 +26,7 @@ function UserCard({ user, query, handleOnCardClick }) {
 			</div>
 			<div>
 				<h1>{name}</h1>
-				<p>{name}'s status: {status}</p>
+				<p>status: {status}</p>
 				{/* map through the arraoy of matching songs and list in the user card */}
 				<ul>{matches.map(song => (
 					<li key={song.title}>{song.title} by {song.artist}</li>

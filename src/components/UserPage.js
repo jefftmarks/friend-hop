@@ -53,6 +53,7 @@ function UserPage({ activeUser }) {
 		<div style={{
 			backgroundImage: 'url("https://www.linkpicture.com/q/V02.jpg")',
 			width: "100%",
+			height: "100vh",
 			backgroundSize: "cover",
 			// backgroundPosition: "50% 100%",
 			}}>
