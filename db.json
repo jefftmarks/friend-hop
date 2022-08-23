@@ -79,9 +79,15 @@
       ]
     },
     {
+<<<<<<< HEAD
       "name": "Mischa",
       "username": "chobe",
       "password": "chobani",
+=======
+      "name": "Shane",
+      "username": "shane_rules",
+      "password": "anime",
+>>>>>>> 970e9ad448234b54816f8c95cc9ce6eb182e6366
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "songs": [],
       "status": "new to friend hop",
