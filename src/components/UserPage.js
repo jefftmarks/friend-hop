@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import StatusDropdown from "./StatusDropdown";
+import SongContainer from "./SongContainer";
 import { useParams } from "react-router-dom";
 
 import { handleAvatar } from "../utils";
@@ -85,7 +86,7 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="box has-text-centered"><h1 className="is-centered">{name}'s Page</h1></div>
-						add song form
+						<SongContainer />
 					</div>
 			</div>			
 		</div>
