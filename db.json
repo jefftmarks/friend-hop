@@ -6,7 +6,7 @@
       "username": "jeffsworld",
       "password": "11111",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "blissed out",
+      "status": "braindead",
       "songs": [
         {
           "title": "Running Away",
@@ -14,20 +14,11 @@
           "url": "https://soundcloud.com/maxb47/vano-3000-running-away-leaving?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         },
         {
-          "title": "Test Song",
-          "artist": "Test Artist",
-          "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?in=user-448187029/sets/bops&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          "title": "test",
+          "artist": "test",
+          "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ]
-    },
-    {
-      "name": "Mario",
-      "username": "mario64",
-      "password": "12345",
-      "id": 2,
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "new to friend hop",
-      "songs": []
     },
     {
       "name": "Shrek",
@@ -35,44 +26,23 @@
       "password": "shrek",
       "id": 3,
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "new to friend hop",
-      "songs": []
+      "status": "angelic",
+      "songs": [
+        {
+          "title": "Test Song",
+          "artist": "Test Artist",
+          "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ]
     },
     {
-      "name": "Shrek's Mom",
-      "username": "momma_shrek",
-      "password": "shrek",
-      "id": 4,
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "new to friend hop",
-      "songs": []
-    },
-    {
-      "name": "Shrek's Dad",
-      "username": "dad_shrek",
-      "password": "shrek",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "new to friend hop",
-      "id": 5,
-      "songs": []
-    },
-    {
-      "name": "Baby Shrek",
-      "username": "baby_shrek",
-      "password": "shrek",
+      "name": "Sky2",
+      "username": "sky_rules_kinda",
+      "password": "11111111",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "songs": [],
       "status": "new to friend hop",
-      "id": 6
-    },
-    {
-      "name": "antonio",
-      "username": "Antonioiscool",
-      "password": "abc123",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "songs": [],
-      "status": "hungry",
-      "id": 7
+      "id": 4
     }
   ]
 }

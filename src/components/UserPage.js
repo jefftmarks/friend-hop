@@ -5,12 +5,12 @@ import { useParams } from "react-router-dom";
 
 import { handleAvatar } from "../utils";
 
-
 function UserPage({ activeUser }) {
 	const [user, setUser] = useState({});
+	const [userIsActive, setUserIsActive] = useState(false);
 	const [avatar, setAvatar] = useState("https://www.linkpicture.com/q/default_1.png");
 
-	const { name, status, songs, id } = user;
+	const { name, status, id } = user;
 
 	// params.username will give us access to username value
 	const params = useParams();
@@ -20,7 +20,13 @@ function UserPage({ activeUser }) {
 		fetch(`http://localhost:4000/users?username=${params.username}`)
 			.then(res => res.json())
 			.then(data => setUser(data[0]))
-	}, [params])
+	}, [params, activeUser])
+
+	useEffect(() => {
+		if (user.username === activeUser.username) {
+			setUserIsActive(true);
+		}
+	}, [activeUser.username, user.username])
 
 	// when status in dropdown menu changes, run a PATCH request to update user and rerender page
 	function handleStatusChange(event) {
@@ -68,8 +74,10 @@ function UserPage({ activeUser }) {
 							className="tags are-normal is-white has-addons buttons"
 							style={{display: "flex", justifyContent: "center"}}
 						>
-							<span className="button is-static">I'm feeling...</span>
-							<StatusDropdown onStatusChange={handleStatusChange} status={user.status} />
+							<span className="button is-static">
+								{userIsActive ? "I'm feeling..." : `${user.name} is feeling...`}
+							</span>
+							<StatusDropdown onStatusChange={handleStatusChange} status={user.status} userIsActive={userIsActive}/>
 						</div>
 					</div>
   				<div className="column is-1">
@@ -86,7 +94,7 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="box has-text-centered"><h1 className="is-centered">{name}'s Page</h1></div>
-						<SongContainer user={user} onAddSong={setUser} />
+						<SongContainer user={user} userIsActive={userIsActive} onAddSong={setUser} />
 					</div>
 			</div>			
 		</div>

@@ -1,16 +1,17 @@
 import React from "react";
 import { Dropdown, Icon } from "react-bulma-components";
 
-function StatusDropdown({ onStatusChange, status }) {
+function StatusDropdown({ onStatusChange, status, userIsActive }) {
 	return (
 		<Dropdown
-				className="dropown is-up is-right"
+				className="dropdown is-up is-right"
 				closeOnSelect={true}
 				color=""
 				icon={<Icon><i aria-hidden="true" className="fas fa-angle-down"/></Icon>}
 				label="choose status"
 				onChange={event => onStatusChange(event)}
 				value={status}
+				disabled={!userIsActive}
 			>
 
 			<Dropdown.Item renderAs="a" value="hypernormal">hypernormal</Dropdown.Item>
