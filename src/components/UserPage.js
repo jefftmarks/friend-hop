@@ -21,21 +21,27 @@ function UserPage() {
 			
 
 			<div className="columns">
-  			<div className="column is-one-fifth">
-					avatar image and 
-					<div className="box">
-  				I'm feeling...
+  				<div className="column is-2">
+					avatar image 
+					<div className="column is-7">
+        			
+						<div className="tags are-large is-white is-centered">
+							<span className="tag">I'm feeling...</span>
+					</div>
+						<StatusDropdown />
+     			</div>	
+			</div>
+
+  				<div className="column is-1">
+					<div className="buttons is-centered">
+					<button className="button is-small is-rounded">light mode</button>
 					
+					<button className="button is-small is-black is-rounded">dark mode</button>
 					</div>
-					<StatusDropdown />
-					</div>
-  				<div className="column is-one-fifth">
-					darkmode/lightmode
-					 toggles go here
-					</div>
+				</div>
  				<div className="column"> 
 				<div className="box"><h1>{name}'s Page</h1>
-				</div> and add song form go here</div>
+				</div> add song form </div>
 			</div>
 
 
