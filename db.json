@@ -21,58 +21,19 @@
       ]
     },
     {
-      "name": "Mario",
-      "username": "mario64",
-      "password": "12345",
-      "id": 2,
+      "name": "George",
+      "username": "big_dick_bandit",
+      "password": "11111",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "new to friend hop",
-      "songs": []
-    },
-    {
-      "name": "Shrek",
-      "username": "shrek_rules",
-      "password": "shrek",
-      "id": 3,
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "new to friend hop",
-      "songs": []
-    },
-    {
-      "name": "Shrek's Mom",
-      "username": "momma_shrek",
-      "password": "shrek",
-      "id": 4,
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "new to friend hop",
-      "songs": []
-    },
-    {
-      "name": "Shrek's Dad",
-      "username": "dad_shrek",
-      "password": "shrek",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "new to friend hop",
-      "id": 5,
-      "songs": []
-    },
-    {
-      "name": "Baby Shrek",
-      "username": "baby_shrek",
-      "password": "shrek",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "id": 6
-    },
-    {
-      "name": "antonio",
-      "username": "Antonioiscool",
-      "password": "abc123",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "songs": [],
-      "status": "hungry",
-      "id": 7
+      "songs": [
+        {
+          "title": "Test Song",
+          "artist": "My Chemical Romance",
+          "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
+      "status": "angelic",
+      "id": 8
     }
   ]
 }
