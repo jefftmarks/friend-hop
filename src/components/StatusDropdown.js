@@ -4,6 +4,7 @@ import { Dropdown, Icon } from "react-bulma-components";
 function StatusDropdown({ onStatusChange, status }) {
 	return (
 		<Dropdown
+				className="dropown is-up is-right"
 				closeOnSelect={true}
 				color=""
 				icon={<Icon><i aria-hidden="true" className="fas fa-angle-down"/></Icon>}

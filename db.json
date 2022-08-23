@@ -6,7 +6,7 @@
       "username": "jeffsworld",
       "password": "11111",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "hypernormal",
+      "status": "blissed out",
       "songs": [
         {
           "artist": "100 gecs",
@@ -86,6 +86,15 @@
       "songs": [],
       "status": "new to friend hop",
       "id": 6
+    },
+    {
+      "name": "antonio",
+      "username": "Antonioiscool",
+      "password": "abc123",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [],
+      "status": "hungry",
+      "id": 7
     }
   ]
 }

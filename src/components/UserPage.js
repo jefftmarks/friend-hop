@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import StatusDropdown from "./StatusDropdown";
 import { useParams } from "react-router-dom";
 
+import { handleAvatar } from "../utils";
+
+
 function UserPage({ activeUser }) {
-	const [user, setUser] = useState({})
+	const [user, setUser] = useState({});
+	const [avatar, setAvatar] = useState("https://www.linkpicture.com/q/default_1.png");
 
 	const { name, status, songs, id } = user;
 
@@ -31,80 +35,60 @@ function UserPage({ activeUser }) {
 			.then(updatedUser => setUser(updatedUser))
 	}
 
-	let avatarUrl = "";
-
-	switch (status) {
-		case "hypernormal":
-				avatarUrl = "https://www.linkpicture.com/q/default_1.png";
-				break;
-		case "angelic":
-				avatarUrl = "https://www.linkpicture.com/q/angelic.png";
-				break;
-		case "braindead":
-				avatarUrl = "https://www.linkpicture.com/q/braindead.png";
-				break;
-		case "blissed out":
-				avatarUrl = "https://www.linkpicture.com/q/great.png";
-				break;
-		case "extra special":
-			avatarUrl = "https://www.linkpicture.com/q/happy_2.png";
-			break;
-		case "hungry":
-			avatarUrl = "https://www.linkpicture.com/q/hungry.png";
-			break;
-		case "in the zone":
-			avatarUrl = "https://www.linkpicture.com/q/inthezone.png";
-			break;
-		case "zoinked":
-			avatarUrl = "https://www.linkpicture.com/q/sleepy_1.png";
-			break;
-		case "evil oblivion":
-			avatarUrl = "https://www.linkpicture.com/q/cranky.png";
-			break;
-		default:
-			avatarUrl = "https://www.linkpicture.com/q/default_1.png";
-	}
+	// change avatar image source depending on status
+	useEffect(() => {
+		handleAvatar(setAvatar, status);
+	}, [status])
 
 	if (!user) return <h1>Loading...</h1>
 
 	return (
-		<>
+		<div style={{
+			backgroundImage: 'url("https://www.linkpicture.com/q/V02.jpg")',
+			backgroundRepeat: "no-repeat",
+			backgroundSize: "cover",
+			backgroundPosition: "50% 100%",
+			width: "100%",
+			height: "100vh"
+			}}>
 			<div className="columns is-multiline">
   				<div className="column is-4">
 						<div style={{
-								border: "1px solid black",
-								height: "500px",
+								height: "520px",
 								width: "80%",
 								margin: "auto",
-								backgroundImage: `url(${avatarUrl})`,
-								backgroundSize: "190%",
+								backgroundImage: `url("${avatar}")`,
+								backgroundSize: "180%",
 								backgroundPosition: "50% 70%",
 								backgroundRepeat: "no-repeat",
-
 							}}>
-							{/* <img src={avatarUrl} alt="avatar" /> */}
 						</div>
-						<div className="tags are-large is-white">
-							<div className="tag">I'm feeling...</div>
-						</div>
-						<div style={{display: "flex", justifyContent: "center"}}>
+						<div
+							className="tags are-normal is-white has-addons buttons"
+							style={{display: "flex", justifyContent: "center"}}
+						>
+							<span className="button is-static">I'm feeling...</span>
 							<StatusDropdown onStatusChange={handleStatusChange} status={user.status} />
 						</div>
-							
 					</div>
-
   				<div className="column is-1">
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="column"></div>
 						<div className="buttons is-centered">
-							<button className="button is-small is-rounded">light mode</button>
+							<button className=" button is-small is-rounded">light mode</button>
 							<button className="button is-small is-black is-rounded">dark mode</button>
 						</div>
 					</div>
 					<div className="column"> 
-						<div className="box"><h1>{name}'s Page</h1></div>
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="box has-text-centered"><h1 className="is-centered">{name}'s Page</h1></div>
 						add song form
 					</div>
 			</div>			
-		</>
+		</div>
 	)
 }
 
