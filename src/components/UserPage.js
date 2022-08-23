@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import StatusDropdown from "./StatusDropdown";
 import { useParams } from "react-router-dom";
 
-function UserPage() {
+function UserPage({ activeUser }) {
 	const [user, setUser] = useState({})
 	const { name, username, status, songs } = user;
 
+	// params.username will give us access to username value
 	const params = useParams();
 
+	// when params (i.e. user profile) changes, perform a fetch and set user to the first (and only) result
 	useEffect(() => {
 		fetch(`http://localhost:4000/users?username=${params.username}`)
 			.then(res => res.json())
