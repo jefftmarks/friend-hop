@@ -1,38 +1,35 @@
 import React from "react";
 import { Dropdown, Icon } from "react-bulma-components";
 
-function StatusDropdown() {
+function StatusDropdown({ onStatusChange, status }) {
 	return (
 		<Dropdown
-				closeOnSelect={false}
+				closeOnSelect={true}
 				color=""
 				icon={<Icon><i aria-hidden="true" className="fas fa-angle-down"/></Icon>}
 				label="choose status"
+				onChange={event => onStatusChange(event)}
+				value={status}
 			>
-			<Dropdown.Item
-				renderAs="a"
-				value="item"
-			>
-				cranky
-			</Dropdown.Item>
-			<Dropdown.Item
-				renderAs="a"
-				value="other"
-			>
-				happy
-			</Dropdown.Item>
-			<Dropdown.Item
-				renderAs="a"
-				value="active"
-			>
-				sad
-			</Dropdown.Item>
-			<Dropdown.Item
-				renderAs="a"
-				value="other 2"
-			>
-				f*cking insane dude
-			</Dropdown.Item>
+
+			<Dropdown.Item renderAs="a" value="hypernormal">hypernormal</Dropdown.Item>
+			
+			<Dropdown.Item renderAs="a" value="angelic">angelic</Dropdown.Item>
+
+			<Dropdown.Item renderAs="a" value="braindead">braindead</Dropdown.Item>
+
+			<Dropdown.Item renderAs="a" value="blissed out">blissed out</Dropdown.Item>
+
+			<Dropdown.Item renderAs="a" value="extra special">happy</Dropdown.Item>
+
+			<Dropdown.Item renderAs="a" value="hungry">hungry</Dropdown.Item>
+
+			<Dropdown.Item renderAs="a" value="in the zone">in the zone</Dropdown.Item>
+
+			<Dropdown.Item renderAs="a" value="zoinked">zoinked</Dropdown.Item>
+
+			<Dropdown.Item renderAs="a" value="evil oblivion">evil oblivion</Dropdown.Item>
+
 		</Dropdown>
 	)
 }
