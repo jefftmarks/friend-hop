@@ -6,15 +6,17 @@
       "username": "jeffsworld",
       "password": "11111",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "angelic",
+      "status": "blissed out",
       "songs": [
         {
-          "artist": "100 gecs",
-          "title": "Doritos & Fritos"
+          "title": "Running Away",
+          "artist": "VANO 3000",
+          "url": "https://soundcloud.com/maxb47/vano-3000-running-away-leaving?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         },
         {
-          "artist": "My Chemical Romance",
-          "title": "Helena"
+          "title": "Test Song",
+          "artist": "Test Artist",
+          "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?in=user-448187029/sets/bops&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ]
     },
@@ -25,12 +27,7 @@
       "id": 2,
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "new to friend hop",
-      "songs": [
-        {
-          "artist": "100 Gecs",
-          "title": "mememe"
-        }
-      ]
+      "songs": []
     },
     {
       "name": "Shrek",
@@ -39,16 +36,7 @@
       "id": 3,
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "new to friend hop",
-      "songs": [
-        {
-          "artist": "Stevie Wonder",
-          "title": "Isn't She Lovely"
-        },
-        {
-          "artist": "Smash Mouth",
-          "title": "All Star"
-        }
-      ]
+      "songs": []
     },
     {
       "name": "Shrek's Mom",
@@ -57,12 +45,7 @@
       "id": 4,
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "new to friend hop",
-      "songs": [
-        {
-          "artist": "Smash Mouth",
-          "title": "I'm a Believer"
-        }
-      ]
+      "songs": []
     },
     {
       "name": "Shrek's Dad",
@@ -71,12 +54,7 @@
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "new to friend hop",
       "id": 5,
-      "songs": [
-        {
-          "artist": "Darkthrone",
-          "title": "Transilvanian Hunger"
-        }
-      ]
+      "songs": []
     },
     {
       "name": "Baby Shrek",

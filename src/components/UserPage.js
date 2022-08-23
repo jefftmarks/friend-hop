@@ -86,7 +86,7 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="box has-text-centered"><h1 className="is-centered">{name}'s Page</h1></div>
-						<SongContainer />
+						<SongContainer user={user} onAddSong={setUser} />
 					</div>
 			</div>			
 		</div>
