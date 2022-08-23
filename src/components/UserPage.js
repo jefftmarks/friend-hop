@@ -52,11 +52,7 @@ function UserPage({ activeUser }) {
 	return (
 		<div style={{
 			backgroundImage: 'url("https://www.linkpicture.com/q/V02.jpg")',
-			backgroundRepeat: "no-repeat",
-			backgroundSize: "cover",
-			backgroundPosition: "50% 100%",
 			width: "100%",
-			height: "100vh"
 			}}>
 			<div className="columns is-multiline">
   				<div className="column is-4">
