@@ -8,8 +8,14 @@
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "new to friend hop",
       "songs": [
-        {"artist": "100 gecs", "title": "Doritos & Fritos"},
-        {"artist": "My Chemical Romance", "title": "Helena"}
+        {
+          "artist": "100 gecs",
+          "title": "Doritos & Fritos"
+        },
+        {
+          "artist": "My Chemical Romance",
+          "title": "Helena"
+        }
       ]
     },
     {
@@ -20,7 +26,10 @@
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "new to friend hop",
       "songs": [
-        {"artist": "100 Gecs", "title": "mememe"}
+        {
+          "artist": "100 Gecs",
+          "title": "mememe"
+        }
       ]
     },
     {
@@ -31,8 +40,14 @@
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "new to friend hop",
       "songs": [
-        {"artist": "Stevie Wonder", "title": "Isn't She Lovely"},
-        {"artist": "Smash Mouth", "title": "All Star"}
+        {
+          "artist": "Stevie Wonder",
+          "title": "Isn't She Lovely"
+        },
+        {
+          "artist": "Smash Mouth",
+          "title": "All Star"
+        }
       ]
     },
     {
@@ -43,7 +58,10 @@
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "new to friend hop",
       "songs": [
-        {"artist": "Smash Mouth", "title": "I'm a Believer"}
+        {
+          "artist": "Smash Mouth",
+          "title": "I'm a Believer"
+        }
       ]
     },
     {
@@ -54,8 +72,20 @@
       "status": "new to friend hop",
       "id": 5,
       "songs": [
-        {"artist": "Darkthrone", "title": "Transilvanian Hunger"}
+        {
+          "artist": "Darkthrone",
+          "title": "Transilvanian Hunger"
+        }
       ]
+    },
+    {
+      "name": "Shane",
+      "username": "shane_rules",
+      "password": "anime",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [],
+      "status": "new to friend hop",
+      "id": 6
     }
   ]
 }
