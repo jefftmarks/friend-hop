@@ -1,12 +1,13 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-function UserCard({ user, query }) {
+function UserCard({ user, query, setSearchInput }) {
 	const { name, username, cardImage, status, songs } = user;
 
 	const history = useHistory();
 
 	function onCardClick() {
+		setSearchInput("");
 		history.push(`/user/${username}`)
 	}
 

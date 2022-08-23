@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
-function SearchBar() {
-	const [searchInput, setSearchInput] = useState("");
+function SearchBar({ setSearchInput, searchInput }) {
 	const [searchQuery, setSearchQuery] = useState("");
 
 	const history = useHistory();

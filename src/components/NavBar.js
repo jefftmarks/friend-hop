@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 import FriendDropdown from "./FriendDropdown";
 import { Link } from "react-router-dom";
 
-function NavBar({ activeUser, setActiveUser }) {
+function NavBar({ activeUser, setActiveUser, setSearchInput, searchInput }) {
 
 	return (
 		<nav className="navbar" role="navigation" aria-label="main navigation">
@@ -39,7 +39,7 @@ function NavBar({ activeUser, setActiveUser }) {
 				{activeUser ? (
 					<div className="navbar-end">
 						<div className="navbar-item">
-							<SearchBar />
+							<SearchBar setSearchInput={setSearchInput} searchInput={searchInput} />
 						</div>
 						<div className="navbar-item">
 							<FriendDropdown />
