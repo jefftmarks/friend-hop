@@ -74,10 +74,10 @@ function UserPage({ activeUser }) {
 						<div className="buttons is-centered" style={{padding: "20px"}}>
 						
 							<div className="column"></div>
-							<button className="button is-normal is-dark">based mode</button>
-							<div className="column is-3"></div>
-							<button className="button is-small is-light">non-anime mode</button>
-							<div className="column is-4"></div>
+							<button className="tag is-normal is-dark" style={{marginLeft: "20px"}}>based mode</button>
+							<div className="column is-2"></div>
+							<button className="tag is-small is-dark" style={{marginLeft: "20px"}}>non-anime mode</button>
+							<div className="column is-2"></div>
 						
 						</div>
 							<div className="column"></div>
