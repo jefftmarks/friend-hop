@@ -1,7 +1,7 @@
 import React from "react";
 import ReactSoundCloud from "react-soundcloud-embedded";
 
-function SongCard({ url, user, onDeleteSong }) {
+function SongCard({ url, user, onDeleteSong, isActiveUser }) {
 	const { id } = user
 
 	function onDeleteClick() {
@@ -30,7 +30,15 @@ function SongCard({ url, user, onDeleteSong }) {
 				visual={false}
 				hideRelated={true}
 			/>
-			<span className="tag is-dark" style={{float: "right", marginBottom: ""}} onClick={onDeleteClick}>remove</span>
+			{isActiveUser ? (
+				<span
+					className="tag is-dark"
+					style={{float: "right", marginBottom: "", cursor: "pointer"}}
+					onClick={onDeleteClick}
+				>
+					remove
+				</span>
+			) : null}
 		</div>
 	)
 }

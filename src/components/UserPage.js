@@ -6,12 +6,12 @@ import { useParams } from "react-router-dom";
 import { handleAvatar } from "../utils";
 import hypernormal from "../images/default.png";
 
-function UserPage({ activeUser }) {
+function UserPage({ activeUser, setActiveUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
 	const [avatar, setAvatar] = useState(hypernormal);
 
-	const { name, pageImage, status } = user;
+	const { name, pageImage, cardImage, status, friends } = user;
 
 	const params = useParams();
 
@@ -32,9 +32,21 @@ function UserPage({ activeUser }) {
 			.catch(e => console.error(e));
 	}, [params, user, activeUser])
 
+	// function handleAddFriend() {
+	// 	fetch(`http://localhost:4000/users/${activeUser.id}`, {
+	// 		method: "PATCH",
+	// 		headers: {
+	// 			"Content-Type": "application/json",
+	// 		},
+	// 		body: JSON.stringify({
+	// 			friends: [...friends, {name: name, cardImage: cardImage}]
+	// 		})
+	// 	})
+	// 		.then(res => res.json())
+	// 		.then(updatedUser => setActiveUser(updatedUser))
+	// }
+
 	if (!user) return <h1>Loading...</h1>
-
-
 
 	return (
 		<div style={{
@@ -80,7 +92,17 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="box has-text-centered" style={{ width: 300}}>
-							<h1 className="is-centered">{name}'s Page</h1></div>
+							<h1 className="is-centered">{name}'s Page</h1>
+							{/* {!isActiveUser ? (
+								<div
+									class="tag"
+									style={{color: "red", cursor: "pointer"}}
+									onClick={handleAddFriend}
+								>
+									add {name} to your besties
+								</div>
+							) : null} */}
+						</div>
 						<article>
 							<section style={{overflowY: "auto", display: "flex", height: "100%", flexDirection: "column"}}>
 								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />

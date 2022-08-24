@@ -149,10 +149,22 @@
         }
       ],
       "friends": [
-        {"name": "margo", "cardImage": "https://www.linkpicture.com/q/margocrop.png"},
-        {"name": "effy", "cardImage": "https://www.linkpicture.com/q/effycrop.png"},
-        {"name": "loraine", "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"},
-        {"name": "jessa", "cardImage": "https://www.linkpicture.com/q/jessacrop.png"}
+        {
+          "name": "margo",
+          "cardImage": "https://www.linkpicture.com/q/margocrop.png"
+        },
+        {
+          "name": "effy",
+          "cardImage": "https://www.linkpicture.com/q/effycrop.png"
+        },
+        {
+          "name": "loraine",
+          "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"
+        },
+        {
+          "name": "jessa",
+          "cardImage": "https://www.linkpicture.com/q/jessacrop.png"
+        }
       ]
     },
     {
@@ -197,10 +209,22 @@
       ],
       "status": "braindead",
       "friends": [
-        {"name": "margo", "cardImage": "https://www.linkpicture.com/q/margocrop.png"},
-        {"name": "effy", "cardImage": "https://www.linkpicture.com/q/effycrop.png"},
-        {"name": "loraine", "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"},
-        {"name": "jessa", "cardImage": "https://www.linkpicture.com/q/jessacrop.png"}
+        {
+          "name": "margo",
+          "cardImage": "https://www.linkpicture.com/q/margocrop.png"
+        },
+        {
+          "name": "effy",
+          "cardImage": "https://www.linkpicture.com/q/effycrop.png"
+        },
+        {
+          "name": "loraine",
+          "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"
+        },
+        {
+          "name": "jessa",
+          "cardImage": "https://www.linkpicture.com/q/jessacrop.png"
+        }
       ],
       "id": 7
     }

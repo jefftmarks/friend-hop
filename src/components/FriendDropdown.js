@@ -13,7 +13,7 @@ function FriendDropdown ({ user }) {
 			key={friend.name}
 			renderAs="a"
 			value={friend.name}
-			href={`/user/${friend}`}
+			href={`/user/${friend.name}`}
 		>
 			<img src={friend.cardImage} alt="user" style={{marginRight: "10px"}}/>
 			{friend.name}

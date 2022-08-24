@@ -56,6 +56,7 @@ function SongForm({ user, onAddSong }) {
 						name="title"
 						value={songForm.title}
 						onChange={handleChange}
+						required
 					/>
 				</div>
 			</div>
@@ -69,6 +70,7 @@ function SongForm({ user, onAddSong }) {
 						name="artist"
 						value={songForm.artist}
 						onChange={handleChange}
+						required
 					/>
 				</div>
 			</div>
@@ -85,6 +87,7 @@ function SongForm({ user, onAddSong }) {
 						name="url"
 						value={songForm.url}
 						onChange={handleChange}
+						required
 					/>
 				</div>
 			</div>
