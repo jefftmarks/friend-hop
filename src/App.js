@@ -8,21 +8,28 @@ import { Route, Switch } from "react-router-dom";
 
 
 function App() {
-  // Tracks active username after log in
-  const [activeUsername, setActiveUsername] = useState(null);
+  // Tracks activeUser after log in
+  const [activeUser, setActiveUser] = useState(null);
   // Tracks search bar input. Both Searchbar and SearchResults component need access
   const [searchInput, setSearchInput] = useState("");
 
+  // Stores activeUser's username locally so we can persist activeUser between page reloads
   useEffect(()=>{
-    if(localStorage.getItem("user")) setActiveUsername(localStorage.getItem("user"))
+    const prevUsername = localStorage.getItem("user")
+
+    if(prevUsername) {
+      fetch(`http://localhost:4000/users?username=${prevUsername}`)
+			.then(res => res.json())
+			.then(data => setActiveUser(data[0]))
+    }
   },[])
 
 
   return (
     <>
       <NavBar
-        activeUsername={activeUsername}
-        onClickLogout={setActiveUsername} 
+        activeUser={activeUser}
+        onClickLogout={setActiveUser} 
         onChangeSearchInput={setSearchInput}
         searchInput={searchInput}
       />
@@ -31,13 +38,13 @@ function App() {
           <About />
         </Route>
         <Route path="/user/:username">
-          <UserPage activeUsername={activeUsername} />
+          <UserPage activeUser={activeUser} />
         </Route>
         <Route path="/search/:query">
-          <SearchResults setActiveUsername={setActiveUsername} handleOnCardClick={setSearchInput} />
+          <SearchResults setActiveUser={setActiveUser} handleOnCardClick={setSearchInput} />
         </Route>
         <Route exact path="/">
-          <Home activeUsername={activeUsername} setActiveUsername={setActiveUsername} />
+          <Home activeUser={activeUser} setActiveUser={setActiveUser} />
         </Route>
       </Switch>
      

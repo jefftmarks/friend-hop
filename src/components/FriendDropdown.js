@@ -1,7 +1,9 @@
 import React from "react";
 import { Dropdown, Icon } from "react-bulma-components";
 
-function FriendDropdown () {
+function FriendDropdown ({ user }) {
+
+	const { friends } = user
 
 	return (
 			<Dropdown
@@ -9,32 +11,21 @@ function FriendDropdown () {
 				right={true}
 				color=""
 				icon={<Icon><i className="fa-solid fa-chevron-down"/></Icon>}
-				label="Dropdown label"
+				label="besties"
 			>
-				<Dropdown.Item
-					renderAs="a"
-					value="item"
-				>
-					Dropdown item
-				</Dropdown.Item>
-				<Dropdown.Item
-					renderAs="a"
-					value="other"
-				>
-					Other Dropdown item
-				</Dropdown.Item>
-				<Dropdown.Item
-					renderAs="a"
-					value="active"
-				>
-					Active Dropdown item
-				</Dropdown.Item>
-				<Dropdown.Item
-					renderAs="a"
-					value="other 2"
-				>
-					Other Dropdown item
-				</Dropdown.Item>
+
+				{friends.map(friend => (
+					<Dropdown.Item
+						key={friend}
+						renderAs="a"
+						value={friend}
+						href={`/user/${friend}`}
+					>
+						{friend}
+					</Dropdown.Item>
+				))}
+
+
 			</Dropdown>
 	)
 }

@@ -6,7 +6,7 @@ const initializedForm = {
 	name: "",
 	username: "",
 	password: "",
-	isActive: true,
+	pageImage: "https://www.linkpicture.com/q/V02.jpg",
 	cardImage: "https://www.linkpicture.com/q/defaultuser.png",
 	songs: [],
 	status: "new to friend hop",

@@ -4,13 +4,13 @@ import Login from "./Login";
 import Signup from "./Signup";
 
 
-function Home({ activeUsername, setActiveUsername }) {
+function Home({ activeUser, setActiveUser }) {
 	const [hasAccount, setHasAccount] = useState(true);
 
 	const history = useHistory();
 
-	if (activeUsername) {
-		history.push(`/user/${activeUsername}`);
+	if (activeUser) {
+		history.push(`/user/${activeUser.username}`);
 	}
 
 	return (
@@ -30,7 +30,11 @@ function Home({ activeUsername, setActiveUsername }) {
 				  <div className="column"></div>
 				  <div className="box has-text-centered" style={{ width: 400, margin: "20px" }}><h1 className="is-centered" style={{fontFamily: "M PLUS Rounded c", fontWeight:"bold", fontSize:"25px"}}>Welcome back!</h1></div>
 
-						{hasAccount ? <Login setActiveUsername={setActiveUsername} setHasAccount={() => setHasAccount(false)}/> : <Signup setHasAccount={() => setHasAccount(true)} setActiveUsername={setActiveUsername} />}
+						{hasAccount ? (
+							<Login setActiveUser={setActiveUser} setHasAccount={() => setHasAccount(false)}/>
+						) : (
+							<Signup setHasAccount={() => setHasAccount(true)} setActiveUser={setActiveUser} />
+						)}
       			</div>
     			</div>
   			</div>

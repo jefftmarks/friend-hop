@@ -6,12 +6,12 @@ import { useParams } from "react-router-dom";
 import { handleAvatar } from "../utils";
 import hypernormal from "../images/default.png";
 
-function UserPage({ activeUsername }) {
+function UserPage({ activeUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
 	const [avatar, setAvatar] = useState(hypernormal);
 
-	const { name, id } = user;
+	const { name, pageImage, status } = user;
 
 	const params = useParams();
 
@@ -24,24 +24,25 @@ function UserPage({ activeUsername }) {
 				setUser(user);
 				// change avatar image depending on user status
 				handleAvatar(setAvatar, user.status)
-				// if username matches our activeUsername (user currently logged in), set isActiveUser to true, enabling certain features
-				if (user.username === activeUsername) {
+				// if username matches our activeUser.username (user currently logged in), set isActiveUser to true, enabling certain features
+				if (user.username === activeUser.username) {
 					setIsActiveUser(true);
 				}
 			})
 			.catch(e => console.error(e));
-	}, [params, user, activeUsername])
+	}, [params, user, activeUser])
 
 	if (!user) return <h1>Loading...</h1>
 
+
+
 	return (
 		<div style={{
-			backgroundImage: 'url("https://www.linkpicture.com/q/V02.jpg")',
+			backgroundImage: `url(${pageImage})`,
 			marginTop: "30px",
 			width: "100%",
 			height: "100vh",
 			backgroundSize: "cover",
-			// backgroundPosition: "50% 100%",
 			}}>
 			<div className="columns is-multiline">
 					
@@ -96,17 +97,36 @@ function UserPage({ activeUsername }) {
 								marginBottom: "20px"
 							}}>
 						</div>
-						<div
+
+						{user.isStatic ? (
+
+							<div
+							className="tags are-normal is-white has-addons buttons"
+							style={{display: "flex", justifyContent: "center"}}
+						>
+							<span className="button is-static">
+								{`${user.name} ${status}`}
+							</span>
+						</div>
+
+						) : (
+
+							<div
 							className="tags are-normal is-white has-addons buttons"
 							style={{display: "flex", justifyContent: "center"}}
 						>
 							<span className="button is-static">
 								{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
 							</span>
-							<StatusDropdown onStatusChange={setUser} id={id} status={user.status} isActiveUser={isActiveUser}/>
+							<StatusDropdown
+								onStatusChange={setUser}
+								user={user}
+								isActiveUser={isActiveUser}
+							/>
 						</div>
 
-
+						)}
+						
 					</div>
 			</div>			
 		</div>

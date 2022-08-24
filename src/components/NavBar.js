@@ -3,13 +3,13 @@ import SearchBar from "./SearchBar";
 import FriendDropdown from "./FriendDropdown";
 import { Link } from "react-router-dom";
 
-function NavBar({ activeUsername, onClickLogout, onChangeSearchInput, searchInput }) {
+function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput }) {
 
 	return (
 		<nav className="navbar" style={{justifyContent: "center"}} role="navigation" aria-label="main navigation">
 			<div className="navbar-brand" style={{height: "70px"}}>
 				{/* If user is logged in, link directs to user's profile, otherwise login page*/}
-				<Link className="navbar-item" to={activeUsername ? `/user/${activeUsername}` : "/"} >
+				<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"} >
 					<img src="https://www.linkpicture.com/q/logo1_7.png" alt="logo"  />
 				</Link>
 
@@ -25,10 +25,10 @@ function NavBar({ activeUsername, onClickLogout, onChangeSearchInput, searchInpu
 					{/* If user is logged in, link says "profile" and directs to user's profile. Otherwise, link says "home" and directs to login page*/}
 					<Link
 						className="navbar-item"
-						to={activeUsername ? `/user/${activeUsername}` : "/"}
+						to={activeUser ? `/user/${activeUser.username}` : "/"}
 						onClick={() => onChangeSearchInput("")}
 					>
-						{activeUsername ? "profile" : "home"}
+						{activeUser ? "profile" : "home"}
 					</Link>
 
 					<Link
@@ -40,7 +40,7 @@ function NavBar({ activeUsername, onClickLogout, onChangeSearchInput, searchInpu
 					</Link>
 
 					{/* If activeUsername, a logout button appears. On click, will set active user to false */}
-					{activeUsername ? (
+					{activeUser ? (
 						<Link className="navbar-item" to="/" onClick={() => {
 							localStorage.clear();
 							onChangeSearchInput("");
@@ -53,13 +53,13 @@ function NavBar({ activeUsername, onClickLogout, onChangeSearchInput, searchInpu
 				</div>
 
 				{/* If activeUsername, show Searchbar and FriendDropdown. This ternary could be merged with above, but leaving separate for now */}
-				{activeUsername ? (
+				{activeUser ? (
 					<div className="navbar-end">
 						<div className="navbar-item">
 							<SearchBar onChangeSearchInput={onChangeSearchInput} searchInput={searchInput} />
 						</div>
 						<div className="navbar-item">
-							<FriendDropdown />
+							<FriendDropdown user={activeUser} />
 						</div>
 					</div>
 				) : null}

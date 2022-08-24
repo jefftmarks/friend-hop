@@ -1,7 +1,8 @@
 import React from "react";
 import { Dropdown, Icon } from "react-bulma-components";
 
-function StatusDropdown({ onStatusChange, status, isActiveUser, id }) {
+function StatusDropdown({ onStatusChange, user, isActiveUser }) {
+	const { id, status } = user;
 
 	// when status in dropdown menu changes, run a PATCH request to update user and rerender page
 	function handleOnChange(event) {

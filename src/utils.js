@@ -7,7 +7,10 @@ import hungry from "./images/hungry.png";
 import inTheZone from "./images/inthezone.png";
 import zoinked from "./images/sleepy.png";
 import evilOblivion from "./images/cranky.png";
-
+import margo from "./images/margo.png";
+import loraine from "./images/loraine.png";
+import effy from "./images/effy.png";
+import jessa from "./images/jessa.png";
 
 export function handleAvatar(cb, value) {
 	let avatarImage = "";
@@ -39,6 +42,18 @@ export function handleAvatar(cb, value) {
 		case "evil oblivion":
 			avatarImage = evilOblivion;
 			break;
+		case "misses warped tour":
+			avatarImage = margo;
+			break;
+		case "is late for swim practice":
+			avatarImage = loraine;
+			break;
+		case "is mythical apocalyspe":
+			avatarImage = effy;
+			break;
+			case "is feeling cheeky":
+				avatarImage = jessa;
+				break;
 		default:
 			avatarImage = hypernormal;
 	}

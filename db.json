@@ -2,9 +2,143 @@
   "users": [
     {
       "id": 1,
+      "name": "Margo",
+      "username": "margo",
+      "password": "margo",
+      "isStatic": true,
+      "pageImage": "https://www.linkpicture.com/q/margopage.jpg",
+      "cardImage": "https://www.linkpicture.com/q/margocrop.png",
+      "status": "misses warped tour",
+      "songs": [
+        {
+          "title": "Nerve",
+          "artist": "The Story So Far",
+          "url": "https://soundcloud.com/purenoiserecs/the-story-so-far-nerve?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "In Bloom",
+          "artist": "Neckdeep",
+          "url": "https://soundcloud.com/neck-deep-official/in-bloom?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Cute Without the 'E'",
+          "artist": "Taking Back Sunday",
+          "url": "https://soundcloud.com/takingbacksunday/cute-without-the-e-cut-from-5?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Gives You Hell",
+          "artist": "The All-American Rejects",
+          "url": "https://soundcloud.com/wstrofficial/gives-you-hell?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Loraine",
+      "username": "loraine",
+      "password": "loraine",
+      "isStatic": true,
+      "pageImage": "https://www.linkpicture.com/q/lorainepage.jpg",
+      "cardImage": "https://www.linkpicture.com/q/lorainecrop.png",
+      "status": "is late for swim practice",
+      "songs": [
+        {
+          "title": "DoYaThing",
+          "artist": "Gorillaz",
+          "url": "https://soundcloud.com/bestfitmusic/gorillaz-ft-andre-3000-and?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Threshold",
+          "artist": "Sex Bob-ombs",
+          "url": "https://soundcloud.com/scottpilgrimmusic/sex-bob-omb-threshold-2?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Help I'm Alive",
+          "artist": "Metric",
+          "url": "https://soundcloud.com/metric-band/01-help-im-alive?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Pumped Up Kicks",
+          "artist": "Foster The People",
+          "url": "https://soundcloud.com/fosterthepeoplemusic/pumped-up-kicks?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Effy",
+      "username": "effy",
+      "password": "effy",
+      "isStatic": true,
+      "pageImage": "https://www.linkpicture.com/q/effypage.png",
+      "cardImage": "https://www.linkpicture.com/q/effycrop.png",
+      "status": "is mythical apocalyspe",
+      "songs": [
+        {
+          "title": "Ginseng Strip 2002",
+          "artist": "YUNG LEAN",
+          "url": "https://soundcloud.com/yung-lean-doer/ginseng-strip-2002?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "a different mask for each day of the week",
+          "artist": "Thanks God",
+          "url": "https://soundcloud.com/thanks_god/a-different-mask-for-each-day-of-the-week?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Boylife in EU",
+          "artist": "YUNG LEAN",
+          "url": "https://soundcloud.com/yung-lean-doer/boylife-in-eu?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "SSalvia",
+          "artist": "quicksand",
+          "url": "https://soundcloud.com/ssaliva/quicksand?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Jessa",
+      "username": "jessa",
+      "password": "jessa",
+      "isStatic": true,
+      "pageImage": "https://www.linkpicture.com/q/jessapage.jpg",
+      "cardImage": "https://www.linkpicture.com/q/jessacrop.png",
+      "status": "is feeling cheeky",
+      "songs": [
+        {
+          "title": "Yummy",
+          "artist": "Ayesha Erotica",
+          "url": "https://soundcloud.com/shitzulover07/ayesha-erotica-yummy?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Smile.Rip Rave Mix",
+          "artist": "MURDER CLUB",
+          "url": "https://soundcloud.com/murderclubmixarchive/smilerip-rave?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Grindr Gimps mix",
+          "artist": "Cyberbitch26",
+          "url": "https://soundcloud.com/rip2peteburnz/cyberbitch26-grindr-gimps-asking-for-butthole-pics?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "puke my gutzz O_o",
+          "artist": "zeija",
+          "url": "https://soundcloud.com/zeija/puke-my-gutzz-o_o-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Castle in the sky",
+          "artist": "Dj Satomi",
+          "url": "https://soundcloud.com/rip2peteburnz/dj-satomi-castle-in-the-sky?si=6c23aa0343974fdfb1e6e2d2723ac692&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ]
+    },
+    {
+      "id": 5,
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "in the zone",
       "songs": [
@@ -13,13 +147,15 @@
           "artist": "cranklin crooner",
           "url": "https://soundcloud.com/cranklincroons/pull-up?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
-      ]
+      ],
+      "friends": ["margo", "effy", "loraine", "jessa"]
     },
     {
       "name": "Shrek",
       "username": "shrek_rules",
       "password": "shrek",
-      "id": 3,
+      "id": 6,
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "angelic",
       "songs": [
@@ -34,6 +170,7 @@
       "name": "Sky",
       "username": "sky_rules",
       "password": "rainbows",
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "songs": [
         {
@@ -53,12 +190,13 @@
         }
       ],
       "status": "braindead",
-      "id": 4
+      "id": 7
     },
     {
       "name": "Umut YILDIRIM",
       "username": "hope",
       "password": "umut475475",
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "songs": [
         {
@@ -73,31 +211,7 @@
         }
       ],
       "status": "blissed out",
-      "id": 5
-    },
-    {
-      "name": "sky",
-      "username": "kjdf",
-      "password": "111111",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "songs": [
-        {
-          "title": "The middle",
-          "artist": "Jimmy eats the world",
-          "url": "https://soundcloud.com/jimmyeatworld/the-middle?si=39553f1306b64a5c80c4398faa38e125&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        }
-      ],
-      "status": "angelic",
-      "id": 6
-    },
-    {
-      "name": "A1",
-      "username": "hmm",
-      "password": "password",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "id": 7
+      "id": 8
     }
   ]
 }
