@@ -16,6 +16,11 @@ function UserPage({ activeUser, setActiveUser }) {
 
 	const params = useParams();
 
+
+	// modal try out demo thingy 
+
+	function handlePopUp(e) {
+
 	function checkFriendStatus() {
 		if (user.username !== activeUser.username) {
 			activeUser.friends.forEach(friend => {
@@ -70,12 +75,15 @@ function UserPage({ activeUser, setActiveUser }) {
 	return (
 		<div style={{
 			backgroundImage: `url(${pageImage})`,
-			marginTop: "30px",
+			backgroundColor: "black",
+			marginTop: "20px",
 			width: "100%",
 			height: "100vh",
-			backgroundSize: "cover"
+			backgroundSize: "cover",
+			backgroundPosition: "center",
+
 			}}>
-			<div className="columns is-multiline">
+			<div className="columns">
 					
   				<div className="column is-1">
 						<div className="column"></div>
@@ -88,6 +96,9 @@ function UserPage({ activeUser, setActiveUser }) {
 						<div className="buttons is-centered" style={{padding: "20px"}}>
 						
 							<div className="column"></div>
+							{/* <button className="js-modal-trigger" onClick={handlePopUp}>
+  									Open JS example modal
+							</button> */}
 							<button className="tag is-normal is-dark" style={{marginLeft: "20px"}}>based mode</button>
 							<div className="column is-2"></div>
 							<button className="tag is-small is-dark" style={{marginLeft: "20px"}}>non-anime mode</button>
@@ -111,6 +122,11 @@ function UserPage({ activeUser, setActiveUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="box has-text-centered" style={{ width: 300}}>
+
+							<h1 className="is-centered">{name}'s Page</h1></div>
+						<article style={{maxHeight: "1000px"}}>
+							<section style={{overflowY: "auto", display: "flex", height: "100%", maxHeight: "640px",flexDirection: "column"}}>
+
 							<h1 className="is-centered">{name}'s Page</h1>
 							{!isActiveUser ? (
 								<div
@@ -124,23 +140,27 @@ function UserPage({ activeUser, setActiveUser }) {
 						</div>
 						<article>
 							<section style={{overflowY: "auto", display: "flex", height: "100%", flexDirection: "column"}}>
+
 								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
 							</section>
 						</article>	
 					</div>
-					<div className="column is-3">
-					<div style={{
-								height: "100%",
-								width: "100%",
+					<div className="column is-3" style={{position: "relative"}}>
+					<img src={avatar}
+					style={{
+								position: "absolute",
+								top: "-4em",
+								right: "3.5em",
 								
-								backgroundImage: `url("${avatar}")`,
-								backgroundPosition: "35% 50%",
-								backgroundRepeat: "no-repeat",
-								backgroundPositionX: "center",
-								marginBottom: "10px"
-							}}>
-						</div>
-
+								marginLeft: "10%",
+								
+								maxHeight:"120%",
+								
+								width: "80%",
+							
+							}}/>
+						
+						
 						{/* if user is one of our preset bot users, page layout will be slightly different */}
 						{user.isStatic ? (
 
@@ -155,10 +175,10 @@ function UserPage({ activeUser, setActiveUser }) {
 
 						) : (
 
-
+ 
 							<div
 							className="tags are-normal is-white has-addons buttons"
-							style={{display: "flex", justifyContent: "center", position: "20%"}}
+							style={{display: "flex", justifyContent: "center", marginLeft: "0px", marginTop: "190%"}}
 						>
 							<span className="button is-static">
 								{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
