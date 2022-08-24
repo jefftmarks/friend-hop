@@ -30,7 +30,7 @@ function SongCard({ url, user, onDeleteSong }) {
 				visual={false}
 				hideRelated={true}
 			/>
-			<button onClick={onDeleteClick}>remove</button>
+			<span class="tag is-dark" style={{float: "right", marginBottom: ""}} onClick={onDeleteClick}>remove</span>
 		</div>
 	)
 }
