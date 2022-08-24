@@ -6,6 +6,7 @@ import UserPage from "./components/UserPage"
 import SearchResults from "./components/SearchResults";
 import { Route, Switch } from "react-router-dom";
 
+
 function App() {
   // Tracks active user after log in
   const [activeUser, setActiveUser] = useState(null);
