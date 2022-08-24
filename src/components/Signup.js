@@ -6,12 +6,13 @@ const initializedForm = {
 	name: "",
 	username: "",
 	password: "",
+	pageImage: "https://www.linkpicture.com/q/V02.jpg",
 	cardImage: "https://www.linkpicture.com/q/defaultuser.png",
 	songs: [],
 	status: "new to friend hop",
 }
 
-function Signup({ setHasAccount, setActiveUser }) {
+function Signup({ setHasAccount, setActiveUsername }) {
 	const [formData, setFormData] = useState(initializedForm);
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [passwordsMatch, setPasswordsMatch] = useState(false);
@@ -26,7 +27,7 @@ function Signup({ setHasAccount, setActiveUser }) {
 		if (
 			formData.password === confirmPassword
 			&& formData.password !== ""
-			&& formData.password.length >= 5
+			&& formData.password.length >= 3
 		) {
 			setPasswordsMatch(true);
 		} else {
@@ -53,7 +54,7 @@ function Signup({ setHasAccount, setActiveUser }) {
 					})
 						.then(res => res.json())
 						.then(newUser => {
-							setActiveUser(newUser);
+							setActiveUsername(newUser.username);
 							history.push(`/user/${newUser.username}`);
 						})
 						.catch(e => console.error(e))

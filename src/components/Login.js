@@ -30,6 +30,7 @@ function Login({ setHasAccount, setActiveUser }) {
 			setFormData(initializedForm);
 		} else {
 			setActiveUser(user);
+			localStorage.setItem("user",user.username)
 			history.push(`/user/${user.username}`);
 		}
 	}

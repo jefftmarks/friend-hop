@@ -23,30 +23,43 @@ function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput })
 			<div id="navbarBasicExample" className="navbar-menu">
 				<div className="navbar-start">
 					{/* If user is logged in, link says "profile" and directs to user's profile. Otherwise, link says "home" and directs to login page*/}
-					<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"}>
+					<Link
+						className="navbar-item"
+						to={activeUser ? `/user/${activeUser.username}` : "/"}
+						onClick={() => onChangeSearchInput("")}
+					>
 						{activeUser ? "profile" : "home"}
 					</Link>
 
-					<Link className="navbar-item" to="/about">
+					<Link
+						className="navbar-item"
+						to="/about"
+						onClick={() => onChangeSearchInput("")}
+					>
 						about
 					</Link>
 
-					{/* If activeuser, a logout button appears. On click, will set active user to false */}
+					{/* If activeUsername, a logout button appears. On click, will set active user to false */}
 					{activeUser ? (
-						<Link className="navbar-item" to="/" onClick={() => onClickLogout(false)}>
+						<Link className="navbar-item" to="/" onClick={() => {
+							localStorage.clear();
+							onChangeSearchInput("");
+							onClickLogout(false);
+						}}
+						>	
 						logout
 					</Link>
 					) : null}
 				</div>
 
-				{/* If activeuser, show Searchbar and FriendDropdown. This ternary could be merged with above, but leaving separate for now */}
+				{/* If activeUsername, show Searchbar and FriendDropdown. This ternary could be merged with above, but leaving separate for now */}
 				{activeUser ? (
 					<div className="navbar-end">
 						<div className="navbar-item">
 							<SearchBar onChangeSearchInput={onChangeSearchInput} searchInput={searchInput} />
 						</div>
 						<div className="navbar-item">
-							<FriendDropdown />
+							<FriendDropdown user={activeUser} />
 						</div>
 					</div>
 				) : null}

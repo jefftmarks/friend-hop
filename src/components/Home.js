@@ -1,11 +1,17 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Login from "./Login";
 import Signup from "./Signup";
 
 
-function Home({ setActiveUser }) {
+function Home({ activeUser, setActiveUser }) {
 	const [hasAccount, setHasAccount] = useState(true);
 
+	const history = useHistory();
+
+	if (activeUser) {
+		history.push(`/user/${activeUser.username}`);
+	}
 
 	return (
 		<div style={{ 
@@ -24,7 +30,11 @@ function Home({ setActiveUser }) {
 				  <div className="column"></div>
 				  <div className="box has-text-centered" style={{ width: 400, margin: "20px" }}><h1 className="is-centered" style={{fontFamily: "", fontWeight:"bold", fontSize:"25px"}}>Welcome back!</h1></div>
 
-						{hasAccount ? <Login setActiveUser={setActiveUser} setHasAccount={() => setHasAccount(false)}/> : <Signup setHasAccount={() => setHasAccount(true)} setActiveUser={setActiveUser} />}
+						{hasAccount ? (
+							<Login setActiveUser={setActiveUser} setHasAccount={() => setHasAccount(false)}/>
+						) : (
+							<Signup setHasAccount={() => setHasAccount(true)} setActiveUser={setActiveUser} />
+						)}
       			</div>
     			</div>
   			</div>

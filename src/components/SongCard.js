@@ -1,16 +1,36 @@
 import React from "react";
 import ReactSoundCloud from "react-soundcloud-embedded";
 
-function SongCard({ url }) {
+function SongCard({ url, user, onDeleteSong }) {
+	const { id } = user
+
+	function onDeleteClick() {
+		const updatedSongs = user.songs.filter(song => {
+			return (song.url !== url)
+		})
+
+		fetch(`http://localhost:4000/users/${id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				...user,
+				songs: updatedSongs,
+			})
+		})
+			.then(res => res.json())
+			.then(updatedUser => onDeleteSong(updatedUser))
+	}
 
 	return (
-		<div>
+		<div className="box">
 			<ReactSoundCloud
 				url={url}
-				showUser={false}
 				visual={false}
 				hideRelated={true}
 			/>
+			<span class="tag is-dark" style={{float: "right", marginBottom: ""}} onClick={onDeleteClick}>remove</span>
 		</div>
 	)
 }

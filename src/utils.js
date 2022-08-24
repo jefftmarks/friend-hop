@@ -1,35 +1,61 @@
+import hypernormal from "./images/default.png";
+import angelic from "./images/angelic.png";
+import braindead from "./images/braindead.png";
+import blissedOut from "./images/happy.png";
+import extraSpecial from "./images/great.png";
+import hungry from "./images/hungry.png";
+import inTheZone from "./images/inthezone.png";
+import zoinked from "./images/sleepy.png";
+import evilOblivion from "./images/cranky.png";
+import margo from "./images/margo.png";
+import loraine from "./images/loraine.png";
+import effy from "./images/effy.png";
+import jessa from "./images/jessa.png";
+
 export function handleAvatar(cb, value) {
 	let avatarImage = "";
 	switch (value) {
 		case "hypernormal":
-				avatarImage = "https://www.linkpicture.com/q/default_1.png";
+				avatarImage = hypernormal;
 				break;
 		case "angelic":
-				avatarImage = "https://www.linkpicture.com/q/angelic.png";
+				avatarImage = angelic;
 				break;
 		case "braindead":
-				avatarImage = "https://www.linkpicture.com/q/braindead.png";
+				avatarImage = braindead;
 				break;
 		case "blissed out":
-				avatarImage = "https://www.linkpicture.com/q/happy_2.png";
+				avatarImage = blissedOut;
 				break;
 		case "extra special":
-			avatarImage = "https://www.linkpicture.com/q/great.png";
+			avatarImage = extraSpecial;
 			break;
 		case "hungry":
-			avatarImage = "https://www.linkpicture.com/q/hungry.png";
+			avatarImage = hungry;
 			break;
 		case "in the zone":
-			avatarImage = "https://www.linkpicture.com/q/inthezone.png";
+			avatarImage = inTheZone;
 			break;
 		case "zoinked":
-			avatarImage = "https://www.linkpicture.com/q/sleepy_1.png";
+			avatarImage = zoinked;
 			break;
 		case "evil oblivion":
-			avatarImage = "https://www.linkpicture.com/q/cranky.png";
+			avatarImage = evilOblivion;
 			break;
+		case "misses warped tour":
+			avatarImage = margo;
+			break;
+		case "is late for swim practice":
+			avatarImage = loraine;
+			break;
+		case "is mythical apocalyspe":
+			avatarImage = effy;
+			break;
+			case "is feeling cheeky":
+				avatarImage = jessa;
+				break;
 		default:
-			avatarImage = "https://www.linkpicture.com/q/default_1.png";
+			avatarImage = hypernormal;
 	}
 	cb(avatarImage);
 }
