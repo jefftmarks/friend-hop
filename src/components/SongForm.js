@@ -37,6 +37,14 @@ function SongForm({ user, onAddSong }) {
 	}
 
 	return (
+
+	// <div id="addmusicform" className="modal">
+	// 	<div className="modal-background"></div>
+	// 		<div className="modal-content">
+
+			
+		
+
 		<form onSubmit={handleSubmit}>
 		<div className="columns">
 			<div className="column is-half">
@@ -99,6 +107,8 @@ function SongForm({ user, onAddSong }) {
 			</div>
 			</div>
 		</form>
+		// </div>
+	// </div>
 	)
 }
 

@@ -15,6 +15,12 @@ function UserPage({ activeUser }) {
 
 	const params = useParams();
 
+	// modal try out demo thingy 
+
+	function handlePopUp(e) {
+
+	}
+
 	// when params (i.e. username) changes, perform a fetch looking for that username
 	useEffect(() => {
 		fetch(`http://localhost:4000/users?username=${params.username}`)
@@ -42,9 +48,11 @@ function UserPage({ activeUser }) {
 			marginTop: "30px",
 			width: "100%",
 			height: "100vh",
-			backgroundSize: "cover"
+			backgroundSize: "cover",
+			backgroundPosition: "center",
+
 			}}>
-			<div className="columns is-multiline">
+			<div className="columns">
 					
   				<div className="column is-1">
 						<div className="column"></div>
@@ -57,6 +65,9 @@ function UserPage({ activeUser }) {
 						<div className="buttons is-centered" style={{padding: "20px"}}>
 						
 							<div className="column"></div>
+							{/* <button className="js-modal-trigger" onClick={handlePopUp}>
+  									Open JS example modal
+							</button> */}
 							<button className="tag is-normal is-dark" style={{marginLeft: "20px"}}>based mode</button>
 							<div className="column is-2"></div>
 							<button className="tag is-small is-dark" style={{marginLeft: "20px"}}>non-anime mode</button>
@@ -81,7 +92,7 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="box has-text-centered" style={{ width: 300}}>
 							<h1 className="is-centered">{name}'s Page</h1></div>
-						<article>
+						<article style={{maxHeight: "1000px"}}>
 							<section style={{overflowY: "auto", display: "flex", height: "100%", flexDirection: "column"}}>
 								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
 							</section>
@@ -93,7 +104,7 @@ function UserPage({ activeUser }) {
 								width: "100%",
 								
 								backgroundImage: `url("${avatar}")`,
-								backgroundPosition: "35% 50%",
+								backgroundPosition: "35% 65%",
 								backgroundRepeat: "no-repeat",
 								backgroundPositionX: "center",
 								marginBottom: "10px"
@@ -117,7 +128,7 @@ function UserPage({ activeUser }) {
 
 							<div
 							className="tags are-normal is-white has-addons buttons"
-							style={{display: "flex", justifyContent: "center", position: "20%"}}
+							style={{display: "flex", justifyContent: "center"}}
 						>
 							<span className="button is-static">
 								{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
