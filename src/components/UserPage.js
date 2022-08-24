@@ -45,7 +45,8 @@ function UserPage({ activeUser }) {
 	return (
 		<div style={{
 			backgroundImage: `url(${pageImage})`,
-			marginTop: "30px",
+			backgroundColor: "black",
+			marginTop: "20px",
 			width: "100%",
 			height: "100vh",
 			backgroundSize: "cover",
@@ -93,21 +94,22 @@ function UserPage({ activeUser }) {
 						<div className="box has-text-centered" style={{ width: 300}}>
 							<h1 className="is-centered">{name}'s Page</h1></div>
 						<article style={{maxHeight: "1000px"}}>
-							<section style={{overflowY: "auto", display: "flex", height: "100%", flexDirection: "column"}}>
+							<section style={{overflowY: "auto", display: "flex", height: "100%", maxHeight: "640px",flexDirection: "column"}}>
 								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
 							</section>
 						</article>	
 					</div>
 					<div className="column is-3">
 					<div style={{
-								height: "100%",
+								height: "130%",
 								width: "100%",
-								
+								marginTop:"-65%",
 								backgroundImage: `url("${avatar}")`,
-								backgroundPosition: "35% 65%",
+								backgroundPosition: "80% 80%",
 								backgroundRepeat: "no-repeat",
 								backgroundPositionX: "center",
-								marginBottom: "10px"
+								marginBottom: "-20%",
+								backgroundSize: "100%"
 							}}>
 						</div>
 
