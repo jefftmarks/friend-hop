@@ -2,18 +2,18 @@ import React from "react";
 import SongCard from "./SongCard";
 import SongForm from "./SongForm";
 
-function SongContainer({ user, userIsActive, onAddSong }) {
+function SongContainer({ user, isActiveUser, onChangeSongs }) {
 	const { songs } = user;
 
 	// if songs present, map song cards
 	const renderedSongCards = songs ? songs.map(song => (
-		<SongCard key={song.title} url={song.url} />
+		<SongCard key={song.title} url={song.url} user={user} onDeleteSong={onChangeSongs} />
 	)) : null;
 
 	return (
 		<div>
 			{renderedSongCards}
-			{userIsActive ? <SongForm user={user} onAddSong={onAddSong} /> : null}
+			{isActiveUser ? <SongForm user={user} onAddSong={onChangeSongs} /> : null}
 		</div>
 	)
 }

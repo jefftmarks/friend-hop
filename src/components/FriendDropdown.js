@@ -35,13 +35,6 @@ function FriendDropdown () {
 				>
 					Other Dropdown item
 				</Dropdown.Item>
-				<Dropdown.Divider />
-				<Dropdown.Item
-					renderAs="a"
-					value="divider"
-				>
-					After divider
-				</Dropdown.Item>
 			</Dropdown>
 	)
 }

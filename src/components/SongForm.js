@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 
+const intializedSongForm = {
+	title: "",
+	artist: "",
+	url: "",
+}
+
 function SongForm({ user, onAddSong }) {
-	const [songForm, setSongForm] = useState({
-		title: "",
-		artist: "",
-		url: "",
-	})
-	const { id, songs } = user;
+	const [songForm, setSongForm] = useState(intializedSongForm)
+	const { id, songs } = user;	
 
 	// update form data
 	function handleChange(event) {
@@ -27,7 +29,11 @@ function SongForm({ user, onAddSong }) {
 			}),
 		})
 			.then(res => res.json())
-			.then(updatedUser => onAddSong(updatedUser) )
+			.then(updatedUser => {
+				onAddSong(updatedUser);
+				setSongForm(intializedSongForm);
+			})
+			.catch(e => console.error(e))
 	}
 
 	return (

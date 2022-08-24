@@ -3,13 +3,13 @@ import SearchBar from "./SearchBar";
 import FriendDropdown from "./FriendDropdown";
 import { Link } from "react-router-dom";
 
-function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput }) {
+function NavBar({ activeUsername, onClickLogout, onChangeSearchInput, searchInput }) {
 
 	return (
 		<nav className="navbar" style={{justifyContent: "center"}} role="navigation" aria-label="main navigation">
 			<div className="navbar-brand" style={{height: "70px"}}>
 				{/* If user is logged in, link directs to user's profile, otherwise login page*/}
-				<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"} >
+				<Link className="navbar-item" to={activeUsername ? `/user/${activeUsername}` : "/"} >
 					<img src="https://www.linkpicture.com/q/logo1_7.png" alt="logo"  />
 				</Link>
 
@@ -23,24 +23,37 @@ function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput })
 			<div id="navbarBasicExample" className="navbar-menu">
 				<div className="navbar-start">
 					{/* If user is logged in, link says "profile" and directs to user's profile. Otherwise, link says "home" and directs to login page*/}
-					<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"}>
-						{activeUser ? "profile" : "home"}
+					<Link
+						className="navbar-item"
+						to={activeUsername ? `/user/${activeUsername}` : "/"}
+						onClick={() => onChangeSearchInput("")}
+					>
+						{activeUsername ? "profile" : "home"}
 					</Link>
 
-					<Link className="navbar-item" to="/about">
+					<Link
+						className="navbar-item"
+						to="/about"
+						onClick={() => onChangeSearchInput("")}
+					>
 						about
 					</Link>
 
-					{/* If activeuser, a logout button appears. On click, will set active user to false */}
-					{activeUser ? (
-						<Link className="navbar-item" to="/" onClick={() => onClickLogout(false)}>
+					{/* If activeUsername, a logout button appears. On click, will set active user to false */}
+					{activeUsername ? (
+						<Link className="navbar-item" to="/" onClick={() => {
+							localStorage.clear();
+							onChangeSearchInput("");
+							onClickLogout(false);
+						}}
+						>	
 						logout
 					</Link>
 					) : null}
 				</div>
 
-				{/* If activeuser, show Searchbar and FriendDropdown. This ternary could be merged with above, but leaving separate for now */}
-				{activeUser ? (
+				{/* If activeUsername, show Searchbar and FriendDropdown. This ternary could be merged with above, but leaving separate for now */}
+				{activeUsername ? (
 					<div className="navbar-end">
 						<div className="navbar-item">
 							<SearchBar onChangeSearchInput={onChangeSearchInput} searchInput={searchInput} />
