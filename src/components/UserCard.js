@@ -16,9 +16,9 @@ function UserCard({ user, query, handleOnCardClick }) {
 	const matches = songs.filter(song => {
 		return song.artist.toLowerCase().includes(query.toLowerCase()) || song.title.toLowerCase().includes(query.toLowerCase());
 	})
-
+	
 	return (
-		<div className="box" style={{paddingBottom: "2.22rem", cursor: "pointer"}} onClick={onCardClick}>
+		<div className="box" style={{paddingBottom: "2.22rem", cursor: "pointer", width: "auto", margin: "20px" }} onClick={onCardClick}>
 			<div className="media-left" style={{float: "left"}}>
 				<figure className="image is-64x64">
 					<img src={cardImage} alt="avatar" />

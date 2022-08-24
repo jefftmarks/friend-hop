@@ -46,7 +46,7 @@ function SongForm({ user, onAddSong }) {
 					<input
 						className="input is-medium"
 						type="text"
-						placeholder="doritos &amp; fritos"
+						placeholder="song title: doritos &amp; fritos"
 						name="title"
 						value={songForm.title}
 						onChange={handleChange}
@@ -59,7 +59,7 @@ function SongForm({ user, onAddSong }) {
 					<input
 						className="input is-medium"
 						type="text"
-						placeholder='100 gecs'
+						placeholder='artist: 100 gecs'
 						name="artist"
 						value={songForm.artist}
 						onChange={handleChange}
@@ -75,7 +75,7 @@ function SongForm({ user, onAddSong }) {
 					<input
 						className="input is-medium"
 						type="text"
-						placeholder="sad soundcloud link"
+						placeholder="enter soundcloud link "
 						name="url"
 						value={songForm.url}
 						onChange={handleChange}

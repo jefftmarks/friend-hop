@@ -90,9 +90,7 @@ function UserPage({ activeUser }) {
 							<div className="column"></div>
 							<div className="column"></div>
 							<div className="column"></div>
-							
-							
-						
+					
 
 					</div>
 					<div className="column"> 
@@ -110,7 +108,6 @@ function UserPage({ activeUser }) {
 								width: "100%",
 								
 								backgroundImage: `url("${avatar}")`,
-								
 								backgroundPosition: "35% 70%",
 								backgroundRepeat: "no-repeat",
 								backgroundPositionX: "center",
