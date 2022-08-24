@@ -28,7 +28,7 @@ function Home({ activeUser, setActiveUser }) {
     			<div className="columns is-mobile">
       			<div className="column is-half">
 				  <div className="column"></div>
-				  <div className="box has-text-centered" style={{ width: 400, margin: "20px" }}><h1 className="is-centered" style={{fontFamily: "M PLUS Rounded c", fontWeight:"bold", fontSize:"25px"}}>Welcome back!</h1></div>
+				  <div className="box has-text-centered" style={{ width: 400, margin: "20px" }}><h1 className="is-centered" style={{fontFamily: "", fontWeight:"bold", fontSize:"25px"}}>Welcome back!</h1></div>
 
 						{hasAccount ? (
 							<Login setActiveUser={setActiveUser} setHasAccount={() => setHasAccount(false)}/>

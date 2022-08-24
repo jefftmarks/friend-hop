@@ -81,9 +81,11 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="box has-text-centered" style={{ width: 300}}>
 							<h1 className="is-centered">{name}'s Page</h1></div>
-							
-						<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
-
+						<article>
+							<section style={{overflowY: "auto", display: "flex", height: "100%", flexDirection: "column"}}>
+								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
+							</section>
+						</article>	
 					</div>
 					<div className="column is-3">
 					<div style={{
@@ -91,10 +93,10 @@ function UserPage({ activeUser }) {
 								width: "100%",
 								
 								backgroundImage: `url("${avatar}")`,
-								backgroundPosition: "35% 70%",
+								backgroundPosition: "35% 0%",
 								backgroundRepeat: "no-repeat",
 								backgroundPositionX: "center",
-								marginBottom: "20px"
+								marginBottom: "-200px"
 							}}>
 						</div>
 
@@ -113,7 +115,7 @@ function UserPage({ activeUser }) {
 
 							<div
 							className="tags are-normal is-white has-addons buttons"
-							style={{display: "flex", justifyContent: "center"}}
+							style={{display: "flex", justifyContent: "center", position: "-20%"}}
 						>
 							<span className="button is-static">
 								{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
