@@ -99,20 +99,22 @@ function UserPage({ activeUser }) {
 							</section>
 						</article>	
 					</div>
-					<div className="column is-3">
-					<div style={{
-								height: "130%",
-								width: "100%",
-								marginTop:"-65%",
-								backgroundImage: `url("${avatar}")`,
-								backgroundPosition: "80% 80%",
-								backgroundRepeat: "no-repeat",
-								backgroundPositionX: "center",
-								marginBottom: "-20%",
-								backgroundSize: "100%"
-							}}>
-						</div>
-
+					<div className="column is-3" style={{position: "relative"}}>
+					<img src={avatar}
+					style={{
+								position: "absolute",
+								top: "-4em",
+								right: "3.5em",
+								
+								marginLeft: "10%",
+								
+								maxHeight:"120%",
+								
+								width: "80%",
+							
+							}}/>
+						
+						
 						{/* if user is one of our preset bot users, page layout will be slightly different */}
 						{user.isStatic ? (
 
@@ -130,7 +132,7 @@ function UserPage({ activeUser }) {
 
 							<div
 							className="tags are-normal is-white has-addons buttons"
-							style={{display: "flex", justifyContent: "center"}}
+							style={{display: "flex", justifyContent: "center", marginLeft: "0px", marginTop: "190%"}}
 						>
 							<span className="button is-static">
 								{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
