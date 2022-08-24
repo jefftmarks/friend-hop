@@ -140,7 +140,7 @@
       "password": "11111",
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "angelic",
+      "status": "hypernormal",
       "songs": [
         {
           "title": "PULL UP",
@@ -151,18 +151,22 @@
       "friends": [
         {
           "name": "margo",
+          "username": "margo",
           "cardImage": "https://www.linkpicture.com/q/margocrop.png"
         },
         {
           "name": "effy",
+          "username": "effy",
           "cardImage": "https://www.linkpicture.com/q/effycrop.png"
         },
         {
           "name": "loraine",
+          "username": "loraine",
           "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"
         },
         {
           "name": "jessa",
+          "username": "jessa",
           "cardImage": "https://www.linkpicture.com/q/jessacrop.png"
         }
       ]
@@ -211,18 +215,22 @@
       "friends": [
         {
           "name": "margo",
+          "username": "margo",
           "cardImage": "https://www.linkpicture.com/q/margocrop.png"
         },
         {
           "name": "effy",
+          "username": "effy",
           "cardImage": "https://www.linkpicture.com/q/effycrop.png"
         },
         {
           "name": "loraine",
+          "username": "loraine",
           "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"
         },
         {
           "name": "jessa",
+          "username": "jessa",
           "cardImage": "https://www.linkpicture.com/q/jessacrop.png"
         }
       ],
