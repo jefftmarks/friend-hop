@@ -52,21 +52,69 @@ function UserPage({ activeUser }) {
 	return (
 		<div style={{
 			backgroundImage: 'url("https://www.linkpicture.com/q/V02.jpg")',
+			marginTop: "30px",
 			width: "100%",
 			height: "100vh",
 			backgroundSize: "cover",
 			// backgroundPosition: "50% 100%",
 			}}>
 			<div className="columns is-multiline">
-  				<div className="column is-4">
-						<div style={{
-								height: "520px",
-								width: "80%",
-								margin: "auto",
+  				
+						
+					
+  				<div className="column is-1">
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="column"></div>
+						
+						
+						<div className="buttons is-centered" style={{padding: "20px"}}>
+						
+							<div className="column"></div>
+							<button className="button is-normal is-dark">based mode</button>
+							<div className="column is-3"></div>
+							<button className="button is-small is-light">non-anime mode</button>
+							<div className="column is-4"></div>
+						
+						</div>
+							<div className="column"></div>
+							<div className="column"></div>
+							<div className="column"></div>
+							<div className="column"></div>
+							<div className="column"></div>
+							<div className="column"></div>
+							<div className="column"></div>
+							<div className="column"></div>
+							<div className="column"></div>
+							<div className="column"></div>
+							
+							
+						
+
+					</div>
+					<div className="column"> 
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="column"></div>
+						<div className="box has-text-centered" style={{ width: 300}}>
+							<h1 className="is-centered">{name}'s Page</h1></div>
+						<SongContainer user={user} userIsActive={userIsActive} onAddSong={setUser} />
+
+					</div>
+					<div className="column is-3">
+					<div style={{
+								height: "100%",
+								width: "100%",
+								
 								backgroundImage: `url("${avatar}")`,
-								backgroundSize: "180%",
-								backgroundPosition: "50% 70%",
+								
+								backgroundPosition: "35% 70%",
 								backgroundRepeat: "no-repeat",
+								backgroundPositionX: "center",
+								marginBottom: "20px"
 							}}>
 						</div>
 						<div
@@ -78,22 +126,8 @@ function UserPage({ activeUser }) {
 							</span>
 							<StatusDropdown onStatusChange={handleStatusChange} status={user.status} userIsActive={userIsActive}/>
 						</div>
-					</div>
-  				<div className="column is-1">
-						<div className="column"></div>
-						<div className="column"></div>
-						<div className="column"></div>
-						<div className="buttons is-centered">
-							<button className=" button is-small is-rounded">light mode</button>
-							<button className="button is-small is-black is-rounded">dark mode</button>
-						</div>
-					</div>
-					<div className="column"> 
-						<div className="column"></div>
-						<div className="column"></div>
-						<div className="column"></div>
-						<div className="box has-text-centered"><h1 className="is-centered">{name}'s Page</h1></div>
-						<SongContainer user={user} userIsActive={userIsActive} onAddSong={setUser} />
+
+
 					</div>
 			</div>			
 		</div>

@@ -16,9 +16,13 @@ function Home({ setActiveUser }) {
 			height: "100vh"
     }}>
 			<div className="columns">
+			
   			<div className="column">
     			<div className="columns is-mobile">
       			<div className="column is-half">
+				  <div className="column"></div>
+				  <div className="box has-text-centered" style={{ width: 400, margin: "20px" }}><h1 className="is-centered">Welcome back!</h1></div>
+
 						{hasAccount ? <Login setActiveUser={setActiveUser} setHasAccount={() => setHasAccount(false)}/> : <Signup setHasAccount={() => setHasAccount(true)} setActiveUser={setActiveUser} />}
       			</div>
     			</div>
