@@ -140,7 +140,7 @@
       "password": "11111",
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "hungry",
+      "status": "angelic",
       "songs": [
         {
           "title": "PULL UP",
@@ -149,10 +149,10 @@
         }
       ],
       "friends": [
-        "margo",
-        "effy",
-        "loraine",
-        "jessa"
+        {"name": "margo", "cardImage": "https://www.linkpicture.com/q/margocrop.png"},
+        {"name": "effy", "cardImage": "https://www.linkpicture.com/q/effycrop.png"},
+        {"name": "loraine", "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"},
+        {"name": "jessa", "cardImage": "https://www.linkpicture.com/q/jessacrop.png"}
       ]
     },
     {
@@ -163,6 +163,7 @@
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "status": "angelic",
+      "friends": [],
       "songs": [
         {
           "title": "This is Halloween (Screamo Cover)",
@@ -196,33 +197,12 @@
       ],
       "status": "braindead",
       "friends": [
-        "margo",
-        "effy",
-        "loraine",
-        "jessa"
+        {"name": "margo", "cardImage": "https://www.linkpicture.com/q/margocrop.png"},
+        {"name": "effy", "cardImage": "https://www.linkpicture.com/q/effycrop.png"},
+        {"name": "loraine", "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"},
+        {"name": "jessa", "cardImage": "https://www.linkpicture.com/q/jessacrop.png"}
       ],
       "id": 7
-    },
-    {
-      "name": "Umut YILDIRIM",
-      "username": "hope",
-      "password": "umut475475",
-      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "songs": [
-        {
-          "title": "",
-          "artist": "",
-          "url": "https://soundcloud.com/iyininkotusu/adamlar-koca-yasli-sisko-dunya?si=af5a990d77b74ce099467fcd5ae94568&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "Koca Yasli Sisko Dunya",
-          "artist": "Adamlar",
-          "url": "https://soundcloud.com/iyininkotusu/adamlar-koca-yasli-sisko-dunya?si=af5a990d77b74ce099467fcd5ae94568&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        }
-      ],
-      "status": "blissed out",
-      "id": 8
     }
   ]
 }
