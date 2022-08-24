@@ -175,7 +175,7 @@ function UserPage({ activeUser, setActiveUser }) {
 
 						) : (
 
- 
+
 							<div
 							className="tags are-normal is-white has-addons buttons"
 							style={{display: "flex", justifyContent: "center", marginLeft: "0px", marginTop: "190%"}}
