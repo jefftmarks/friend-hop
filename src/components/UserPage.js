@@ -42,7 +42,7 @@ function UserPage({ activeUser }) {
 			marginTop: "30px",
 			width: "100%",
 			height: "100vh",
-			backgroundSize: "cover",
+			backgroundSize: "cover"
 			}}>
 			<div className="columns is-multiline">
 					
@@ -93,13 +93,14 @@ function UserPage({ activeUser }) {
 								width: "100%",
 								
 								backgroundImage: `url("${avatar}")`,
-								backgroundPosition: "35% 0%",
+								backgroundPosition: "35% 50%",
 								backgroundRepeat: "no-repeat",
 								backgroundPositionX: "center",
-								marginBottom: "-200px"
+								marginBottom: "10px"
 							}}>
 						</div>
 
+						{/* if user is one of our preset bot users, page layout will be slightly different */}
 						{user.isStatic ? (
 
 							<div
@@ -113,9 +114,10 @@ function UserPage({ activeUser }) {
 
 						) : (
 
+
 							<div
 							className="tags are-normal is-white has-addons buttons"
-							style={{display: "flex", justifyContent: "center", position: "-20%"}}
+							style={{display: "flex", justifyContent: "center", position: "20%"}}
 						>
 							<span className="button is-static">
 								{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
