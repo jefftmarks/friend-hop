@@ -42,8 +42,11 @@ function SearchResults({ handleOnCardClick }) {
 
  return (
 	<>
+		<div className="box" style={{ width: "auto", margin: "20px", marginRight: "90%"  }}><h1>search results</h1></div>
+		
+		
 		<div className="columns">
-			{/* map a userccard for each search result value */}
+			{/* map a userccard for each search result value */}	
   		<div className="column is-three-quarters">{searchResults.map(result => (
 			<UserCard key={result.username} user={result} query={query} handleOnCardClick={handleOnCardClick}/>
 		))}</div>

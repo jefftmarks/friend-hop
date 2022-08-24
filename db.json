@@ -39,6 +39,61 @@
           "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ]
+    },
+    {
+      "name": "Sky",
+      "username": "sky_rules",
+      "password": "rainbows",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [
+        {
+          "title": "I miss the rage",
+          "artist": "Mario Judah",
+          "url": "https://soundcloud.com/ghzupwzhxr6u/i-miss-the-rage?si=497f6932f5ed4cf4b66213297ccdc521&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Shelter",
+          "artist": "Porter Robinson",
+          "url": "https://soundcloud.com/porter-robinson/porter-robinson-madeon-shelter-5?si=ffb12b9cca3b47c1806a368c5ab44d96&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
+      "status": "braindead",
+      "id": 4
+    },
+    {
+      "name": "Umut YILDIRIM",
+      "username": "hope",
+      "password": "umut475475",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [
+        {
+          "title": "",
+          "artist": "",
+          "url": "https://soundcloud.com/iyininkotusu/adamlar-koca-yasli-sisko-dunya?si=af5a990d77b74ce099467fcd5ae94568&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Koca Yasli Sisko Dunya",
+          "artist": "Adamlar",
+          "url": "https://soundcloud.com/iyininkotusu/adamlar-koca-yasli-sisko-dunya?si=af5a990d77b74ce099467fcd5ae94568&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
+      "status": "blissed out",
+      "id": 5
+    },
+    {
+      "name": "sky",
+      "username": "kjdf",
+      "password": "111111",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [
+        {
+          "title": "The middle",
+          "artist": "Jimmy eats the world",
+          "url": "https://soundcloud.com/jimmyeatworld/the-middle?si=39553f1306b64a5c80c4398faa38e125&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
+      "status": "angelic",
+      "id": 6
     }
   ]
 }

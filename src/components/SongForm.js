@@ -32,51 +32,66 @@ function SongForm({ user, onAddSong }) {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<div className="tag is-small">song title:</div>
-			<div className="field has-addons">
+		<div className="columns">
+			<div className="column is-half">
+			<div className="column"></div>
+			<div className="column"></div>
+			<span className="tag is-large is-light">I'm adding ...</span>
+			<div className="column"></div>
+			
+			
+			
+			<div className="field">
 				<div className="control">
 					<input
-						className="input"
+						className="input is-medium"
 						type="text"
-						placeholder="doritos &amp; fritos"
+						placeholder="song title: doritos &amp; fritos"
 						name="title"
 						value={songForm.title}
 						onChange={handleChange}
 					/>
 				</div>
 			</div>
-
-			<div className="tag is-small">artist:</div>
-			<div className="field has-addons">
+			
+			<div className="field">
 				<div className="control">
 					<input
-						className="input"
+						className="input is-medium"
 						type="text"
-						placeholder='100 gecs'
+						placeholder='artist: 100 gecs'
 						name="artist"
 						value={songForm.artist}
 						onChange={handleChange}
 					/>
 				</div>
 			</div>
+			
 
-			<div className="tag is-small">link:</div>
-			<div className="field has-addons">
+			
+			
+			<div className="field">
 				<div className="control">
 					<input
-						className="input"
+						className="input is-medium"
 						type="text"
-						placeholder="sad soundcloud link"
+						placeholder="enter soundcloud link "
 						name="url"
 						value={songForm.url}
 						onChange={handleChange}
 					/>
 				</div>
 			</div>
-
-			<button type="submti" className="button is-white">
-				add song
+			
+			
+{/* 
+			<div className="column"></div> */}
+			<button type="submit" className="button is-white">
+				click me!
 			</button>
+			
+			</div>
+			</div>
 		</form>
 	)
 }

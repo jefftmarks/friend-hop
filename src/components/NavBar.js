@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput }) {
 
 	return (
-		<nav className="navbar" role="navigation" aria-label="main navigation">
-			<div className="navbar-brand" height="100px">
+		<nav className="navbar" style={{justifyContent: "center"}} role="navigation" aria-label="main navigation">
+			<div className="navbar-brand" style={{height: "70px"}}>
 				{/* If user is logged in, link directs to user's profile, otherwise login page*/}
 				<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"} >
-					<img src="https://www.linkpicture.com/q/logo1_7.png" alt="logo" width="112" height="28" />
+					<img src="https://www.linkpicture.com/q/logo1_7.png" alt="logo"  />
 				</Link>
 
 				<a role="button" className="navbar-burger is-active" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
+					<span aria-hidden="false"></span>
+					<span aria-hidden="false"></span>
+					<span aria-hidden="false"></span>
 				</a>
 			</div>
 
