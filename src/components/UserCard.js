@@ -18,7 +18,7 @@ function UserCard({ user, query, handleOnCardClick }) {
 	})
 	
 	return (
-		<div className="box" style={{paddingBottom: "2.22rem", cursor: "pointer", width: "auto", margin: "20px" }} onClick={onCardClick}>
+		<div className="box" style={{paddingBottom: "2.22rem", cursor: "pointer", width: "auto", margin: "20px", marginRight: "40%" }} onClick={onCardClick}>
 			<div className="media-left" style={{float: "left"}}>
 				<figure className="image is-64x64">
 					<img src={cardImage} alt="avatar" />
