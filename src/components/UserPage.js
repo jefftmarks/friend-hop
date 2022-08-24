@@ -6,19 +6,35 @@ import { useParams } from "react-router-dom";
 import { handleAvatar } from "../utils";
 import hypernormal from "../images/default.png";
 
-function UserPage({ activeUser }) {
+function UserPage({ activeUser, setActiveUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
 	const [avatar, setAvatar] = useState(hypernormal);
+	const [isYourFriend, setIsYourFriend] = useState(false);
 
-	const { name, pageImage, status } = user;
+	const { name, username, pageImage, cardImage, status, friends } = user;
 
 	const params = useParams();
+
 
 	// modal try out demo thingy 
 
 	function handlePopUp(e) {
 
+	function checkFriendStatus() {
+		if (user.username !== activeUser.username) {
+			activeUser.friends.forEach(friend => {
+				if (friend.username === user.username ) {
+					setIsYourFriend(true);
+				}
+			})
+		}
+	}
+
+	function checkIfActiveUser() {
+		if (user.username === activeUser.username) {
+			setIsActiveUser(true);
+		}
 	}
 
 	// when params (i.e. username) changes, perform a fetch looking for that username
@@ -30,17 +46,31 @@ function UserPage({ activeUser }) {
 				setUser(user);
 				// change avatar image depending on user status
 				handleAvatar(setAvatar, user.status)
-				// if username matches our activeUser.username (user currently logged in), set isActiveUser to true, enabling certain features
-				if (user.username === activeUser.username) {
-					setIsActiveUser(true);
+				// run conditional functions to render the page according to whether we're on our page or someone else's
+				console.log("hello")
+				if (activeUser) {
+					checkIfActiveUser();
+					checkFriendStatus();
 				}
 			})
 			.catch(e => console.error(e));
-	}, [params, user, activeUser])
+	}, [params, activeUser])
+
+	function handleAddFriend() {
+		fetch(`http://localhost:4000/users/${activeUser.id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				friends: [...friends, {name: name, username: username, cardImage: cardImage}]
+			})
+		})
+			.then(res => res.json())
+			.then(updatedUser => setActiveUser(updatedUser))
+	}
 
 	if (!user) return <h1>Loading...</h1>
-
-
 
 	return (
 		<div style={{
@@ -92,9 +122,25 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="box has-text-centered" style={{ width: 300}}>
+
 							<h1 className="is-centered">{name}'s Page</h1></div>
 						<article style={{maxHeight: "1000px"}}>
 							<section style={{overflowY: "auto", display: "flex", height: "100%", maxHeight: "640px",flexDirection: "column"}}>
+
+							<h1 className="is-centered">{name}'s Page</h1>
+							{!isActiveUser ? (
+								<div
+									className="tag"
+									style={{color: "red", cursor: "pointer"}}
+									onClick={handleAddFriend}
+								>
+									{isYourFriend ? `remove ${name} from your friends` : `add ${name} to your besties`}
+								</div>
+							) : null}
+						</div>
+						<article>
+							<section style={{overflowY: "auto", display: "flex", height: "100%", flexDirection: "column"}}>
+
 								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
 							</section>
 						</article>	

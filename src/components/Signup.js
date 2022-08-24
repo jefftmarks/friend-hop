@@ -10,9 +10,10 @@ const initializedForm = {
 	cardImage: "https://www.linkpicture.com/q/defaultuser.png",
 	songs: [],
 	status: "new to friend hop",
+	friends: [],
 }
 
-function Signup({ setHasAccount, setActiveUsername }) {
+function Signup({ setHasAccount, setActiveUser }) {
 	const [formData, setFormData] = useState(initializedForm);
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [passwordsMatch, setPasswordsMatch] = useState(false);
@@ -54,7 +55,7 @@ function Signup({ setHasAccount, setActiveUsername }) {
 					})
 						.then(res => res.json())
 						.then(newUser => {
-							setActiveUsername(newUser.username);
+							setActiveUser(newUser);
 							history.push(`/user/${newUser.username}`);
 						})
 						.catch(e => console.error(e))
@@ -97,7 +98,7 @@ function Signup({ setHasAccount, setActiveUsername }) {
 					</Form.Control>
 				</Form.Field>
 				<Form.Field>
-					<Form.Label htmlFor="password">password</Form.Label>
+					<Form.Label htmlFor="password">password (3 to 25 characters)</Form.Label>
 					<Form.Control>
 						<Form.Input
 							type="password"

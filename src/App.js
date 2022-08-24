@@ -38,7 +38,7 @@ function App() {
           <About />
         </Route>
         <Route path="/user/:username">
-          <UserPage activeUser={activeUser} />
+          <UserPage activeUser={activeUser} setActiveUser={setActiveUser} />
         </Route>
         <Route path="/search/:query">
           <SearchResults setActiveUser={setActiveUser} handleOnCardClick={setSearchInput} />
