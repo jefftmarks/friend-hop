@@ -1,7 +1,23 @@
 import React from "react";
 import { Dropdown, Icon } from "react-bulma-components";
 
-function StatusDropdown({ onStatusChange, status, userIsActive }) {
+function StatusDropdown({ onStatusChange, status, isActiveUser, id }) {
+
+	// when status in dropdown menu changes, run a PATCH request to update user and rerender page
+	function handleOnChange(event) {
+		const newStatus = event
+		fetch(`http://localhost:4000/users/${id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({status: newStatus}),
+		})
+			.then(res => res.json())
+			.then(updatedUser => onStatusChange(updatedUser) )
+			.catch(e => console.error(e));
+	}
+
 	return (
 		<Dropdown
 				className="dropdown is-up is-right"
@@ -9,9 +25,9 @@ function StatusDropdown({ onStatusChange, status, userIsActive }) {
 				color=""
 				icon={<Icon><i aria-hidden="true" className="fas fa-angle-down"/></Icon>}
 				label="choose status"
-				onChange={event => onStatusChange(event)}
+				onChange={handleOnChange}
 				value={status}
-				disabled={!userIsActive}
+				disabled={!isActiveUser}
 			>
 
 			<Dropdown.Item renderAs="a" value="hypernormal">hypernormal</Dropdown.Item>

@@ -4,48 +4,33 @@ import SongContainer from "./SongContainer";
 import { useParams } from "react-router-dom";
 
 import { handleAvatar } from "../utils";
+import hypernormal from "../images/default.png";
 
-function UserPage({ activeUser }) {
+function UserPage({ activeUsername }) {
 	const [user, setUser] = useState({});
-	const [userIsActive, setUserIsActive] = useState(false);
-	const [avatar, setAvatar] = useState("https://www.linkpicture.com/q/default_1.png");
+	const [isActiveUser, setIsActiveUser] = useState(false);
+	const [avatar, setAvatar] = useState(hypernormal);
 
-	const { name, status, id } = user;
+	const { name, id } = user;
 
-	// params.username will give us access to username value
 	const params = useParams();
 
-	// when params (i.e. user profile) changes, perform a fetch and set user to the first (and only) result
+	// when params (i.e. username) changes, perform a fetch looking for that username
 	useEffect(() => {
 		fetch(`http://localhost:4000/users?username=${params.username}`)
 			.then(res => res.json())
-			.then(data => setUser(data[0]))
-	}, [params, activeUser])
-
-	useEffect(() => {
-		if (user.username === activeUser.username) {
-			setUserIsActive(true);
-		}
-	}, [activeUser.username, user.username])
-
-	// when status in dropdown menu changes, run a PATCH request to update user and rerender page
-	function handleStatusChange(event) {
-		const newStatus = event
-		fetch(`http://localhost:4000/users/${id}`, {
-			method: "PATCH",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({status: newStatus}),
-		})
-			.then(res => res.json())
-			.then(updatedUser => setUser(updatedUser))
-	}
-
-	// change avatar image source depending on status
-	useEffect(() => {
-		handleAvatar(setAvatar, status);
-	}, [status])
+			.then(data => {
+				const user = data[0]; // set user to the first (and only) result
+				setUser(user);
+				// change avatar image depending on user status
+				handleAvatar(setAvatar, user.status)
+				// if username matches our activeUsername (user currently logged in), set isActiveUser to true, enabling certain features
+				if (user.username === activeUsername) {
+					setIsActiveUser(true);
+				}
+			})
+			.catch(e => console.error(e));
+	}, [params, user, activeUsername])
 
 	if (!user) return <h1>Loading...</h1>
 
@@ -59,8 +44,6 @@ function UserPage({ activeUser }) {
 			// backgroundPosition: "50% 100%",
 			}}>
 			<div className="columns is-multiline">
-  				
-						
 					
   				<div className="column is-1">
 						<div className="column"></div>
@@ -69,7 +52,6 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="column"></div>
-						
 						
 						<div className="buttons is-centered" style={{padding: "20px"}}>
 						
@@ -91,7 +73,6 @@ function UserPage({ activeUser }) {
 							<div className="column"></div>
 							<div className="column"></div>
 					
-
 					</div>
 					<div className="column"> 
 						<div className="column"></div>
@@ -99,7 +80,8 @@ function UserPage({ activeUser }) {
 						<div className="column"></div>
 						<div className="box has-text-centered" style={{ width: 300}}>
 							<h1 className="is-centered">{name}'s Page</h1></div>
-						<SongContainer user={user} userIsActive={userIsActive} onAddSong={setUser} />
+							
+						<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
 
 					</div>
 					<div className="column is-3">
@@ -119,9 +101,9 @@ function UserPage({ activeUser }) {
 							style={{display: "flex", justifyContent: "center"}}
 						>
 							<span className="button is-static">
-								{userIsActive ? "I'm feeling..." : `${user.name} is feeling...`}
+								{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
 							</span>
-							<StatusDropdown onStatusChange={handleStatusChange} status={user.status} userIsActive={userIsActive}/>
+							<StatusDropdown onStatusChange={setUser} id={id} status={user.status} isActiveUser={isActiveUser}/>
 						</div>
 
 

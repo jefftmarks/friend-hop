@@ -4,7 +4,7 @@ import { Form, Button, Box } from "react-bulma-components"
 
 const initializedForm = {username: "", password: ""};
 
-function Login({ setHasAccount, setActiveUser }) {
+function Login({ setHasAccount, setActiveUsername }) {
 	const [formData, setFormData] = useState(initializedForm)
 	const history = useHistory();
 
@@ -29,7 +29,8 @@ function Login({ setHasAccount, setActiveUser }) {
 			alert("password incorrect");
 			setFormData(initializedForm);
 		} else {
-			setActiveUser(user);
+			setActiveUsername(user.username);
+			localStorage.setItem("user",user.username)
 			history.push(`/user/${user.username}`);
 		}
 	}

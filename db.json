@@ -6,22 +6,12 @@
       "username": "jeffsworld",
       "password": "11111",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "blissed out",
+      "status": "in the zone",
       "songs": [
         {
-          "title": "Running Away",
-          "artist": "VANO 3000",
-          "url": "https://soundcloud.com/maxb47/vano-3000-running-away-leaving?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "test",
-          "artist": "test",
-          "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "Blah blah",
-          "artist": "Karl",
-          "url": "https://soundcloud.com/user-81871523/network-spring-mixtape-1?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          "title": "PULL UP",
+          "artist": "Cranklin Crooner",
+          "url": "https://soundcloud.com/cranklincroons/pull-up?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ]
     },
@@ -34,9 +24,9 @@
       "status": "angelic",
       "songs": [
         {
-          "title": "Test Song",
-          "artist": "Test Artist",
-          "url": "https://soundcloud.com/pablo_caleb1/playboi-carti-pierre-bourne-switchin-lanes-flipped-mastered?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          "title": "This is Halloween (Screamo Cover)",
+          "artist": "The Nightmare Before Christmas",
+          "url": "https://soundcloud.com/pattywalters/the-nightmare-before-christmas?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ]
     },
