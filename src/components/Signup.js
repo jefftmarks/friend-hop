@@ -56,6 +56,7 @@ function Signup({ setHasAccount, setActiveUser }) {
 						.then(res => res.json())
 						.then(newUser => {
 							setActiveUser(newUser);
+							localStorage.setItem("user",newUser.username);
 							history.push(`/user/${newUser.username}`);
 						})
 						.catch(e => console.error(e))

@@ -22,11 +22,27 @@ function UserPage({ activeUser, setActiveUser }) {
 
 	}
 
-
-
-
 	// when params (i.e. username) changes, perform a fetch looking for that username
 	useEffect(() => {
+		fetch(`http://localhost:4000/users?username=${params.username}`)
+			.then(res => res.json())
+			.then(data => {
+				const user = data[0]; // set user to the first (and only) result
+				setUser(user);
+			})
+			.catch(e => console.error(e));
+			
+	}, [params.username])
+
+	// after user is set, update state of whether we're on our own page or someone else's and whether we're already friends with that other person
+	useEffect(() => {
+
+		function checkIfActiveUser() {
+			if (user.username === activeUser.username) {
+				setIsActiveUser(true);
+			}
+		}
+
 		function checkFriendStatus() {
 			if (user.username !== activeUser.username) {
 				activeUser.friends.forEach(friend => {
@@ -36,29 +52,15 @@ function UserPage({ activeUser, setActiveUser }) {
 				})
 			}
 		}
-	
-		function checkIfActiveUser() {
-			if (user.username === activeUser.username) {
-				setIsActiveUser(true);
-			}
+
+		handleAvatar(setAvatar, user.status);
+
+		if (activeUser) {
+			checkIfActiveUser();
+			checkFriendStatus();
 		}
 
-
-		fetch(`http://localhost:4000/users?username=${params.username}`)
-			.then(res => res.json())
-			.then(data => {
-				const user = data[0]; // set user to the first (and only) result
-				setUser(user);
-				// change avatar image depending on user status
-				handleAvatar(setAvatar, user.status)
-				// run conditional functions to render the page according to whether we're on our page or someone else's
-				if (activeUser) {
-					checkIfActiveUser();
-					checkFriendStatus();
-				}
-			})
-			.catch(e => console.error(e));
-	}, [params, activeUser, user.username])
+	}, [user, activeUser])
 
 	function handleAddFriend() {
 		fetch(`http://localhost:4000/users/${activeUser.id}`, {
@@ -67,7 +69,7 @@ function UserPage({ activeUser, setActiveUser }) {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
-				friends: [...friends, {name: name, username: username, cardImage: cardImage}]
+				friends: [...activeUser.friends, {name: name, username: username, cardImage: cardImage}]
 			})
 		})
 			.then(res => res.json())
@@ -75,7 +77,6 @@ function UserPage({ activeUser, setActiveUser }) {
 	}
 
 	if (!user) return <h1>Loading...</h1>
-
 
 
 	return (

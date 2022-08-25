@@ -39,7 +39,7 @@ function StatusDropdown({ onStatusChange, user, isActiveUser }) {
 
 			<Dropdown.Item renderAs="a" value="blissed out">blissed out</Dropdown.Item>
 
-			<Dropdown.Item renderAs="a" value="extra special">happy</Dropdown.Item>
+			<Dropdown.Item renderAs="a" value="extra special">extra special</Dropdown.Item>
 
 			<Dropdown.Item renderAs="a" value="hungry">hungry</Dropdown.Item>
 

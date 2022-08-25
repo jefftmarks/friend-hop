@@ -140,7 +140,7 @@
       "password": "11111",
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "hypernormal",
+      "status": "evil oblivion",
       "songs": [
         {
           "title": "PULL UP",
@@ -173,23 +173,6 @@
           "name": "Sky",
           "username": "sky_rules",
           "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
-        }
-      ]
-    },
-    {
-      "name": "Shrek",
-      "username": "shrek_rules",
-      "password": "shrek",
-      "id": 6,
-      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "angelic",
-      "friends": [],
-      "songs": [
-        {
-          "title": "This is Halloween (Screamo Cover)",
-          "artist": "The Nightmare Before Christmas",
-          "url": "https://soundcloud.com/pattywalters/the-nightmare-before-christmas?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ]
     },
@@ -237,6 +220,23 @@
           "name": "jessa",
           "username": "jessa",
           "cardImage": "https://www.linkpicture.com/q/jessacrop.png"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "name": "shrek",
+      "username": "shrek",
+      "password": "shrek",
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [],
+      "status": "new to friend hop",
+      "friends": [
+        {
+          "name": "Jeff",
+          "username": "jeffsworld",
+          "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
         }
       ],
       "id": 7
