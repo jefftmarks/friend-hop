@@ -2,27 +2,23 @@ import React, { useEffect, useState } from "react";
 import StatusDropdown from "./StatusDropdown";
 import SongContainer from "./SongContainer";
 import { useParams } from "react-router-dom";
-
-import { handleAvatar } from "../utils";
-import hypernormal from "../images/default.png";
+import Avatar from "./Avatar";
 
 function UserPage({ activeUser, setActiveUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
 	const [isYourFriend, setIsYourFriend] = useState(false);
-	const [avatar, setAvatar] = useState(hypernormal);
 
 	const { name, username, pageImage, cardImage, status, friends } = user;
-
 
 	const params = useParams();
 
 	// modal try out demo thingy 
-	function handlePopUp(e) {
+	// function handlePopUp(e) {
+	// }
 
-	}
+	// When params (i.e. username) changes, perform a fetch query looking for that username
 
-	// when params (i.e. username) changes, perform a fetch looking for that username
 	useEffect(() => {
 		fetch(`http://localhost:4000/users?username=${params.username}`)
 			.then(res => res.json())
@@ -33,10 +29,11 @@ function UserPage({ activeUser, setActiveUser }) {
 			.catch(e => console.error(e));
 	}, [params.username])
 
-	// after user is set, update state of whether we're on our own page or someone else's and whether we're already friends with that other person
+	// After user is set, update state of whether we're on our own page or someone else's and whether we're already friends with that other person
+
 	useEffect(() => {
 
-		handleAvatar(setAvatar, user.status);
+		// handleAvatar(setAvatar, user.status);
 
 		function checkIfActiveUser() {
 			if (user.username === activeUser.username) {
@@ -146,52 +143,36 @@ function UserPage({ activeUser, setActiveUser }) {
 						</article>	
 					</div>
 					<div className="column is-3" style={{position: "relative"}}>
-					<img src={avatar} alt="avatar"
-					style={{
-								position: "absolute",
-								top: "-4em",
-								right: "3.5em",
-								
-								marginLeft: "10%",
-								
-								maxHeight:"120%",
-								
-								width: "80%",
-							
-							}}/>
-						
-						
-						{/* if user is one of our preset bot users, page layout will be slightly different */}
-						{user.isStatic ? (
 
-							<div
-							className="tags are-normal is-white has-addons buttons"
-							style={{display: "flex", justifyContent: "center"}}
-						>
-							<span className="button is-static">
-								{`${user.name} ${status}`}
-							</span>
-						</div>
+					<Avatar status={status} />
 
-						) : (
-
- 
-							<div
+						<div
 							className="tags are-normal is-white has-addons buttons"
 							style={{display: "flex", justifyContent: "center", marginLeft: "0px", marginTop: "190%"}}
 						>
-							<span className="button is-static">
-								{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
-							</span>
-							<StatusDropdown
-								onStatusChange={setUser}
-								user={user}
-								isActiveUser={isActiveUser}
-							/>
-						</div>
+						
+						{/* If one of our premade "static" users, render content differently */}
+						{user.isStatic ? (
+
+							<span className="button is-static">{`${user.name} ${status}`}</span>
+
+						) : (
+
+							<>
+								<span className="button is-static">
+									{/* If our page or another user's, render content differently */}
+									{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
+								</span>
+								<StatusDropdown
+									onStatusChange={setUser}
+									user={user}
+									isActiveUser={isActiveUser}
+								/>	
+							</>	
 
 						)}
-						
+
+						</div>
 					</div>
 			</div>			
 		</div>
