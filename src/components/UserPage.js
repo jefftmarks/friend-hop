@@ -3,13 +3,14 @@ import StatusDropdown from "./StatusDropdown";
 import SongContainer from "./SongContainer";
 import { useParams } from "react-router-dom";
 import Avatar from "./Avatar";
+import UserHeader from "./UserHeader";
 
 function UserPage({ activeUser, setActiveUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
 	const [isYourFriend, setIsYourFriend] = useState(false);
 
-	const { name, username, pageImage, cardImage, status, friends } = user;
+	const { pageImage, status } = user;
 
 	const params = useParams();
 
@@ -23,57 +24,43 @@ function UserPage({ activeUser, setActiveUser }) {
 		fetch(`http://localhost:4000/users?username=${params.username}`)
 			.then(res => res.json())
 			.then(data => {
-				const user = data[0]; // set user to the first (and only) result
+
+				// set user of the page we're currently on to the first (and only) result
+				const user = data[0]; 
 				setUser(user);
+
+				// function to determine whether we're on our page or someone else's
+				function checkIfActiveUser() {
+					if (user.username === activeUser.username) {
+						setIsActiveUser(true);
+					}
+				}
+		
+				// function: if we're on someone else's page, are we already friends?
+				function checkFriendStatus() {
+					if (user.username !== activeUser.username) {
+						const matches = activeUser.friends.filter(friend => {
+							return friend.username === user.username
+						})
+						if (matches.length >= 1) {
+							setIsYourFriend(true);
+						} else {
+							setIsYourFriend(false);
+						}
+					}
+				}
+
+				// run the above two functions once activeUser has been passed down (otherwise throws error)
+				if (activeUser) {
+					checkIfActiveUser();
+					checkFriendStatus();
+				}
+				
 			})
 			.catch(e => console.error(e));
-	}, [params.username])
-
-	// After user is set, update state of whether we're on our own page or someone else's and whether we're already friends with that other person
-
-	useEffect(() => {
-
-		// handleAvatar(setAvatar, user.status);
-
-		function checkIfActiveUser() {
-			if (user.username === activeUser.username) {
-				setIsActiveUser(true);
-			}
-		}
-
-		function checkFriendStatus() {
-			if (user.username !== activeUser.username) {
-				activeUser.friends.forEach(friend => {
-					if (friend.username === user.username ) {
-						setIsYourFriend(true);
-					}
-				})
-			}
-		}
-
-		if (activeUser) {
-			checkIfActiveUser();
-			checkFriendStatus();
-		}
-
-	}, [user, activeUser])
-
-	function handleAddFriend() {
-		fetch(`http://localhost:4000/users/${activeUser.id}`, {
-			method: "PATCH",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				friends: [...activeUser.friends, {name: name, username: username, cardImage: cardImage}]
-			})
-		})
-			.then(res => res.json())
-			.then(updatedUser => setActiveUser(updatedUser))
-	}
+	}, [activeUser, params.username])
 
 	if (!user) return <h1>Loading...</h1>
-
 
 	return (
 		<div style={{
@@ -124,21 +111,20 @@ function UserPage({ activeUser, setActiveUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="column"></div>
-						<div className="box has-text-centered" style={{ width: 300}}>
-							<h1 className="is-centered">{name}'s Page</h1>
-							{!isActiveUser ? (
-								<div
-									className="tag"
-									style={{color: "red", cursor: "pointer"}}
-									onClick={handleAddFriend}
-								>
-									{isYourFriend ? `remove ${name} from your friends` : `add ${name} to your besties`}
-								</div>
-							) : null}
-						</div>
+
+						<UserHeader
+							user={user}
+							activeUser={activeUser}
+							isActiveUser={isActiveUser}
+							isYourFriend={isYourFriend}
+							setActiveUser={setActiveUser}
+						/>
+
 						<article style={{maxHeight: "1000px"}}>
 							<section style={{overflowY: "auto", display: "flex", height: "100%", maxHeight: "640px",flexDirection: "column"}}>
+
 								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
+
 							</section>
 						</article>	
 					</div>
@@ -163,10 +149,12 @@ function UserPage({ activeUser, setActiveUser }) {
 									{/* If our page or another user's, render content differently */}
 									{isActiveUser ? "I'm feeling..." : `${user.name} is feeling...`}
 								</span>
+
 								<StatusDropdown
 									onStatusChange={setUser}
 									user={user}
 									isActiveUser={isActiveUser}
+
 								/>	
 							</>	
 
