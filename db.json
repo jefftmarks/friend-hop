@@ -179,22 +179,12 @@
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "songs": [
         {
-          "title": "I miss the rage",
-          "artist": "Mario Judah",
-          "url": "https://soundcloud.com/ghzupwzhxr6u/i-miss-the-rage?si=497f6932f5ed4cf4b66213297ccdc521&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "Shelter",
-          "artist": "Porter Robinson",
-          "url": "https://soundcloud.com/porter-robinson/porter-robinson-madeon-shelter-5?si=ffb12b9cca3b47c1806a368c5ab44d96&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "Hold My Liquor",
-          "artist": "Kanye West",
-          "url": "https://soundcloud.com/kanyewest/hold-my-liquor?si=c9ea0e0b3b9d48f5a1126b07fac813cc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          "title": "Watch me",
+          "artist": "Inspector Koo Soundtrack",
+          "url": "https://soundcloud.com/user78650/watch-me?si=dc26dfad715348d3bc3ed70fcea0e5b2&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
-      "status": "evil oblivion",
+      "status": "angelic",
       "friends": [
         "margo",
         "effy",
@@ -223,6 +213,42 @@
       ],
       "status": "blissed out",
       "id": 8
+    },
+    {
+      "name": "shane",
+      "username": "shane_rules",
+      "password": "iamcoolerthansky",
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [],
+      "status": "new to friend hop",
+      "id": 9
+    },
+    {
+      "name": "shane",
+      "username": "sky_is_uncool",
+      "password": "lolskyislame",
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [],
+      "status": "new to friend hop",
+      "id": 10
+    },
+    {
+      "name": "shane 1",
+      "username": "shane_shane",
+      "password": "shane",
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [
+        {
+          "title": "Something comforting",
+          "artist": "Porter Robinson",
+          "url": "https://soundcloud.com/porter-robinson/something-comforting?si=68850087be474fc8bd5385361c3a1c25&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
+      "status": "evil oblivion",
+      "id": 11
     }
   ]
 }
