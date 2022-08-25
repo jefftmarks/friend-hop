@@ -9,36 +9,41 @@ import hypernormal from "../images/default.png";
 function UserPage({ activeUser, setActiveUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
-	const [avatar, setAvatar] = useState(hypernormal);
 	const [isYourFriend, setIsYourFriend] = useState(false);
+	const [avatar, setAvatar] = useState(hypernormal);
 
 	const { name, username, pageImage, cardImage, status, friends } = user;
 
+
 	const params = useParams();
 
-
 	// modal try out demo thingy 
-
 	function handlePopUp(e) {
 
-	function checkFriendStatus() {
-		if (user.username !== activeUser.username) {
-			activeUser.friends.forEach(friend => {
-				if (friend.username === user.username ) {
-					setIsYourFriend(true);
-				}
-			})
-		}
 	}
 
-	function checkIfActiveUser() {
-		if (user.username === activeUser.username) {
-			setIsActiveUser(true);
-		}
-	}
+
+
 
 	// when params (i.e. username) changes, perform a fetch looking for that username
 	useEffect(() => {
+		function checkFriendStatus() {
+			if (user.username !== activeUser.username) {
+				activeUser.friends.forEach(friend => {
+					if (friend.username === user.username ) {
+						setIsYourFriend(true);
+					}
+				})
+			}
+		}
+	
+		function checkIfActiveUser() {
+			if (user.username === activeUser.username) {
+				setIsActiveUser(true);
+			}
+		}
+
+
 		fetch(`http://localhost:4000/users?username=${params.username}`)
 			.then(res => res.json())
 			.then(data => {
@@ -47,14 +52,13 @@ function UserPage({ activeUser, setActiveUser }) {
 				// change avatar image depending on user status
 				handleAvatar(setAvatar, user.status)
 				// run conditional functions to render the page according to whether we're on our page or someone else's
-				console.log("hello")
 				if (activeUser) {
 					checkIfActiveUser();
 					checkFriendStatus();
 				}
 			})
 			.catch(e => console.error(e));
-	}, [params, activeUser])
+	}, [params, activeUser, user.username])
 
 	function handleAddFriend() {
 		fetch(`http://localhost:4000/users/${activeUser.id}`, {
@@ -71,6 +75,8 @@ function UserPage({ activeUser, setActiveUser }) {
 	}
 
 	if (!user) return <h1>Loading...</h1>
+
+
 
 	return (
 		<div style={{
@@ -122,11 +128,6 @@ function UserPage({ activeUser, setActiveUser }) {
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="box has-text-centered" style={{ width: 300}}>
-
-							<h1 className="is-centered">{name}'s Page</h1></div>
-						<article style={{maxHeight: "1000px"}}>
-							<section style={{overflowY: "auto", display: "flex", height: "100%", maxHeight: "640px",flexDirection: "column"}}>
-
 							<h1 className="is-centered">{name}'s Page</h1>
 							{!isActiveUser ? (
 								<div
@@ -138,15 +139,14 @@ function UserPage({ activeUser, setActiveUser }) {
 								</div>
 							) : null}
 						</div>
-						<article>
-							<section style={{overflowY: "auto", display: "flex", height: "100%", flexDirection: "column"}}>
-
+						<article style={{maxHeight: "1000px"}}>
+							<section style={{overflowY: "auto", display: "flex", height: "100%", maxHeight: "640px",flexDirection: "column"}}>
 								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
 							</section>
 						</article>	
 					</div>
 					<div className="column is-3" style={{position: "relative"}}>
-					<img src={avatar}
+					<img src={avatar} alt="avatar"
 					style={{
 								position: "absolute",
 								top: "-4em",
@@ -175,7 +175,7 @@ function UserPage({ activeUser, setActiveUser }) {
 
 						) : (
 
-
+ 
 							<div
 							className="tags are-normal is-white has-addons buttons"
 							style={{display: "flex", justifyContent: "center", marginLeft: "0px", marginTop: "190%"}}
