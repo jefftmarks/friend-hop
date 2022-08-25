@@ -72,7 +72,7 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 				<span className="is-centered">{name}'s Page</span>
 
 				{/* add a star to reflect whether frieds or not */}
-				{isYourFriend ?<span style={{color: "gray", fontSize: "17px", marginLeft: "7px"}}>&#9733;</span> : null}
+				{isYourFriend & !isActiveUser ?<span style={{color: "gray", fontSize: "17px", marginLeft: "7px"}}>&#9733;</span> : null}
 
 				{/* if not your own page, show friend status and render depending on whether you're friends or not */}
 

@@ -145,7 +145,7 @@
       "isBased": true,
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "hypernormal",
+      "status": "blissed out",
       "songs": [
         {
           "title": "PULL UP",
@@ -160,11 +160,6 @@
       ],
       "friends": [
         {
-          "name": "margo",
-          "username": "margo",
-          "cardImage": "https://www.linkpicture.com/q/margocrop.png"
-        },
-        {
           "name": "effy",
           "username": "effy",
           "cardImage": "https://www.linkpicture.com/q/effycrop.png"
@@ -175,14 +170,19 @@
           "cardImage": "https://www.linkpicture.com/q/jessacrop.png"
         },
         {
-          "name": "Sky",
-          "username": "sky_rules",
-          "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
-        },
-        {
           "name": "Loraine",
           "username": "loraine",
           "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"
+        },
+        {
+          "name": "Margo",
+          "username": "margo",
+          "cardImage": "https://www.linkpicture.com/q/margocrop.png"
+        },
+        {
+          "name": "Sky",
+          "username": "sky_rules",
+          "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
         }
       ]
     },
@@ -190,7 +190,7 @@
       "name": "Sky",
       "username": "sky_rules",
       "password": "rainbows",
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "songs": [
