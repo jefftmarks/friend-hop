@@ -43,7 +43,7 @@ function SearchBar({ setSearchInput, searchInput }) {
 		<>
 			<div className="field is-horizontal">
   			<div className="field-label is-normal">
-					<label className="label" htmlFor="search">what are my friends listening to?</label>
+					<label className="label" htmlFor="search">what is everyone listening to?</label>
 				</div>
 			</div>
 			<div className="control">

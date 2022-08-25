@@ -6,6 +6,7 @@
       "username": "margo",
       "password": "margo",
       "isStatic": true,
+      "isBased": true,
       "pageImage": "https://www.linkpicture.com/q/margopage.jpg",
       "cardImage": "https://www.linkpicture.com/q/margocrop.png",
       "status": "misses warped tour",
@@ -38,6 +39,7 @@
       "username": "loraine",
       "password": "loraine",
       "isStatic": true,
+      "isBased": true,
       "pageImage": "https://www.linkpicture.com/q/lorainepage.jpg",
       "cardImage": "https://www.linkpicture.com/q/lorainecrop.png",
       "status": "is late for swim practice",
@@ -70,6 +72,7 @@
       "username": "effy",
       "password": "effy",
       "isStatic": true,
+      "isBased": true,
       "pageImage": "https://i.postimg.cc/9fC1Hd2q/effypage.png",
       "cardImage": "https://www.linkpicture.com/q/effycrop.png",
       "status": "is mythical apocalyspe",
@@ -102,6 +105,7 @@
       "username": "jessa",
       "password": "jessa",
       "isStatic": true,
+      "isBased": true,
       "pageImage": "https://www.linkpicture.com/q/jessapage.jpg",
       "cardImage": "https://www.linkpicture.com/q/jessacrop.png",
       "status": "is feeling cheeky",
@@ -138,14 +142,20 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
+      "isBased": true,
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "angelic",
+      "status": "hypernormal",
       "songs": [
         {
           "title": "PULL UP",
           "artist": "cranklincrooner",
           "url": "https://soundcloud.com/cranklincroons/pull-up?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "MEDICINE MIX (2020 Remastering)",
+          "artist": "Haruomi Hosono",
+          "url": "https://soundcloud.com/haruomihosono/medicine-mix-2020-remastering?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
       "friends": [
@@ -160,11 +170,6 @@
           "cardImage": "https://www.linkpicture.com/q/effycrop.png"
         },
         {
-          "name": "loraine",
-          "username": "loraine",
-          "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"
-        },
-        {
           "name": "jessa",
           "username": "jessa",
           "cardImage": "https://www.linkpicture.com/q/jessacrop.png"
@@ -173,6 +178,11 @@
           "name": "Sky",
           "username": "sky_rules",
           "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
+        },
+        {
+          "name": "Loraine",
+          "username": "loraine",
+          "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"
         }
       ]
     },
@@ -180,6 +190,7 @@
       "name": "Sky",
       "username": "sky_rules",
       "password": "rainbows",
+      "isBased": true,
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
       "songs": [
@@ -228,19 +239,31 @@
       "name": "shrek",
       "username": "shrek",
       "password": "shrek",
+      "isBased": true,
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "songs": [],
+      "songs": [
+        {
+          "title": "Hallelujah",
+          "artist": "Shrek",
+          "url": "https://soundcloud.com/dropson-3/shrek-hallelujah-new-concept-music-edit?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
       "status": "new to friend hop",
       "friends": [
+        {
+          "name": "Sky",
+          "username": "sky_rules",
+          "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
+        },
         {
           "name": "Margo",
           "username": "margo",
           "cardImage": "https://www.linkpicture.com/q/margocrop.png"
         },
         {
-          "name": "Sky",
-          "username": "sky_rules",
+          "name": "Jeff",
+          "username": "jeffsworld",
           "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
         }
       ],

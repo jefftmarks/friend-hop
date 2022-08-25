@@ -6,6 +6,7 @@ const initializedForm = {
 	name: "",
 	username: "",
 	password: "",
+	basedMode: true,
 	pageImage: "https://www.linkpicture.com/q/V02.jpg",
 	cardImage: "https://www.linkpicture.com/q/defaultuser.png",
 	songs: [],

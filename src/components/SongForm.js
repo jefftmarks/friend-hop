@@ -48,9 +48,13 @@ function SongForm({ user, onAddSong }) {
 		<form onSubmit={handleSubmit}>
 		<div className="columns">
 			<div className="column is-half">
-			<div className="column"></div>
-			<div className="column"></div>
-			<span className="tag is-large is-light">I'm adding ...</span>
+			{/* <div className="column"></div> */}
+			<span
+				className="tag is-medium is-light"
+	
+			>
+				I'm adding ...
+			</span>
 			<div className="column"></div>
 			
 			
@@ -58,7 +62,7 @@ function SongForm({ user, onAddSong }) {
 			<div className="field">
 				<div className="control">
 					<input
-						className="input is-medium"
+						className="input is-normal"
 						type="text"
 						placeholder="song title: doritos &amp; fritos"
 						name="title"
@@ -72,7 +76,7 @@ function SongForm({ user, onAddSong }) {
 			<div className="field">
 				<div className="control">
 					<input
-						className="input is-medium"
+						className="input is-normal"
 						type="text"
 						placeholder='artist: 100 gecs'
 						name="artist"
@@ -89,7 +93,7 @@ function SongForm({ user, onAddSong }) {
 			<div className="field">
 				<div className="control">
 					<input
-						className="input is-medium"
+						className="input is-normal"
 						type="text"
 						placeholder="enter soundcloud link "
 						name="url"
@@ -103,8 +107,11 @@ function SongForm({ user, onAddSong }) {
 			
 {/* 
 			<div className="column"></div> */}
-			<button type="submit" className="button is-white">
-				click me!
+			<button
+				type="submit"
+				className="button is-white is-small"
+			>
+				click to add song!
 			</button>
 			
 			</div>

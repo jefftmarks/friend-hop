@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from "react";
 import StatusDropdown from "./StatusDropdown";
 import SongContainer from "./SongContainer";
-import { useParams } from "react-router-dom";
 import Avatar from "./Avatar";
+import NonBasedAvatar from "./NonBasedAvatar";
 import UserHeader from "./UserHeader";
+import { useParams } from "react-router-dom";
 
 function UserPage({ activeUser, setActiveUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
 	const [isYourFriend, setIsYourFriend] = useState(false);
+	const [isBasedMode, setIsBasedMode] = useState(true);
 
-	const { pageImage, status } = user;
+	const { pageImage, status, id } = user;
 
 	const params = useParams();
 
 	// modal try out demo thingy 
 	// function handlePopUp(e) {
 	// }
+
 
 	// When params (i.e. username) changes, perform a fetch query looking for that username
 
@@ -28,6 +31,7 @@ function UserPage({ activeUser, setActiveUser }) {
 				// set user of the page we're currently on to the first (and only) result
 				const user = data[0]; 
 				setUser(user);
+				setIsBasedMode(user.isBased);
 
 				// function to determine whether we're on our page or someone else's
 				function checkIfActiveUser() {
@@ -60,18 +64,32 @@ function UserPage({ activeUser, setActiveUser }) {
 			.catch(e => console.error(e));
 	}, [activeUser, params.username])
 
+
+	// toggle basedMode on and off
+	function handleToggleBasedMode(boolean) {
+		fetch(`http://localhost:4000/users/${id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({isBased: boolean}),
+		})
+			.then(res => res.json())
+			.then(updatedUser => setActiveUser(updatedUser))
+			.catch(e => console.error(e));
+	}
+
 	if (!user) return <h1>Loading...</h1>
 
 	return (
 		<div style={{
-			backgroundImage: `url(${pageImage})`,
+			backgroundImage: isBasedMode ? `url(${pageImage})` : "url(https://i.postimg.cc/SxWNgN9D/photo-1577412647305-991150c7d163.jpg)",
 			backgroundColor: "black",
 			marginTop: "20px",
 			width: "100%",
 			height: "100vh",
 			backgroundSize: "cover",
 			backgroundPosition: "center",
-
 			}}>
 			<div className="columns">
 					
@@ -89,10 +107,29 @@ function UserPage({ activeUser, setActiveUser }) {
 							{/* <button className="js-modal-trigger" onClick={handlePopUp}>
   									Open JS example modal
 							</button> */}
-							<button className="tag is-normal is-dark" style={{marginLeft: "20px"}}>based mode</button>
-							<div className="column is-2"></div>
-							<button className="tag is-small is-dark" style={{marginLeft: "20px"}}>non-anime mode</button>
-							<div className="column is-2"></div>
+
+							{/* display basedMode buttons if we're on our own page */}
+							{ isActiveUser ? (
+								<>
+									<button
+										className={isBasedMode ? "tag is-normal" : "tag is-normal is-dark"}
+										style={{marginLeft: "20px", cursor: "pointer"}}
+										onClick={() => handleToggleBasedMode(true)}
+									>
+										based mode
+									</button>
+									<div className="column is-2"></div>
+
+									<button
+										className={isBasedMode ? "tag is-normal is-dark" : "tag is-normal"}
+										style={{marginLeft: "20px", cursor: "pointer"}}
+										onClick={() => handleToggleBasedMode(false)}
+									>
+										non-anime mode
+									</button>
+									<div className="column is-2"></div>
+								</>
+							) : null}
 						
 						</div>
 							<div className="column"></div>
@@ -130,7 +167,7 @@ function UserPage({ activeUser, setActiveUser }) {
 					</div>
 					<div className="column is-3" style={{position: "relative"}}>
 
-					<Avatar status={status} />
+					{isBasedMode ? <Avatar status={status} /> : <NonBasedAvatar status={status} />}
 
 						<div
 							className="tags are-normal is-white has-addons buttons"

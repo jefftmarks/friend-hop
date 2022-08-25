@@ -7,7 +7,11 @@ import logo from "../images/logo.png";
 function NavBar({ activeUser, onClickLogout, setSearchInput, searchInput }) {
 
 	return (
-		<nav className="navbar" style={{justifyContent: "center"}} role="navigation" aria-label="main navigation">
+		<nav
+			className="navbar"
+			style={{justifyContent: "center"}}
+			role="navigation"
+			aria-label="main navigation">
 			<div className="navbar-brand" style={{height: "70px"}}>
 				{/* If user is logged in, link directs to user's profile, otherwise login page*/}
 				<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"} >
