@@ -30,7 +30,7 @@ function App() {
       <NavBar
         activeUser={activeUser}
         onClickLogout={setActiveUser} 
-        onChangeSearchInput={setSearchInput}
+        setSearchInput={setSearchInput}
         searchInput={searchInput}
       />
       <Switch>

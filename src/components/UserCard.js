@@ -6,13 +6,15 @@ function UserCard({ user, query, handleOnCardClick }) {
 
 	const history = useHistory();
 
-	// when you click on a user card in the search result page, reset the input field in the search bar and programmatically navigate to that user's page
+	// When you click on a user card in the search result page, reset the input field in the search bar and programmatically navigate to that user's page
+
 	function onCardClick() {
 		handleOnCardClick("");
 		history.push(`/user/${username}`)
 	}
 
-	// filter through the user's favorite songs and return an array of the songs that match the search query
+	// Filter through the user's favorite songs and return an array of the songs that match the search query to display as additional information in the user card
+
 	const matches = songs.filter(song => {
 		return song.artist.toLowerCase().includes(query.toLowerCase()) || song.title.toLowerCase().includes(query.toLowerCase());
 	})
@@ -27,7 +29,7 @@ function UserCard({ user, query, handleOnCardClick }) {
 			<div>
 				<h1>{name}</h1>
 				<p>status: {status}</p>
-				{/* map through the arraoy of matching songs and list in the user card */}
+				{/* map through the array of matching songs and list in the user card */}
 				<ul>{matches.map(song => (
 					<li key={song.title}>{song.title} by {song.artist}</li>
 				))}</ul>

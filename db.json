@@ -140,11 +140,11 @@
       "password": "11111",
       "pageImage": "https://www.linkpicture.com/q/V02.jpg",
       "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "status": "evil oblivion",
+      "status": "hungry",
       "songs": [
         {
           "title": "PULL UP",
-          "artist": "cranklin crooner",
+          "artist": "cranklincrooner",
           "url": "https://soundcloud.com/cranklincroons/pull-up?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
@@ -234,8 +234,13 @@
       "status": "new to friend hop",
       "friends": [
         {
-          "name": "Jeff",
-          "username": "jeffsworld",
+          "name": "Margo",
+          "username": "margo",
+          "cardImage": "https://www.linkpicture.com/q/margocrop.png"
+        },
+        {
+          "name": "Sky",
+          "username": "sky_rules",
           "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
         }
       ],

@@ -31,11 +31,12 @@ function UserPage({ activeUser, setActiveUser }) {
 				setUser(user);
 			})
 			.catch(e => console.error(e));
-			
 	}, [params.username])
 
 	// after user is set, update state of whether we're on our own page or someone else's and whether we're already friends with that other person
 	useEffect(() => {
+
+		handleAvatar(setAvatar, user.status);
 
 		function checkIfActiveUser() {
 			if (user.username === activeUser.username) {
@@ -52,8 +53,6 @@ function UserPage({ activeUser, setActiveUser }) {
 				})
 			}
 		}
-
-		handleAvatar(setAvatar, user.status);
 
 		if (activeUser) {
 			checkIfActiveUser();

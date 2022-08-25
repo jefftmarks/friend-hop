@@ -2,15 +2,16 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import FriendDropdown from "./FriendDropdown";
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
 
-function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput }) {
+function NavBar({ activeUser, onClickLogout, setSearchInput, searchInput }) {
 
 	return (
 		<nav className="navbar" style={{justifyContent: "center"}} role="navigation" aria-label="main navigation">
 			<div className="navbar-brand" style={{height: "70px"}}>
 				{/* If user is logged in, link directs to user's profile, otherwise login page*/}
 				<Link className="navbar-item" to={activeUser ? `/user/${activeUser.username}` : "/"} >
-					<img src="https://www.linkpicture.com/q/logo1_7.png" alt="logo"  />
+					<img src={logo} alt="logo"  />
 				</Link>
 
 				<a role="button" className="navbar-burger is-active" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -26,7 +27,7 @@ function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput })
 					<Link
 						className="navbar-item"
 						to={activeUser ? `/user/${activeUser.username}` : "/"}
-						onClick={() => onChangeSearchInput("")}
+						onClick={() => setSearchInput("")}
 					>
 						{activeUser ? "profile" : "home"}
 					</Link>
@@ -34,7 +35,7 @@ function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput })
 					<Link
 						className="navbar-item"
 						to="/about"
-						onClick={() => onChangeSearchInput("")}
+						onClick={() => setSearchInput("")}
 					>
 						about
 					</Link>
@@ -43,7 +44,7 @@ function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput })
 					{activeUser ? (
 						<Link className="navbar-item" to="/" onClick={() => {
 							localStorage.clear();
-							onChangeSearchInput("");
+							setSearchInput("");
 							onClickLogout(false);
 						}}
 						>	
@@ -56,7 +57,7 @@ function NavBar({ activeUser, onClickLogout, onChangeSearchInput, searchInput })
 				{activeUser ? (
 					<div className="navbar-end">
 						<div className="navbar-item">
-							<SearchBar onChangeSearchInput={onChangeSearchInput} searchInput={searchInput} />
+							<SearchBar setSearchInput={setSearchInput} searchInput={searchInput} />
 						</div>
 						<div className="navbar-item">
 							<FriendDropdown user={activeUser} />
