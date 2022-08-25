@@ -145,7 +145,7 @@
       "isBased": true,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "status": "blissed out",
+      "status": "hungry",
       "songs": [
         {
           "title": "PULL UP",
@@ -239,7 +239,7 @@
       "name": "shrek",
       "username": "shrek",
       "password": "shrek",
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
       "songs": [
@@ -266,7 +266,8 @@
           "username": "jeffsworld",
           "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
         }
-      ]
+      ],
+      "id": 7
     }
   ]
 }

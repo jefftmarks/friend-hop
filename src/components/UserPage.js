@@ -64,7 +64,6 @@ function UserPage({ activeUser, setActiveUser }) {
 			.catch(e => console.error(e));
 	}, [activeUser, params.username])
 
-
 	// toggle basedMode on and off
 	function handleToggleBasedMode(boolean) {
 		fetch(`http://localhost:4000/users/${id}`, {

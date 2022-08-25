@@ -5,8 +5,6 @@ import SongForm from "./SongForm";
 function SongContainer({ user, isActiveUser, onChangeSongs }) {
 	const { songs } = user;
 
-	console.log(songs)
-
 	// if songs present, map song cards
 	const renderedSongCards = songs ? songs.map(song => (
 		<SongCard key={song.title} url={song.url} user={user} onDeleteSong={onChangeSongs} isActiveUser={isActiveUser} />
