@@ -187,49 +187,47 @@
           "title": "I miss the rage",
           "artist": "Mario Judah",
           "url": "https://soundcloud.com/ghzupwzhxr6u/i-miss-the-rage?si=497f6932f5ed4cf4b66213297ccdc521&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Shelter",
+          "artist": "Porter Robinson",
+          "url": "https://soundcloud.com/porter-robinson/porter-robinson-madeon-shelter-5?si=ffb12b9cca3b47c1806a368c5ab44d96&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Hold My Liquor",
+          "artist": "Kanye West",
+          "url": "https://soundcloud.com/kanyewest/hold-my-liquor?si=c9ea0e0b3b9d48f5a1126b07fac813cc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
       "status": "evil oblivion",
       "friends": [
-        {
-          "name": "margo",
-          "username": "margo",
-          "cardImage": "https://www.linkpicture.com/q/margocrop.png"
-        },
-        {
-          "name": "effy",
-          "username": "effy",
-          "cardImage": "https://www.linkpicture.com/q/effycrop.png"
-        },
-        {
-          "name": "loraine",
-          "username": "loraine",
-          "cardImage": "https://www.linkpicture.com/q/lorainecrop.png"
-        },
-        {
-          "name": "jessa",
-          "username": "jessa",
-          "cardImage": "https://www.linkpicture.com/q/jessacrop.png"
-        }
-      ],
-      "id": 6
-    },
-    {
-      "name": "shrek",
-      "username": "shrek",
-      "password": "shrek",
-      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
-      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [
-        {
-          "name": "Jeff",
-          "username": "jeffsworld",
-          "cardImage": "https://www.linkpicture.com/q/defaultuser.png"
-        }
+        "margo",
+        "effy",
+        "loraine",
+        "jessa"
       ],
       "id": 7
+    },
+    {
+      "name": "Umut YILDIRIM",
+      "username": "hope",
+      "password": "umut475475",
+      "pageImage": "https://www.linkpicture.com/q/V02.jpg",
+      "cardImage": "https://www.linkpicture.com/q/defaultuser.png",
+      "songs": [
+        {
+          "title": "",
+          "artist": "",
+          "url": "https://soundcloud.com/iyininkotusu/adamlar-koca-yasli-sisko-dunya?si=af5a990d77b74ce099467fcd5ae94568&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Koca Yasli Sisko Dunya",
+          "artist": "Adamlar",
+          "url": "https://soundcloud.com/iyininkotusu/adamlar-koca-yasli-sisko-dunya?si=af5a990d77b74ce099467fcd5ae94568&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
+      "status": "blissed out",
+      "id": 8
     }
   ]
 }
