@@ -15,7 +15,7 @@ function Home({ activeUser, setActiveUser }) {
 
 	return (
 		<div style={{ 
-      backgroundImage: 'url("https://www.linkpicture.com/q/home1.jpg")',
+      backgroundImage: 'url("https://i.postimg.cc/PrGL8LYJ/home1.jpg")',
 			backgroundRepeat: "no-repeat",
 			backgroundSize: "cover",
 			backgroundPosition: "center",
