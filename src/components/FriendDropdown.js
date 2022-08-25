@@ -5,8 +5,6 @@ function FriendDropdown ({ user }) {
 
 	const { friends } = user
 
-	// friends.forEach(friend => console.log(friend.cardImage))
-
 	// if user has friends, render a dropdown item for each friend and route to their page
 	const renderedFriends = friends ? friends.map(friend => (
 		<Dropdown.Item
