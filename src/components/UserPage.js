@@ -81,18 +81,17 @@ function UserPage({ activeUser, setActiveUser }) {
 	if (!user) return <h1>Loading...</h1>
 
 	return (
-		<div style={{
+		<div className ="userPage" style={{
 			backgroundImage: isBasedMode ? `url(${pageImage})` : "url(https://i.postimg.cc/SxWNgN9D/photo-1577412647305-991150c7d163.jpg)",
-			backgroundColor: "black",
 			marginTop: "20px",
-			width: "100%",
+			width: "102%",
 			height: "100vh",
 			backgroundSize: "cover",
 			backgroundPosition: "center",
 			}}>
 			<div className="columns">
 					
-  				<div className="column is-1">
+  				<div className="column is-1" style={{marginLeft: "5px"}}>
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="column"></div>
@@ -110,22 +109,22 @@ function UserPage({ activeUser, setActiveUser }) {
 							{/* display basedMode buttons if we're on our own page */}
 							{ isActiveUser ? (
 								<>
-									<button
-										className={isBasedMode ? "tag is-normal" : "tag is-normal is-dark"}
+									<span
+										className={isBasedMode ? "tag is-normal is-rounded" : "tag is-normal is-dark is-rounded"}
 										style={{marginLeft: "20px", cursor: "pointer"}}
 										onClick={() => handleToggleBasedMode(true)}
 									>
 										based mode
-									</button>
+									</span>
 									<div className="column is-2"></div>
 
-									<button
-										className={isBasedMode ? "tag is-normal is-dark" : "tag is-normal"}
-										style={{marginLeft: "20px", cursor: "pointer"}}
+									<span
+										className={isBasedMode ? "tag is-normal is-dark is-rounded" : "tag is-normal is-rounded"}
+										style={{marginLeft: "25px", cursor: "pointer"}}
 										onClick={() => handleToggleBasedMode(false)}
 									>
 										non-anime mode
-									</button>
+									</span>
 									<div className="column is-2"></div>
 								</>
 							) : null}

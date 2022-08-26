@@ -20,18 +20,18 @@ function UserCard({ user, query, handleOnCardClick }) {
 	})
 	
 	return (
-		<div className="box" style={{paddingBottom: "2.22rem", cursor: "pointer", width: "auto", margin: "20px", marginRight: "40%" }} onClick={onCardClick}>
-			<div className="media-left" style={{float: "left"}}>
-				<figure className="image is-64x64">
-					<img src={cardImage} alt="avatar" />
+			<div className="box" style={{paddingTop:"20px", paddingBottom: "60px", cursor: "pointer", width: "auto", margin: "20px", marginRight: "40%" }} onClick={onCardClick}>
+				<div className="media-left" style={{float: "left"}}>
+					<figure className="image is-96x96">
+						<img src={cardImage} alt="avatar" />
 				</figure>
 			</div>
 			<div>
-				<h1>{name}</h1>
-				<p>status: {status}</p>
+				<h1 style={{fontSize: 20}}>{name}</h1>
+				<p style={{fontSize: 16}}>status: {status}</p>
 				{/* map through the array of matching songs and list in the user card */}
 				<ul>{matches.map(song => (
-					<li key={song.title}>{song.title} by {song.artist}</li>
+					<li style={{fontSize: 14}} key={song.title}>{song.title} by {song.artist}</li>
 				))}</ul>
 			</div>
 		</div>

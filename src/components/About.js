@@ -7,7 +7,7 @@ function About() {
 	<div>
 
 		<div style={{ 
-				backgroundImage: 'url("https://www.linkpicture.com/q/about_5.png")',
+				backgroundImage: 'url("https://i.postimg.cc/c1khqBpj/about.gif")',
 				backgroundRepeat: "no-repeat",
 				backgroundSize: "cover",
 				backgroundPosition: "center",
@@ -17,29 +17,39 @@ function About() {
 		<div className="columns">
 		
 		<div className="column">
-			<div className="column"></div>
-				<div className="box has-text-centered" style={{ width: 400, margin: "30px 30px"}}>
-					<h1 className="is-centered" style={{fontFamily: "", fontWeight:"bold", fontSize:"25px"}}>
+			
+				<div className="box" style={{ width: 400, margin: "30px 30px"}}>
+					<h1 className="is-centered" style={{ fontSize:"38px"}}>
 					What is friend hop?
 					</h1></div>
-					<div className="column" style={{margin: "-30px 20px"}}>
-					<div className="box has-text-centered" style={{ width: "80%", margin: "0px", marginBottom: "60px"}}>
-					<h1 className="is-centered" style={{fontFamily: "", fontWeight:"bold", fontSize:"25px"}}>
+					<div className="column is-centered" style={{margin: "-30px 20px"}}>
+					<div className="box is-centered" style={{ width: "60%", margin: "0px", marginBottom: "60px"}}>
+					<h1  className="is-centered" style={{fontFamily: "", fontSize:"20px"}}>
 					We are a social media emulator, bringing back the nostalgia of 2009 animation classics, while supporting a place to save and share your favorite songs of the week. 
 					Friend hop also supports custom moods for your avatar and uploads of embedded music links. 
 					</h1>
 					</div>
 					</div>
+					<div className="column"></div>
+					<div className="column"></div>
+					<div className="column"></div>
+					<div className="column"></div>
+					<div className="column"></div>
+					<div className="column"></div>
+					<div className="column"></div>
+					<div className="column"></div>
+					<div className="column"></div>
+					<div className="column"></div>
 					<div className="column">
-					<div className="box has-text-centered" style={{ width: 400, margin: "20px" }}>
-					<h1 className="is-centered" style={{fontFamily: "", fontWeight:"bold", fontSize:"25px"}}>
+					<div className="box" style={{ width: 450, margin: "20px" }}>
+					<h1 className="is-centered" style={{ fontSize:"38px"}}>
 					Embedded music links?
 					</h1>
 					</div>
 					</div>
 					<div className="column" style={{margin: "-30px 20px"}}>
-					<div className="box has-text-centered" style={{ width: "50%", margin: "0px" }}>
-					<h1 className="is-centered" style={{fontFamily: "", fontWeight:"bold", fontSize:"25px"}}>
+					<div className="box " style={{ width: "40%", margin: "0px" }}>
+					<h1 className="is-centered" style={{fontFamily: "", fontSize:"20px"}}>
 					While we cater to our audience of those who prefer SoundCloud, Youtube implementations are next on our to-do list!
 					</h1>
 					</div>

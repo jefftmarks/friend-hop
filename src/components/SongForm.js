@@ -47,15 +47,18 @@ function SongForm({ user, onAddSong }) {
 
 		<form onSubmit={handleSubmit}>
 		<div className="columns">
-			<div className="column is-half">
+			<div className="column is-half"
+			>
 			{/* <div className="column"></div> */}
 			<span
 				className="tag is-medium is-light"
-	
+				
 			>
 				I'm adding ...
 			</span>
-			<div className="column"></div>
+			<div className="column"
+			style={{padding: "0.25rem", marginBottom: ".5rem",}}
+			></div>
 			
 			
 			
@@ -107,12 +110,13 @@ function SongForm({ user, onAddSong }) {
 			
 {/* 
 			<div className="column"></div> */}
-			<button
+			<span
 				type="submit"
-				className="button is-white is-small"
+				className="button is-white is-normal"
+				style={{marginTop: "0.5rem", marginBottom: "5rem", fontSize:14, color: "3b3939"}}
 			>
-				click to add song!
-			</button>
+				submit
+			</span>
 			
 			</div>
 			</div>

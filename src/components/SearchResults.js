@@ -54,10 +54,10 @@ function SearchResults({ handleOnCardClick }) {
 
 	return (
 		<>
-			<div className="box" style={{ width: "auto", margin: "20px", marginRight: "90%"  }}>
+			<div className="box" style={{ width: "15%", margin: "20px", marginRight: "80%", fontSize: 25 }}>
 				<h1>
 					{/* If no results, display "no results" */}
-					{searchResults.length === 0 ? "no results . . ." : "search results" }
+					{searchResults.length === 0 ? "sorry... no results." : "search results" }
 				</h1>
 			</div>
 			<div className="columns">
