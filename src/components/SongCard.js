@@ -1,7 +1,7 @@
 import React from "react";
 import ReactSoundCloud from "react-soundcloud-embedded";
 
-function SongCard({ song, user, onDeleteSong, activeUser, isActiveUser }) {
+function SongCard({ song, user, onDeleteSong, activeUser, isActiveUser, setActiveUser }) {
 	const { id, songs } = user;
 	const { url } = song;
 
@@ -56,6 +56,7 @@ function SongCard({ song, user, onDeleteSong, activeUser, isActiveUser }) {
 				.then(res => res.json())
 				.then(updatedUser => {
 					alert(`${song.title} by ${song.artist} has been added to your page!`);
+					setActiveUser(updatedUser)
 				})
 				.catch(e => console.error(e))
 		}

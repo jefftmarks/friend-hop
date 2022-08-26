@@ -156,6 +156,7 @@ function UserPage({ activeUser, setActiveUser }) {
 									activeUser={activeUser}
 									isActiveUser={isActiveUser}
 									onUpdateSongs={setUser}
+									setActiveUser={setActiveUser}
 								/>
 
 							</section>

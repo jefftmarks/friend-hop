@@ -3,7 +3,7 @@ import { act } from "react-dom/test-utils";
 import SongCard from "./SongCard";
 import SongForm from "./SongForm";
 
-function SongContainer({ user, activeUser, isActiveUser, onUpdateSongs }) {
+function SongContainer({ user, activeUser, isActiveUser, setActiveUser, onUpdateSongs }) {
 	const { songs } = user;
 
 	// if songs present, map song cards
@@ -15,6 +15,7 @@ function SongContainer({ user, activeUser, isActiveUser, onUpdateSongs }) {
 			onDeleteSong={onUpdateSongs}
 			activeUser={activeUser}
 			isActiveUser={isActiveUser}
+			setActiveUser={setActiveUser}
 		/>
 	)) : null;
 
