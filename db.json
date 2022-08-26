@@ -146,7 +146,13 @@
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
       "status": "blissed out",
-      "songs": [],
+      "songs": [
+        {
+          "title": "Medicine Mix",
+          "artist": "Haruomi Hosono",
+          "url": "https://soundcloud.com/haruomihosono/medicine-mix-2020-remastering?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
       "friends": [
         {
           "name": "effy",
