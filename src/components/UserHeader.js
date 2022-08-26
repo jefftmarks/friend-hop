@@ -69,7 +69,7 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 		<>
 			
 			<div className="box has-text-centered" style={{ width: 300, fontSize: "25px"}}>
-				<span className="is-centered">{name}'s Page</span>
+				<span className="is-centered">{name}'s page</span>
 
 				{/* add a star to reflect whether frieds or not */}
 				{isYourFriend & !isActiveUser ?<span style={{color: "gray", fontSize: "17px", marginLeft: "7px"}}>&#9733;</span> : null}

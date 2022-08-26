@@ -82,7 +82,7 @@ function UserPage({ activeUser, setActiveUser }) {
 
 	return (
 		<div className ="userPage" style={{
-			backgroundImage: isBasedMode ? `url(${pageImage})` : "url(https://i.postimg.cc/SxWNgN9D/photo-1577412647305-991150c7d163.jpg)",
+			backgroundImage: isBasedMode ? "url(https://i.postimg.cc/SxWNgN9D/photo-1577412647305-991150c7d163.jpg)" : `url(${pageImage})`,
 			marginTop: "20px",
 			width: "102%",
 			height: "100vh",
@@ -165,7 +165,7 @@ function UserPage({ activeUser, setActiveUser }) {
 					</div>
 					<div className="column is-3" style={{position: "relative"}}>
 
-					{isBasedMode ? <Avatar status={status} /> : <NonBasedAvatar status={status} />}
+					{isBasedMode ? <NonBasedAvatar status={status} /> : <Avatar status={status} /> }
 
 						<div
 							className="tags are-normal is-white has-addons buttons"
