@@ -151,7 +151,12 @@ function UserPage({ activeUser, setActiveUser }) {
 						<article style={{maxHeight: "1000px"}}>
 							<section style={{overflowY: "auto", display: "flex", height: "100%", maxHeight: "640px",flexDirection: "column"}}>
 
-								<SongContainer user={user} isActiveUser={isActiveUser} onChangeSongs={setUser} />
+								<SongContainer
+									user={user}
+									activeUser={activeUser}
+									isActiveUser={isActiveUser}
+									onUpdateSongs={setUser}
+								/>
 
 							</section>
 						</article>	

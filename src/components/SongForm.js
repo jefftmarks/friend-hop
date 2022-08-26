@@ -15,22 +15,23 @@ function SongForm({ user, onAddSong }) {
 		const { name, value } = event.target;
 		setSongForm(songForm => ({...songForm, [name]: value}))
 	}
-
-	// Function to make sure song isn't already in your playlist
-	function checkIfDuplicateSong() {
-		let flag = false;
-		songs.forEach(song => {
-			if (songForm.url === song.url) {
-				flag = true;
-			}
-		})
-		return(flag);
-	}
-
+	
+	
 	// submit new song to list of songs
 	function handleSubmit (event) {
 		event.preventDefault();
-		
+
+		// Function to make sure song isn't already in your playlist
+		function checkIfDuplicateSong() {
+			let flag = false;
+			songs.forEach(song => {
+				if (songForm.url === song.url) {
+					flag = true;
+				}
+			})
+			return(flag);
+		}
+	
 		if(checkIfDuplicateSong()) {
 			alert("This song is already in your playlist!")
 			setSongForm(intializedSongForm);
