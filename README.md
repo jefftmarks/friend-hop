@@ -13,6 +13,14 @@ We are a social media emulator, bringing back the nostalgia of 2009 animation cl
 Friend hop also supports custom moods for your avatar and uploads of embedded music links. 
 
 
+<br/>
 
 ### `Diagram of Our Component Tree `
+<br/>
+<img src="component_tree.png"/>
 
+<br/>
+<br/> 
+
+### `Captures of our db.json `
+<img src="db.png"/>
