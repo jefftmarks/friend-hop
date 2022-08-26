@@ -146,24 +146,31 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
-      "isBased": false,
+      "isBased": true,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "status": "braindead",
-      "messages": [],
+      "status": "angelic",
+      "messages": [
+        {
+          "name": "shrek",
+          "username": "shrek",
+          "messageText": "YO!!!!",
+          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
+        }
+      ],
       "songs": [
         {
-          "title": "test",
-          "artist": "test",
-          "url": "https://soundcloud.com/haruomihosono/quiet-lodge-edit-2020?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          "title": "Helena",
+          "artist": "My Chemical Romance",
+          "url": "https://soundcloud.com/my-chemical-romance/helena-so-long-goodnight?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Ginseng Strip 2002",
+          "artist": "YUNG LEAN",
+          "url": "https://soundcloud.com/yung-lean-doer/ginseng-strip-2002?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
       "friends": [
-        {
-          "name": "effy",
-          "username": "effy",
-          "cardImage": "https://i.postimg.cc/x88PJXzt/effycrop.png"
-        },
         {
           "name": "jessa",
           "username": "jessa",
@@ -183,6 +190,11 @@
           "name": "shrek",
           "username": "shrek",
           "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
+        },
+        {
+          "name": "Margo",
+          "username": "margo",
+          "cardImage": "https://i.postimg.cc/MZ9P6SQ9/margocrop.png"
         }
       ]
     },

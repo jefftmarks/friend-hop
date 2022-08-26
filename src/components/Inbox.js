@@ -30,7 +30,7 @@ function Inbox({ activeUser, setActiveUser }) {
 
 	let messageHeader;
 	if (activeUser) {
-		messageHeader = activeUser.messages.length === 0 ? "sorry... no messages." : "inbox";
+		messageHeader = activeUser.messages.length === 0 ? "sorry... no messages" : "inbox";
 	}
 
 	return (
