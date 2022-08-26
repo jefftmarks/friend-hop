@@ -1,6 +1,0 @@
-@font-face {
-    font-family: "hackedfont";
-    src: url("/src/components/fontstuff/bold.ttf") format("ttf"),
-         url("/src/components/fontstuff/medium.ttf") format("ttf"),
-         url("/src/components/fontstuff/regular.ttf") format("ttf");
-}
