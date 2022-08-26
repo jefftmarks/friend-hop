@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MessageForm from "./MessageForm";
 
-function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFriend }) {
+function UserHeader({ user, activeUser, isActiveUser, setActiveUser, setUser, isYourFriend }) {
 	const [messageFormIsActive, setMessageFormIsActive] = useState(false);
 
 	const { name, username, cardImage, songs, id, messages } = user;
@@ -79,7 +79,7 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 				{!isActiveUser ? (
 					<div
 						className="tag"
-						style={{color:  "red", cursor: "pointer"}}
+						style={{color:  "red", cursor: "pointer", marginTop: "10px" }}
 						onClick={isYourFriend ? handleDeleteFriend : handleAddFriend}
 					>
 						{isYourFriend ? `remove ${name} from your besties` : `add ${name} to your besties`}
@@ -90,21 +90,22 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 				{isYourFriend && !isActiveUser ? (
 					<div
 						className="tag"
-						style={{color:  "red", cursor: "pointer", marginTop: "5px"}}
+						style={{color:  "red", cursor: "pointer", marginTop: "10px"}}
 						onClick={() => setMessageFormIsActive(messageFormIsActive => !messageFormIsActive)}
 				>
-					<span style={{fontSize: "30px", marginRight: "5px"}}>{'\u2709'}</span>message {name}
+					<span style={{fontSize: "30px", marginRight: "5px", marginBottom: "10px"}}>{'\u2709'}</span>message {name}
 				</div>
 				) : null}
 
 				{/* toggled message form */}
-				{messageFormIsActive ? (
+				{messageFormIsActive && !isActiveUser ? (
 					<MessageForm
 						name={name}
 						id={id}
 						activeUser={activeUser}
 						messages={messages}
 						setMessageFormIsActive={setMessageFormIsActive}
+						setUser={setUser}
 					/>
 				) : null}
 

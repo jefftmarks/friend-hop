@@ -20,7 +20,7 @@ function Inbox({ activeUser, setActiveUser }) {
 	if (activeUser) {
 		renderMessages = activeUser.messages.map(message => (
 			<MessageCard
-				key={Date()}
+				key={message.messageText}
 				message={message}
 				activeUser={activeUser}
 				setActiveUser={setActiveUser}

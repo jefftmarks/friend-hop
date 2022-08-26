@@ -146,6 +146,7 @@ function UserPage({ activeUser, setActiveUser }) {
 							isActiveUser={isActiveUser}
 							isYourFriend={isYourFriend}
 							setActiveUser={setActiveUser}
+							setUser={setUser}
 						/>
 
 						<article style={{maxHeight: "1000px"}}>

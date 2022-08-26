@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-function MessageForm({ name, id, activeUser, messages, setMessageFormIsActive }) {
+function MessageForm({ name, id, activeUser, setUser, messages, setMessageFormIsActive }) {
 	const initializedForm = {
 		name: activeUser.name,
 		username: activeUser.username,
 		messageText: "",
 		cardImage: activeUser.cardImage,
-		date: Date(),
 	}
 
 	const [formData, setFormData] = useState (initializedForm)
@@ -19,17 +18,20 @@ function MessageForm({ name, id, activeUser, messages, setMessageFormIsActive })
 	// send message to user
 	function handleSubmit(event) {
 		event.preventDefault();
+		const updatedMessages = [...messages, formData];
+
 		fetch(`http://localhost:4000/users/${id}`, {
 			method: "PATCH",
 			headers: {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
-				messages: [...messages, formData]
+				messages: updatedMessages
 			})
 		})
 			.then(res => res.json())
-			.then(data => {
+			.then(updatedUser => {
+				setUser(updatedUser);
 				alert("message sent!");
 				setFormData(initializedForm)
 				setMessageFormIsActive(false);
@@ -37,8 +39,10 @@ function MessageForm({ name, id, activeUser, messages, setMessageFormIsActive })
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<textarea
+		<form  onSubmit={handleSubmit}>
+			<textarea 
+				style={{marginTop: "15px", marginBottom: "15px"}}
+				className="input"
 				name="messageText"
 				rows="4"
 				cols="30"
@@ -48,7 +52,10 @@ function MessageForm({ name, id, activeUser, messages, setMessageFormIsActive })
 				onChange={handleOnChange}
 				value={formData.messageText}
 			/>
-			<button type="submit">send</button>
+			<button 
+			className="button is-small is-info" 
+			type="submit">send
+			</button>
 		</form>
 	)
 }
