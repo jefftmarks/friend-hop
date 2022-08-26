@@ -110,20 +110,20 @@ function UserPage({ activeUser, setActiveUser }) {
 							{ isActiveUser ? (
 								<>
 									<span
-										className={isBasedMode ? "tag is-normal is-rounded" : "tag is-normal is-dark is-rounded"}
-										style={{marginLeft: "20px", cursor: "pointer"}}
+										className={isBasedMode ? "tag is-normal is-rounded" : "tag is-normal is-warning is-rounded"}
+										style={{padding: "12px", marginLeft: "30px", cursor: "pointer", textAlign: "center", fontSize: "12px"}}
 										onClick={() => handleToggleBasedMode(true)}
 									>
-										based mode
+										non-anime mode
 									</span>
 									<div className="column is-2"></div>
 
 									<span
-										className={isBasedMode ? "tag is-normal is-dark is-rounded" : "tag is-normal is-rounded"}
-										style={{marginLeft: "25px", cursor: "pointer"}}
+										className={isBasedMode ? "tag is-normal is-warning is-rounded" : "tag is-normal is-rounded"}
+										style={{marginLeft: "25px", cursor: "pointer", padding:"12px", fontSize: "12px"}}
 										onClick={() => handleToggleBasedMode(false)}
 									>
-										non-anime mode
+										based mode
 									</span>
 									<div className="column is-2"></div>
 								</>

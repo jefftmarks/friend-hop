@@ -60,7 +60,7 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 	if (songs) {
 		addSongInstructions = songs.length===0 ? (
 			<div className="box has-text-centered" style={{ width: "49%", paddingLeft: "15px", marginTop: "30px", marginBottom: "30px", fontSize: "16px"}}>
-				<p>first time here? ... that's okay 🫶🏼 <br />express how you're feeling by sharing your first favorite song </p>
+				<p>first time here? <br /> start by sharing your first favorite song </p>
 			</div>
 		) : null
 	}

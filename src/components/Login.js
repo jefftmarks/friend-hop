@@ -66,9 +66,13 @@ function Login({ setHasAccount, setActiveUser }) {
 					</Form.Control>
 				</Form.Field>
 				<Button.Group align="right">
-					<Button color="is-black">login</Button>
-					<Button color="is-black" onClick={setHasAccount}>create account</Button>
+					<Button className="is-warning" onClick={setHasAccount}>create account</Button>
+					<Button className="is-info">login</Button>
 				</Button.Group>
+				
+					
+				
+					
 			</form>
 		</Box>
 	)

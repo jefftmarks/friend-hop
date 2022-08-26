@@ -113,8 +113,8 @@ function SongForm({ user, onAddSong }) {
 			
 			<button 
 				type="submit"
-				className="button has-addons is-white "
-				style={{marginTop: "-3.25rem", marginBottom: "5rem", fontSize:14, color: "3b3939", padding:"-30px", height:"40px", marginLeft: "443px"}}
+				className="button has-addons is-info "
+				style={{marginTop: "-3.25rem", marginBottom: "5rem", fontSize:14, padding:"-30px", height:"40px", marginLeft: "443px"}}
 			>
 				submit
 			</button>
