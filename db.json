@@ -142,10 +142,10 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
-      "isBased": false,
+      "isBased": true,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "status": "braindead",
+      "status": "blissed out",
       "songs": [
         {
           "title": "PULL UP",
@@ -193,34 +193,13 @@
       "isBased": false,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [
-        {
-          "title": "I miss the rage",
-          "artist": "Mario Judah",
-          "url": "https://soundcloud.com/ghzupwzhxr6u/i-miss-the-rage?si=497f6932f5ed4cf4b66213297ccdc521&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "Shelter",
-          "artist": "Porter Robinson",
-          "url": "https://soundcloud.com/porter-robinson/porter-robinson-madeon-shelter-5?si=ffb12b9cca3b47c1806a368c5ab44d96&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "Hold My Liquor",
-          "artist": "Kanye West",
-          "url": "https://soundcloud.com/kanyewest/hold-my-liquor?si=c9ea0e0b3b9d48f5a1126b07fac813cc&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        }
-      ],
-      "status": "hypernormal",
+      "songs": [],
+      "status": "blissed out",
       "friends": [
         {
           "name": "effy",
           "username": "effy",
           "cardImage": "https://i.postimg.cc/x88PJXzt/effycrop.png"
-        },
-        {
-          "name": "loraine",
-          "username": "loraine",
-          "cardImage": "https://i.postimg.cc/jj6cG0TQ/lorainecrop.png"
         },
         {
           "name": "Margo",
@@ -231,6 +210,11 @@
           "name": "Jessa",
           "username": "jessa",
           "cardImage": "https://i.postimg.cc/Gpnz73Wm/jessacrop.png"
+        },
+        {
+          "name": "Loraine",
+          "username": "loraine",
+          "cardImage": "https://i.postimg.cc/jj6cG0TQ/lorainecrop.png"
         }
       ],
       "id": 6
@@ -422,6 +406,18 @@
         }
       ],
       "id": 18
+    },
+    {
+      "name": "test",
+      "username": "testing10",
+      "password": "testing",
+      "basedMode": true,
+      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
+      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
+      "songs": [],
+      "status": "zoinked",
+      "friends": [],
+      "id": 19
     }
   ]
 }

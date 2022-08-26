@@ -114,7 +114,7 @@ function SongForm({ user, onAddSong }) {
 			<button 
 				type="submit"
 				className="button is-info "
-				style={{marginTop: "-3.25rem", marginBottom: "5rem", fontSize:14, padding:"-30%", height:"40px", marginLeft: "84%"}}
+				style={{marginTop: "-3.25rem", marginBottom: "5rem", fontSize:14, padding:"-30%", height:"40px", marginLeft: "86%"}}
 			>
 				submit
 			</button>

@@ -120,7 +120,7 @@ function UserPage({ activeUser, setActiveUser }) {
 
 									<span
 										className={isBasedMode ? "tag is-normal is-dark is-rounded" : "tag is-normal is-light is-rounded"}
-										style={{marginLeft: "25px", cursor: "pointer", padding:"12px", fontSize: "12px"}}
+										style={{marginLeft: "30px", cursor: "pointer", padding:"12px", fontSize: "12px"}}
 										onClick={() => handleToggleBasedMode(false)}
 									>
 										based mode

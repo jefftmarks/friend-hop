@@ -67,7 +67,7 @@ function Login({ setHasAccount, setActiveUser }) {
 				</Form.Field>
 				<Button.Group align="right">
 					<Button className="is-info">login</Button>
-					<Button className="is-warning" onClick={setHasAccount}>sign up</Button>
+					<Button className="" onClick={setHasAccount}>sign up</Button>
 					
 				</Button.Group>
 				
