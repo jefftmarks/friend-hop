@@ -10,15 +10,11 @@ function UserPage({ activeUser, setActiveUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
 	const [isYourFriend, setIsYourFriend] = useState(false);
-	const [isBasedMode, setIsBasedMode] = useState(false);
+	const [isBasedMode, setIsBasedMode] = useState(true);
 
 	const { pageImage, status, id } = user;
 
 	const params = useParams();
-
-	// modal try out demo thingy 
-	// function handlePopUp(e) {
-	// }
 
 
 	// When params (i.e. username) changes, perform a fetch query looking for that username
@@ -102,9 +98,6 @@ function UserPage({ activeUser, setActiveUser }) {
 						<div className="buttons is-centered" style={{padding: "20px"}}>
 						
 							<div className="column"></div>
-							{/* <button className="js-modal-trigger" onClick={handlePopUp}>
-  									Open JS example modal
-							</button> */}
 
 							{/* display basedMode buttons if we're on our own page */}
 							{ isActiveUser ? (

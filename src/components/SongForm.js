@@ -10,30 +10,47 @@ function SongForm({ user, onAddSong }) {
 	const [songForm, setSongForm] = useState(intializedSongForm)
 	const { id, songs } = user;	
 
-	// update form data
+	// Update song form data
 	function handleChange(event) {
 		const { name, value } = event.target;
 		setSongForm(songForm => ({...songForm, [name]: value}))
 	}
 
+	// Function to make sure song isn't already in your playlist
+	function checkIfDuplicateSong() {
+		let flag = false;
+		songs.forEach(song => {
+			if (songForm.url === song.url) {
+				flag = true;
+			}
+		})
+		return(flag);
+	}
+
 	// submit new song to list of songs
 	function handleSubmit (event) {
 		event.preventDefault();
-		fetch(`http://localhost:4000/users/${id}`, {
-			method: "PATCH",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				songs: [...songs, songForm]
-			}),
-		})
-			.then(res => res.json())
-			.then(updatedUser => {
-				onAddSong(updatedUser);
-				setSongForm(intializedSongForm);
+		
+		if(checkIfDuplicateSong()) {
+			alert("This song is already in your playlist!")
+			setSongForm(intializedSongForm);
+		} else {
+			fetch(`http://localhost:4000/users/${id}`, {
+				method: "PATCH",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					songs: [...songs, songForm]
+				}),
 			})
-			.catch(e => console.error(e))
+				.then(res => res.json())
+				.then(updatedUser => {
+					onAddSong(updatedUser);
+					setSongForm(intializedSongForm);
+				})
+				.catch(e => console.error(e))
+		}
 	}
 
 	return (

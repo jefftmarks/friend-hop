@@ -7,7 +7,7 @@ function SongContainer({ user, isActiveUser, onChangeSongs }) {
 
 	// if songs present, map song cards
 	const renderedSongCards = songs ? songs.map(song => (
-		<SongCard key={song.title} url={song.url} user={user} onDeleteSong={onChangeSongs} isActiveUser={isActiveUser} />
+		<SongCard key={song.url} url={song.url} user={user} onDeleteSong={onChangeSongs} isActiveUser={isActiveUser} />
 	)) : null;
 
 	return (
