@@ -92,7 +92,7 @@ function SongForm({ user, onAddSong }) {
 			
 
 			
-			
+	
 			<div className="field">
 				<div className="control" style={{marginRight: "85px"}}>
 					<input
@@ -106,15 +106,15 @@ function SongForm({ user, onAddSong }) {
 						required
 					/>
 				</div>
-			</div>
-			
-			
 
+
+				
+			</div>
 			
 			<button 
 				type="submit"
-				className="button has-addons is-info "
-				style={{marginTop: "-3.25rem", marginBottom: "5rem", fontSize:14, padding:"-30px", height:"40px", marginLeft: "443px"}}
+				className="button is-info "
+				style={{marginTop: "-3.25rem", marginBottom: "5rem", fontSize:14, padding:"-30%", height:"40px", marginLeft: "84%"}}
 			>
 				submit
 			</button>

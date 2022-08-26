@@ -10,7 +10,7 @@ function UserPage({ activeUser, setActiveUser }) {
 	const [user, setUser] = useState({});
 	const [isActiveUser, setIsActiveUser] = useState(false);
 	const [isYourFriend, setIsYourFriend] = useState(false);
-	const [isBasedMode, setIsBasedMode] = useState(true);
+	const [isBasedMode, setIsBasedMode] = useState(false);
 
 	const { pageImage, status, id } = user;
 
@@ -110,16 +110,16 @@ function UserPage({ activeUser, setActiveUser }) {
 							{ isActiveUser ? (
 								<>
 									<span
-										className={isBasedMode ? "tag is-normal is-rounded" : "tag is-normal is-warning is-rounded"}
+										className={isBasedMode ? "tag is-normal is-light is-rounded" : "tag is-normal is-dark is-rounded"}
 										style={{padding: "12px", marginLeft: "30px", cursor: "pointer", textAlign: "center", fontSize: "12px"}}
 										onClick={() => handleToggleBasedMode(true)}
 									>
-										non-anime mode
+										SFW mode
 									</span>
 									<div className="column is-2"></div>
 
 									<span
-										className={isBasedMode ? "tag is-normal is-warning is-rounded" : "tag is-normal is-rounded"}
+										className={isBasedMode ? "tag is-normal is-dark is-rounded" : "tag is-normal is-light is-rounded"}
 										style={{marginLeft: "25px", cursor: "pointer", padding:"12px", fontSize: "12px"}}
 										onClick={() => handleToggleBasedMode(false)}
 									>

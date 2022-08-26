@@ -6,7 +6,7 @@
       "username": "margo",
       "password": "margo",
       "isStatic": true,
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/tCfB6NDP/margopage.jpg",
       "cardImage": "https://i.postimg.cc/MZ9P6SQ9/margocrop.png",
       "status": "misses warped tour",
@@ -39,7 +39,7 @@
       "username": "loraine",
       "password": "loraine",
       "isStatic": true,
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/kXVc7t95/lorainepage.jpg",
       "cardImage": "https://i.postimg.cc/jj6cG0TQ/lorainecrop.png",
       "status": "is late for swim practice",
@@ -72,7 +72,7 @@
       "username": "effy",
       "password": "effy",
       "isStatic": true,
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/9fC1Hd2q/effypage.png",
       "cardImage": "https://i.postimg.cc/x88PJXzt/effycrop.png",
       "status": "is mythical apocalyspe",
@@ -105,7 +105,7 @@
       "username": "jessa",
       "password": "jessa",
       "isStatic": true,
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/dVy4jZSf/jessapage.jpg",
       "cardImage": "https://i.postimg.cc/Gpnz73Wm/jessacrop.png",
       "status": "is feeling cheeky",
@@ -142,10 +142,10 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "status": "hungry",
+      "status": "braindead",
       "songs": [
         {
           "title": "PULL UP",
@@ -190,7 +190,7 @@
       "name": "Sky",
       "username": "sky_rules",
       "password": "rainbows",
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
       "songs": [
@@ -385,13 +385,43 @@
       "name": "Bryguy",
       "username": "brywoz1",
       "password": "banana",
+      "basedMode": false,
+      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
+      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
+      "songs": [
+        {
+          "title": "your fav dress",
+          "artist": "Lil peep x Bring me the horizon",
+          "url": "https://soundcloud.com/andrew-alvarez-627046428/lil-tracy-ft-lil-peep-x-bring-me-the-horizon-your-favorite-dress-miro-edit?si=ecff27b219454efcb9e1827f54aa1d4d&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        }
+      ],
+      "status": "evil oblivion",
+      "friends": [
+        {
+          "name": "Sky",
+          "username": "sky_rules",
+          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
+        }
+      ],
+      "id": 17
+    },
+    {
+      "name": "test",
+      "username": "test10",
+      "password": "testing",
       "basedMode": true,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
       "songs": [],
       "status": "new to friend hop",
-      "friends": [],
-      "id": 17
+      "friends": [
+        {
+          "name": "Sky",
+          "username": "sky_rules",
+          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
+        }
+      ],
+      "id": 18
     }
   ]
 }
