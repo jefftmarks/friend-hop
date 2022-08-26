@@ -142,22 +142,11 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
       "status": "blissed out",
-      "songs": [
-        {
-          "title": "PULL UP",
-          "artist": "cranklincrooner",
-          "url": "https://soundcloud.com/cranklincroons/pull-up?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "MEDICINE MIX (2020 Remastering)",
-          "artist": "Haruomi Hosono",
-          "url": "https://soundcloud.com/haruomihosono/medicine-mix-2020-remastering?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        }
-      ],
+      "songs": [],
       "friends": [
         {
           "name": "effy",
@@ -175,13 +164,13 @@
           "cardImage": "https://i.postimg.cc/jj6cG0TQ/lorainecrop.png"
         },
         {
-          "name": "Margo",
-          "username": "margo",
-          "cardImage": "https://i.postimg.cc/MZ9P6SQ9/margocrop.png"
-        },
-        {
           "name": "Sky",
           "username": "sky_rules",
+          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
+        },
+        {
+          "name": "shrek",
+          "username": "shrek",
           "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
         }
       ]
@@ -254,118 +243,6 @@
       "id": 7
     },
     {
-      "name": "test",
-      "username": "test",
-      "password": "testing",
-      "basedMode": true,
-      "pageImage": "https://i.postimg.cc/PrGL8LYJ/home1.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 8
-    },
-    {
-      "name": "test",
-      "username": "test1",
-      "password": "testing2",
-      "basedMode": false,
-      "pageImage": "https://i.postimg.cc/PrGL8LYJ/home1.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 9,
-      "isBased": true
-    },
-    {
-      "name": "test",
-      "username": "test3",
-      "password": "testing",
-      "basedMode": false,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 10
-    },
-    {
-      "name": "test",
-      "username": "test4",
-      "password": "testing",
-      "basedMode": true,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 11,
-      "isBased": true
-    },
-    {
-      "name": "test",
-      "username": "test5",
-      "password": "testing",
-      "basedMode": true,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 12
-    },
-    {
-      "name": "test",
-      "username": "test6",
-      "password": "testing",
-      "basedMode": false,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 13
-    },
-    {
-      "name": "test",
-      "username": "test7",
-      "password": "testing",
-      "basedMode": true,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 14,
-      "isBased": true
-    },
-    {
-      "name": "test",
-      "username": "testing8",
-      "password": "testing",
-      "basedMode": true,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 15
-    },
-    {
-      "name": "test",
-      "username": "testing9",
-      "password": "testing",
-      "basedMode": true,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [],
-      "id": 16,
-      "isBased": false
-    },
-    {
       "name": "Bryguy",
       "username": "brywoz1",
       "password": "banana",
@@ -388,36 +265,6 @@
         }
       ],
       "id": 17
-    },
-    {
-      "name": "test",
-      "username": "test10",
-      "password": "testing",
-      "basedMode": true,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "new to friend hop",
-      "friends": [
-        {
-          "name": "Sky",
-          "username": "sky_rules",
-          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
-        }
-      ],
-      "id": 18
-    },
-    {
-      "name": "test",
-      "username": "testing10",
-      "password": "testing",
-      "basedMode": true,
-      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
-      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "songs": [],
-      "status": "zoinked",
-      "friends": [],
-      "id": 19
     }
   ]
 }

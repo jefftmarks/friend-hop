@@ -53,6 +53,7 @@ function SearchBar({ setSearchInput, searchInput }) {
 					placeholder='"100 Gecs"'
 					name="search"
 					value={searchInput}
+					autoComplete="off"
 					// Immediately changes search input state, which lives in App component
 					onChange={onSearchInputChange}
 				/>
