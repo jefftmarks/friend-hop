@@ -64,7 +64,7 @@ function SearchResults({ handleOnCardClick }) {
 				<div className="column is-three-quarters">
 				{/* render a user card for each search result */}	
 				{ renderedUserCards }
-			</div>
+				</div>
 			</div>
 		</>
  )

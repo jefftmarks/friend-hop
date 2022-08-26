@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
+import Inbox from "./components/Inbox";
 import UserPage from "./components/UserPage"
 import SearchResults from "./components/SearchResults";
 import { Route, Switch } from "react-router-dom";
@@ -36,6 +37,9 @@ function App() {
       <Switch>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/inbox">
+          <Inbox activeUser={activeUser} setActiveUser={setActiveUser} />
         </Route>
         <Route path="/user/:username">
           <UserPage activeUser={activeUser} setActiveUser={setActiveUser} />

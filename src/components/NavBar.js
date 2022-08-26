@@ -44,16 +44,31 @@ function NavBar({ activeUser, onClickLogout, setSearchInput, searchInput }) {
 						about
 					</Link>
 
-					{/* If activeUsername, a logout button appears. On click, will set active user to false */}
+					{/* If activeUsername, logout and inbox buttons appear. */}
 					{activeUser ? (
-						<Link className="navbar-item" to="/" onClick={() => {
-							localStorage.clear();
-							setSearchInput("");
-							onClickLogout(false);
-						}}
-						>	
-						logout
-					</Link>
+						<>
+							<Link className="navbar-item" to="/inbox">	
+								inbox
+								<span style={{color: "red", fontSize: "30px", marginLeft: "2px", marginBottom: "3px"}}>
+									{activeUser.messages.length >= 1 ? '\u2022' : null}
+								</span>
+							</Link>
+
+							<Link
+								className="navbar-item"
+								to="/"
+								onClick={() => {
+									localStorage.clear();
+									setSearchInput("");
+									onClickLogout(false);
+								}}
+							>	
+								logout
+							</Link>
+						</>
+						//navigate to inbox page
+				
+
 					) : null}
 				</div>
 

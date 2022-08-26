@@ -12,6 +12,7 @@ const initializedForm = {
 	songs: [],
 	status: "new to friend hop",
 	friends: [],
+	messages: [],
 }
 
 function Signup({ setHasAccount, setActiveUser }) {

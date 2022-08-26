@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import MessageForm from "./MessageForm";
 
 function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFriend }) {
+	const [messageFormIsActive, setMessageFormIsActive] = useState(false);
 
-	const { name, username, cardImage, songs } = user;
+	const { name, username, cardImage, songs, id, messages } = user;
 
 	// add new friend to active user's array of friends and reset activeuser, which will rerender "besties" dropdown
 	function handleAddFriend() {
@@ -67,7 +69,6 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 
 	return (
 		<>
-			
 			<div className="box has-text-centered" style={{ width: 300, fontSize: "20px"}}>
 				<span className="is-centered">{name}'s page</span>
 
@@ -75,7 +76,6 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 				{isYourFriend & !isActiveUser ?<span style={{color: "gray", fontSize: "17px", marginLeft: "7px"}}>&#9733;</span> : null}
 
 				{/* if not your own page, show friend status and render depending on whether you're friends or not */}
-
 				{!isActiveUser ? (
 					<div
 						className="tag"
@@ -84,6 +84,28 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 					>
 						{isYourFriend ? `remove ${name} from your besties` : `add ${name} to your besties`}
 					</div>
+				) : null}
+
+				{/* add messenger button to trigger message form if person is in your besties */}
+				{isYourFriend && !isActiveUser ? (
+					<div
+						className="tag"
+						style={{color:  "red", cursor: "pointer", marginTop: "5px"}}
+						onClick={() => setMessageFormIsActive(messageFormIsActive => !messageFormIsActive)}
+				>
+					<span style={{fontSize: "30px", marginRight: "5px"}}>{'\u2709'}</span>message {name}
+				</div>
+				) : null}
+
+				{/* toggled message form */}
+				{messageFormIsActive ? (
+					<MessageForm
+						name={name}
+						id={id}
+						activeUser={activeUser}
+						messages={messages}
+						setMessageFormIsActive={setMessageFormIsActive}
+					/>
 				) : null}
 
 			</div>
