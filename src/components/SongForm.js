@@ -50,26 +50,26 @@ function SongForm({ user, onAddSong }) {
 			<div className="column is-half"
 			>
 			{/* <div className="column"></div> */}
-			<span
+			{/* <span
 				className="tag is-medium is-light"
 				
 			>
 				I'm adding ...
 			</span>
 			<div className="column"
-			style={{padding: "0.25rem", marginBottom: ".5rem",}}
-			></div>
+			style={{padding: "0.25rem", marginBottom: "0rem",}}
+			></div> */}
 			
 			
 			
 			<div className="field">
 				<div className="control">
 					<input
-						className="input is-normal"
+						className="input"
 						type="text"
-						placeholder="song title: doritos &amp; fritos"
-						name="title"
-						value={songForm.title}
+						placeholder="artist: 100 gecs"
+						name="artist"
+						value={songForm.artist}
 						onChange={handleChange}
 						required
 					/>
@@ -81,9 +81,9 @@ function SongForm({ user, onAddSong }) {
 					<input
 						className="input is-normal"
 						type="text"
-						placeholder='artist: 100 gecs'
-						name="artist"
-						value={songForm.artist}
+						placeholder='song title: doritos &amp; fritos'
+						name="title"
+						value={songForm.title}
 						onChange={handleChange}
 						required
 					/>
@@ -94,9 +94,10 @@ function SongForm({ user, onAddSong }) {
 			
 			
 			<div className="field">
-				<div className="control">
+				<div className="control" style={{marginRight: "85px"}}>
 					<input
-						className="input is-normal"
+						
+						className="input"
 						type="text"
 						placeholder="enter soundcloud link "
 						name="url"
@@ -108,15 +109,15 @@ function SongForm({ user, onAddSong }) {
 			</div>
 			
 			
-{/* 
-			<div className="column"></div> */}
-			<span
+
+			
+			<button 
 				type="submit"
-				className="button is-white is-normal"
-				style={{marginTop: "0.5rem", marginBottom: "5rem", fontSize:14, color: "3b3939"}}
+				className="button has-addons is-white "
+				style={{marginTop: "-3.25rem", marginBottom: "5rem", fontSize:14, color: "3b3939", padding:"-30px", height:"40px", marginLeft: "443px"}}
 			>
 				submit
-			</span>
+			</button>
 			
 			</div>
 			</div>

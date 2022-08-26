@@ -380,6 +380,18 @@
       "friends": [],
       "id": 16,
       "isBased": false
+    },
+    {
+      "name": "Bryguy",
+      "username": "brywoz1",
+      "password": "banana",
+      "basedMode": true,
+      "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
+      "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
+      "songs": [],
+      "status": "new to friend hop",
+      "friends": [],
+      "id": 17
     }
   ]
 }

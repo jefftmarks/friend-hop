@@ -6,7 +6,7 @@ function SongCard({ url, user, onDeleteSong, isActiveUser }) {
 
 	function onDeleteClick() {
 		const updatedSongs = user.songs.filter(song => {
-			return (song.url !== url)
+			return (song.url !== song.url)
 		})
 
 		fetch(`http://localhost:4000/users/${id}`, {

@@ -59,8 +59,8 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 
 	if (songs) {
 		addSongInstructions = songs.length===0 ? (
-			<div className="box" style={{ width: "49%", paddingLeft: "15px", fontSize: "20px"}}>
-				why don't you have any songs? <br />use the form below to add your favs
+			<div className="box has-text-centered" style={{ width: "49%", paddingLeft: "15px", marginTop: "30px", marginBottom: "30px", fontSize: "16px"}}>
+				<p>first time here? ... that's okay 🫶🏼 <br />express how you're feeling by sharing your first favorite song </p>
 			</div>
 		) : null
 	}
@@ -68,7 +68,7 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, isYourFrien
 	return (
 		<>
 			
-			<div className="box has-text-centered" style={{ width: 300, fontSize: "25px"}}>
+			<div className="box has-text-centered" style={{ width: 300, fontSize: "20px"}}>
 				<span className="is-centered">{name}'s page</span>
 
 				{/* add a star to reflect whether frieds or not */}

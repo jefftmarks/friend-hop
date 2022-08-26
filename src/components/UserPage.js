@@ -91,7 +91,7 @@ function UserPage({ activeUser, setActiveUser }) {
 			}}>
 			<div className="columns">
 					
-  				<div className="column is-1" style={{marginLeft: "5px"}}>
+  				<div className="column is-1" style={{marginLeft: "25px", marginRight: "45px"}}>
 						<div className="column"></div>
 						<div className="column"></div>
 						<div className="column"></div>
