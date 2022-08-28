@@ -6,6 +6,7 @@ function MessageForm({ name, id, activeUser, setUser, messages, setMessageFormIs
 		username: activeUser.username,
 		messageText: "",
 		cardImage: activeUser.cardImage,
+		date: ""
 	}
 
 	const [formData, setFormData] = useState (initializedForm)
@@ -18,7 +19,14 @@ function MessageForm({ name, id, activeUser, setUser, messages, setMessageFormIs
 	// send message to user
 	function handleSubmit(event) {
 		event.preventDefault();
-		const updatedMessages = [...messages, formData];
+
+		// include property of date at time of submission
+		const newMessage = {
+			...formData,
+			date: Date.now(),
+		}
+
+		const updatedMessages = [...messages, newMessage ];
 
 		fetch(`http://localhost:4000/users/${id}`, {
 			method: "PATCH",

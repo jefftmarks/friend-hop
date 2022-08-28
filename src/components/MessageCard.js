@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function MessageCard({ message, activeUser, setActiveUser }) {
-	const { messageText, name, username, cardImage } = message;
+	const { messageText, name, username, cardImage, date } = message;
 
 	function onDeleteMessage() {
 		const updatedMessages = activeUser.messages.filter(message => {
-			return message.messageText !== messageText;
+			return message.date !== date;
 		})
 
 		fetch(`http://localhost:4000/users/${activeUser.id}`, {

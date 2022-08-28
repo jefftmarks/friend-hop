@@ -146,18 +146,11 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "status": "angelic",
-      "messages": [
-        {
-          "name": "shrek",
-          "username": "shrek",
-          "messageText": "YO!!!!",
-          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
-        }
-      ],
+      "status": "braindead",
+      "messages": [],
       "songs": [
         {
           "title": "Helena",
@@ -165,9 +158,14 @@
           "url": "https://soundcloud.com/my-chemical-romance/helena-so-long-goodnight?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         },
         {
-          "title": "Ginseng Strip 2002",
-          "artist": "YUNG LEAN",
-          "url": "https://soundcloud.com/yung-lean-doer/ginseng-strip-2002?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          "title": "asdfas",
+          "artist": "asdfasd",
+          "url": "https://soundcloud.com/panicatthedisco/all-by-yourself?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Nerve",
+          "artist": "The Story So Far",
+          "url": "https://soundcloud.com/purenoiserecs/the-story-so-far-nerve?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
       "friends": [
