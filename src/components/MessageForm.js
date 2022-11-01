@@ -26,7 +26,7 @@ function MessageForm({ name, id, activeUser, setUser, messages, setMessageFormIs
 			date: Date.now(),
 		}
 
-		const updatedMessages = [...messages, newMessage ];
+		const updatedMessages = [...messages, newMessage];
 
 		fetch(`http://localhost:4000/users/${id}`, {
 			method: "PATCH",

@@ -45,7 +45,7 @@ function Login({ setHasAccount, setActiveUser }) {
 							type="text"
 							placeholder="sky_rules"
 							id="loginUsername"
-          					name="username"
+          		name="username"
 							value={formData.username}
 							required
 							onChange={handleChange}

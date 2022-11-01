@@ -35,7 +35,6 @@ function UserHeader({ user, activeUser, isActiveUser, setActiveUser, setUser, is
 		}
 	}
 
-
 	// same as above except filter out friend and run same patch
 	function handleDeleteFriend() {
 		const updatedFriends = activeUser.friends.filter(friend => {
