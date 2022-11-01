@@ -10,7 +10,15 @@
       "pageImage": "https://i.postimg.cc/tCfB6NDP/margopage.jpg",
       "cardImage": "https://i.postimg.cc/MZ9P6SQ9/margocrop.png",
       "status": "misses warped tour",
-      "messagess": [],
+      "messages": [
+        {
+          "name": "shrek",
+          "username": "shrek",
+          "messageText": "Hi Margo",
+          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
+          "date": 1667314209545
+        }
+      ],
       "songs": [
         {
           "title": "Nerve",
@@ -44,7 +52,7 @@
       "pageImage": "https://i.postimg.cc/kXVc7t95/lorainepage.jpg",
       "cardImage": "https://i.postimg.cc/jj6cG0TQ/lorainecrop.png",
       "status": "is late for swim practice",
-      "messagess": [],
+      "messages": [],
       "songs": [
         {
           "title": "DoYaThing",
@@ -78,7 +86,7 @@
       "pageImage": "https://i.postimg.cc/9fC1Hd2q/effypage.png",
       "cardImage": "https://i.postimg.cc/x88PJXzt/effycrop.png",
       "status": "is mythical apocalyspe",
-      "messagess": [],
+      "messages": [],
       "songs": [
         {
           "title": "Ginseng Strip 2002",
@@ -146,28 +154,16 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
-      "isBased": true,
+      "isBased": false,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "status": "angelic",
-      "messages": [
-        {
-          "name": "shrek",
-          "username": "shrek",
-          "messageText": "YO!!!!",
-          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
-        }
-      ],
+      "status": "blissed out",
+      "messages": [],
       "songs": [
         {
           "title": "Helena",
           "artist": "My Chemical Romance",
           "url": "https://soundcloud.com/my-chemical-romance/helena-so-long-goodnight?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-        },
-        {
-          "title": "Ginseng Strip 2002",
-          "artist": "YUNG LEAN",
-          "url": "https://soundcloud.com/yung-lean-doer/ginseng-strip-2002?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
       "friends": [
@@ -187,14 +183,14 @@
           "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
         },
         {
-          "name": "shrek",
-          "username": "shrek",
-          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
-        },
-        {
           "name": "Margo",
           "username": "margo",
           "cardImage": "https://i.postimg.cc/MZ9P6SQ9/margocrop.png"
+        },
+        {
+          "name": "shrek",
+          "username": "shrek",
+          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png"
         }
       ]
     },
@@ -207,7 +203,15 @@
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
       "songs": [],
       "status": "blissed out",
-      "messages": [],
+      "messages": [
+        {
+          "name": "shrek",
+          "username": "shrek",
+          "messageText": "Yo sky!",
+          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
+          "date": 1667313875619
+        }
+      ],
       "friends": [
         {
           "name": "effy",
@@ -244,6 +248,11 @@
           "title": "Hallelujah",
           "artist": "Shrek",
           "url": "https://soundcloud.com/dropson-3/shrek-hallelujah-new-concept-music-edit?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Helena",
+          "artist": "My Chemical Romance",
+          "url": "https://soundcloud.com/my-chemical-romance/helena-so-long-goodnight?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
       "status": "new to friend hop",
@@ -282,7 +291,7 @@
         }
       ],
       "status": "evil oblivion",
-      "messagess": [],
+      "messages": [],
       "friends": [
         {
           "name": "Sky",

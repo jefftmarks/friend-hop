@@ -12,34 +12,32 @@ function SearchResults({ handleOnCardClick }) {
 	useEffect(() => {
 		fetch(`http://localhost:4000/users?q=${encodeURI(query)}`)
 			.then(res => res.json())
-			.then(results => setSearchResults(results.filter(result => {
+			.then(results => {
 
-				// Conditions below to make sure we are only searching according to certain fields: name, username, status, and song title and song artist
+				const searchTerm = query.toLowerCase();
 
-				let titles = "";
-				result.songs.forEach(song => {
+				// filter to show results that match name, username, status, or song title and artist
+				const updatedResults = results.filter(result => {
+					let titles = "";
+					let artists = "";
+
+					result.songs.forEach(song => {
 					titles = titles + " " + song.title.toLowerCase();
-				})
-
-				let artists = "";
-				result.songs.forEach(song => {
 					artists = artists + " " + song.artist.toLowerCase();
+					})
+
+					return (
+						result.name.toLowerCase().includes(searchTerm)
+						|| result.username.toLowerCase().includes(searchTerm)
+						|| result.status.toLowerCase().includes(searchTerm)
+						|| titles.includes(searchTerm)
+						|| artists.includes(searchTerm)
+					)
+
 				})
 
-				if (result.name.toLowerCase().includes(query.toLowerCase())) {
-					return true;
-				} else if (result.username.toLowerCase().includes(query.toLowerCase())) {
-					return true;
-				} else if (result.status.toLowerCase().includes(query.toLowerCase())) {
-					return true;
-				} else if (titles.includes(query.toLowerCase())) {
-					return true;
-				} else if (artists.includes(query.toLowerCase())) {
-					return true;
-				} else {
-					return false;
-				}
-			})))
+				setSearchResults(updatedResults);
+			})
 			.catch(e => console.error(e));
 	}, [query]);
 
