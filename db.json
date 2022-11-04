@@ -154,16 +154,26 @@
       "name": "Jeff",
       "username": "jeffsworld",
       "password": "11111",
-      "isBased": false,
+      "isBased": true,
       "pageImage": "https://i.postimg.cc/FR67szgy/V02.jpg",
       "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
-      "status": "blissed out",
+      "status": "zoinked",
       "messages": [],
       "songs": [
         {
-          "title": "Helena",
-          "artist": "My Chemical Romance",
-          "url": "https://soundcloud.com/my-chemical-romance/helena-so-long-goodnight?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          "title": "Chameleon",
+          "artist": "Herbie Hancock",
+          "url": "https://soundcloud.com/funk-itblog/herbie-hancock-headhunters?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Medicine Mix",
+          "artist": "Haruomi Hosono",
+          "url": "https://soundcloud.com/haruomihosono/medicine-mix-2020-remastering?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+        },
+        {
+          "title": "Hallelujah",
+          "artist": "Shrek",
+          "url": "https://soundcloud.com/dropson-3/shrek-hallelujah-new-concept-music-edit?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
         }
       ],
       "friends": [
@@ -256,7 +266,15 @@
         }
       ],
       "status": "new to friend hop",
-      "messages": [],
+      "messages": [
+        {
+          "name": "Jeff",
+          "username": "jeffsworld",
+          "messageText": "Hey there!",
+          "cardImage": "https://i.postimg.cc/BbzBxJ5s/defaultuser.png",
+          "date": 1667572026006
+        }
+      ],
       "friends": [
         {
           "name": "Sky",

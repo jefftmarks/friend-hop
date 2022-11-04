@@ -19,6 +19,8 @@ can share uploaded song links (via SoundCloud), add and view friends, send messa
 
 ### Running the App
 
+View a video walkthrough of the app [here](https://www.youtube.com/watch?v=hPPoNhUfxmk).
+
 To run the app in development mode, navigate into the root directory.
 
 Run `npm install` to install the necessary dependencies.
